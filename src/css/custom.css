@@ -4,27 +4,109 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+ /* Matching the main website theme */
+ 
+ .navbar {
+  background-color: #192742;
+  color: #c1c2c5;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] .navbar {
+  background-color: #0D1421;
+  color: #c1c2c5;
+}
+
+.navbar__item {
+  color: #c1c2c5;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navbar__item:hover {
+  color: #8DA4D3;
+}
+
+.hero--primary {
+  background-color: #c4d0e8;
+  color: #222;
+}
+
+.navbar__logo {
+  height: 30px;
+}
+
+.footer {
+  background-color: #192742;
+  color: #c1c2c5;
+}
+
+[data-theme='dark'] .footer {
+  background-color: #0D1421;
+  color: #c1c2c5;
+}
+
+[data-theme='dark'] .hero--primary {
+  background-color: #06090F;
+  color: #c1c2c5;
+}
+
+.footer__link-item:hover {
+  color: #8DA4D3;
+  text-decoration: none;
+}
+
+
+/* Root Colors */
+:root {
+  --ifm-color-primary: #192742;
+  --ifm-color-primary-dark: #16233b;
+  --ifm-color-primary-darker: #152138;
+  --ifm-color-primary-darkest: #111b2e;
+  --ifm-color-primary-light: #1b2b49;
+  --ifm-color-primary-lighter: #1d2d4c;
+  --ifm-color-primary-lightest: #203356;
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'faricy-new-web', sans-serif;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #c4d0e8;
+  --ifm-color-primary-dark: #a5b7dc;
+  --ifm-color-primary-darker: #96abd6;
+  --ifm-color-primary-darkest: #6886c4;
+  --ifm-color-primary-light: #e3e9f4;
+  --ifm-color-primary-lighter: #f2f5fa;
+  --ifm-color-primary-lightest: #ffffff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+
+/* Search Style Overrides */
+
+.aa-DetachedSearchButton {
+  background-color: #192742 !important;
+  color: #c1c2c5 !important;
+  border: 1px solid #8DA4D3 !important;
+}
+
+.aa-DetachedSearchButtonIcon {
+  color: #c1c2c5 !important;
+}
+
+[data-theme='dark'] .aa-DetachedFormContainer {
+  background-color: #192742 !important;
+  color: #c1c2c5 !important;
+}
+.aa-Input .aa-SubmitButton {
+  color: #c1c2c5 !important;
+  border: 1px solid #8DA4D3 !important;
+}
+
+.aa-SubmitIcon {
+  color: #c1c2c5 !important;
+}
+
+.aa-Input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #888889 !important;
+  opacity: 1; /* Firefox */
 }
