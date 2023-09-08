@@ -78,7 +78,7 @@ const config = {
             position: "left",
             label: "Documentation",
           },
-          { to: "/blog", label: "Tech Blog", position: "left" },
+          { to: "/blog", label: "Blog", position: "left" },
           {
             to: "https://www.igorbox.com",
             label: "IgorBox.com",
