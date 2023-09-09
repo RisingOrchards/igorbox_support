@@ -128,7 +128,7 @@ const config = {
                 to: "https://risingorchards.com/news",
               },
               {
-                label: "Tech Blog",
+                label: "Blog",
                 to: "/blog",
               },
               {
