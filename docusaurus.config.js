@@ -65,7 +65,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/opengraph-image.png",
+      image: "img/opengraph-image-carl-support.png",
       navbar: {
         logo: {
           alt: "IgorBox Logo",
@@ -80,13 +80,13 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            to: "https://www.igorbox.com",
-            label: "IgorBox.com",
+            href: "https://www.igorbox.com",
+            label: "IgorBox Home",
             position: "left",
           },
           {
             href: "https://github.com/RisingOrchards/igorbox_support",
-            label: "GitHub",
+            label: "Edit on GitHub",
             position: "right",
           },
         ],
@@ -95,7 +95,7 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "Getting Started Docs",
             items: [
               {
                 label: "Setup Your IgorBox",
@@ -111,16 +111,20 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Discord",
+                label: "Join the Discord",
                 href: "https://discord.gg/urGRjudMM2",
               },
               {
-                label: "YouTube",
+                label: "Subscribe on YouTube",
                 href: "https://www.youtube.com/@risingorchards",
               },
               {
-                label: "Facebook",
+                label: "Like on Facebook",
                 href: "https://www.facebook.com/profile.php?id=100087874489151",
+              },
+              {
+                label: "Follow on Instagram",
+                href: "https://www.instagram.com/risingorchards/",
               },
             ],
           },
@@ -128,16 +132,16 @@ const config = {
             title: "More",
             items: [
               {
-                label: "News",
-                to: "https://risingorchards.com/news",
-              },
-              {
-                label: "Blog",
+                label: "IgorBox Blog",
                 to: "/blog",
               },
               {
+                label: "Company News",
+                href: "https://risingorchards.com/news",
+              },
+              {
                 label: "GitHub",
-                href: "https://github.com/RisingOrchards",
+                href: "https://github.com/RisingOrchards/igorbox_support",
               },
             ],
           },
