@@ -101,6 +101,10 @@ const config = {
                 label: "Setup Your IgorBox",
                 to: "/docs/intro",
               },
+              {
+                label: "Control Your IgorBox",
+                to: "/docs/intro",
+              },
             ],
           },
           {

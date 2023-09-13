@@ -1,11 +1,16 @@
 import React from "react";
 import clsx from "clsx";
 import styles from "./styles.module.css";
+import {
+  IconMessage,
+  IconBrandYoutube,
+  IconBrandDiscord,
+} from "@tabler/icons-react";
 
 const FeatureList = [
   {
     title: "Video Tutorials",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    icon: <IconBrandYoutube size="8rem" stroke={1} />,
     description: (
       <>
         We have video tutorials to help you get started and configure your
@@ -15,7 +20,7 @@ const FeatureList = [
   },
   {
     title: "Join the Community on Discord",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    icon: <IconBrandDiscord size="8rem" stroke={1} />,
     description: (
       <>
         Join the community on{" "}
@@ -28,7 +33,7 @@ const FeatureList = [
   },
   {
     title: "Contact Us for Support",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    icon: <IconMessage size="8rem" stroke={1} />,
     description: (
       <>
         If you need help with your IgorBox, you can contact us directly for
@@ -38,12 +43,10 @@ const FeatureList = [
   },
 ];
 
-function Feature({ Svg, title, description }) {
+function Feature({ Svg, title, description, icon }) {
   return (
     <div className={clsx("col col--4")}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
+      <div className="text--center">{icon}</div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>

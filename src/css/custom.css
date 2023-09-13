@@ -8,7 +8,7 @@
  
  .navbar {
   background-color: #192742;
-  color: #c1c2c5;
+  color: #ffffff;
 }
 
 [data-theme='dark'] .navbar {
@@ -17,6 +17,12 @@
 }
 
 .navbar__item {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+[data-theme='dark'] .navbar__item {
   color: #c1c2c5;
   font-size: 14px;
   font-weight: 600;
@@ -54,7 +60,17 @@
   color: #8DA4D3;
   text-decoration: none;
 }
+.cls-1 {
+  fill: #06090F !important;
+}
 
+[data-theme='dark'] .cls-1 {
+  fill: #c1c2c5 !important;
+}
+
+.headLogo {
+  height: 100px;
+}
 
 /* Root Colors */
 :root {
