@@ -2,7 +2,6 @@
 slug: hello-world
 title: Hello World
 authors: [mheijmans]
-tags: [hello]
 ---
 
 **Hello World**
