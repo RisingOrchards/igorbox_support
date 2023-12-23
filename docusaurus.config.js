@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const { themes } = require("prism-react-renderer");
+const lightCodeTheme = themes.github;
+const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -47,6 +48,16 @@ const config = {
 
         blog: {
           showReadingTime: true,
+          path: "releases",
+          routeBasePath: "changelog",
+          postsPerPage: 10,
+          feedOptions: {
+            type: "all",
+            title: "IgorBox ChangeLog",
+            description:
+              "Information about IgorBox releases and their changes.",
+            copyright: `Copyright © ${new Date().getFullYear()} Rising Orchards, LLC`,
+          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           //editUrl:
@@ -64,7 +75,10 @@ const config = {
     ],
   ],
 
-  plugins: [require.resolve("docusaurus-lunr-search")],
+  plugins: [
+    require.resolve("docusaurus-lunr-search"),
+    require.resolve("docusaurus-plugin-hubspot"),
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -83,7 +97,7 @@ const config = {
             position: "left",
             label: "Documentation",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          { to: "/changelog", label: "ChangeLog", position: "left" },
           {
             href: "https://www.igorbox.com",
             label: "IgorBox Home",
@@ -137,8 +151,8 @@ const config = {
             title: "More",
             items: [
               {
-                label: "IgorBox Blog",
-                to: "/blog",
+                label: "IgorBox ChangeLog",
+                to: "/changelog",
               },
               {
                 label: "Company News",
@@ -156,6 +170,11 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      hubspot: {
+        accountId: 23439067,
+        async: false, // OPTIONAL: sets the async attribute on the script tag, defaults to false
+        defer: false, // OPTIONAL: sets the defer attribute on the script tag, defaults to false
       },
     }),
 };

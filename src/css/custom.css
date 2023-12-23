@@ -4,16 +4,42 @@
  * work well for content-centric websites.
  */
 
- /* Matching the main website theme */
- 
- .navbar {
+/* Matching the main website theme */
+
+.navbar {
   background-color: #192742;
   color: #ffffff;
 }
 
-[data-theme='dark'] .navbar {
-  background-color: #0D1421;
+[data-theme="dark"] .navbar {
+  background-color: #0d1421;
   color: #c1c2c5;
+}
+
+.navbar-sidebar__brand {
+  background: #192742;
+}
+
+[data-theme="dark"] .navbar-sidebar__brand {
+  background: #0d1421;
+}
+
+.navbar-sidebar__back {
+  color: #333333;
+}
+
+[data-theme="dark"] .navbar-sidebar__back {
+  color: #c1c2c5;
+}
+
+.landing-component a:hover {
+  color: #6886c4;
+  text-decoration: none;
+}
+
+[data-theme="dark"] .landing-component a:hover {
+  color: #8da4d3;
+  text-decoration: none;
 }
 
 .navbar__item {
@@ -22,14 +48,14 @@
   font-weight: 600;
 }
 
-[data-theme='dark'] .navbar__item {
+[data-theme="dark"] .navbar__item {
   color: #c1c2c5;
   font-size: 14px;
   font-weight: 600;
 }
 
 .navbar__item:hover {
-  color: #8DA4D3;
+  color: #8da4d3;
 }
 
 .hero--primary {
@@ -46,25 +72,25 @@
   color: #c1c2c5;
 }
 
-[data-theme='dark'] .footer {
-  background-color: #0D1421;
+[data-theme="dark"] .footer {
+  background-color: #0d1421;
   color: #c1c2c5;
 }
 
-[data-theme='dark'] .hero--primary {
-  background-color: #06090F;
+[data-theme="dark"] .hero--primary {
+  background-color: #06090f;
   color: #c1c2c5;
 }
 
 .footer__link-item:hover {
-  color: #8DA4D3;
+  color: #8da4d3;
   text-decoration: none;
 }
 .cls-1 {
-  fill: #06090F !important;
+  fill: #06090f !important;
 }
 
-[data-theme='dark'] .cls-1 {
+[data-theme="dark"] .cls-1 {
   fill: #c1c2c5 !important;
 }
 
@@ -82,10 +108,10 @@
   --ifm-color-primary-lighter: #1d2d4c;
   --ifm-color-primary-lightest: #203356;
   --ifm-code-font-size: 95%;
-  --ifm-font-family-base: 'faricy-new-web', sans-serif;
+  --ifm-font-family-base: "faricy-new-web", sans-serif;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #c4d0e8;
   --ifm-color-primary-dark: #a5b7dc;
   --ifm-color-primary-darker: #96abd6;
@@ -96,33 +122,33 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-
 /* Search Style Overrides */
 
 .aa-DetachedSearchButton {
   background-color: #192742 !important;
   color: #c1c2c5 !important;
-  border: 1px solid #8DA4D3 !important;
+  border: 1px solid #8da4d3 !important;
 }
 
 .aa-DetachedSearchButtonIcon {
   color: #c1c2c5 !important;
 }
 
-[data-theme='dark'] .aa-DetachedFormContainer {
+[data-theme="dark"] .aa-DetachedFormContainer {
   background-color: #192742 !important;
   color: #c1c2c5 !important;
 }
 .aa-Input .aa-SubmitButton {
   color: #c1c2c5 !important;
-  border: 1px solid #8DA4D3 !important;
+  border: 1px solid #8da4d3 !important;
 }
 
 .aa-SubmitIcon {
   color: #c1c2c5 !important;
 }
 
-.aa-Input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.aa-Input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #888889 !important;
   opacity: 1; /* Firefox */
 }

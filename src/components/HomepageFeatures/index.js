@@ -11,6 +11,7 @@ const FeatureList = [
   {
     title: "Video Tutorials",
     icon: <IconBrandYoutube size="8rem" stroke={1} />,
+    url: "https://www.youtube.com/playlist?list=PLfVK6bChUJrnvhsadbSC-Gs42l93bEPQE",
     description: (
       <>
         We have video tutorials to help you get started and configure your
@@ -21,19 +22,18 @@ const FeatureList = [
   {
     title: "Join the Community on Discord",
     icon: <IconBrandDiscord size="8rem" stroke={1} />,
+    url: "https://discord.igorbox.com",
     description: (
       <>
-        Join the community on{" "}
-        <a href="https://discord.gg/urGRjudMM2" target="_blank">
-          Discord
-        </a>{" "}
-        to get help from other users and the IgorBox team.
+        Join the community on Discord. to get help from other users and the
+        IgorBox team.
       </>
     ),
   },
   {
     title: "Contact Us for Support",
     icon: <IconMessage size="8rem" stroke={1} />,
+    url: "/docs/contact",
     description: (
       <>
         If you need help with your IgorBox, you can contact us directly for
@@ -43,14 +43,16 @@ const FeatureList = [
   },
 ];
 
-function Feature({ Svg, title, description, icon }) {
+function Feature({ Svg, title, description, icon, url }) {
   return (
-    <div className={clsx("col col--4")}>
-      <div className="text--center">{icon}</div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
+    <div className={clsx("col col--4", "landing-component")}>
+      <a href={url}>
+        <div className="text--center">{icon}</div>
+        <div className="text--center padding-horiz--md">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+      </a>
     </div>
   );
 }
