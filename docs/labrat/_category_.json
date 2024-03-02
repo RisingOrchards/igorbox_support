@@ -1,0 +1,12 @@
+{
+  "position": 20,
+  "label": "LabRat",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "LabRat Documentation",
+    "description": "The LabRat is a simple 1 input and 1 output box that can trigger many types of animated props/decorations."
+  }
+}
