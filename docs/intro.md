@@ -6,4 +6,4 @@ sidebar_position: 1
 
 Welcome! We are in pre-release early access with our IgorBox controllers. More docs will hit this space as we move out of our early access beta.
 
-If you'd like access to the early access beta, join our discord server at discord.igorbox.com and we'll be happy to get you on the list.
+If you'd like access to the early access beta, join our discord server at [https://discord.igorbox.com](https://discord.igorbox.com) and we'll be happy to get you on the list.
