@@ -19,10 +19,10 @@ function HomepageHeader() {
         </div>
         <div className="text--center padding-horiz--md">
           <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro"
+            className="button button--secondary button--lg margin--sm"
+            to="/docs/category/labrat"
           >
-            Get Started
+            Get Started with your LabRat
           </Link>
         </div>
       </div>

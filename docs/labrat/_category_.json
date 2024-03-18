@@ -6,7 +6,7 @@
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "LabRat Documentation",
+    "title": "Get Started with your LabRat",
     "description": "The LabRat is a simple 1 input, 1 motion, and 1 output box that can trigger many types of animated props/decorations."
   }
 }
