@@ -1,0 +1,16 @@
+mike:
+  name: Mike Heijmans
+  title: CTO @ Rising Orchards / IgorBox
+  #url: https://www.linkedin.com/in/mheijmans
+  image_url: /img/blog/mike-profile.png
+
+lisa:
+  name: Lisa Heijmans
+  title: CEO @ Rising Orchards / IgorBox
+  #url: https://www.linkedin.com/in/lisa-heijmans-64b3a6265/
+  image_url: /img/blog/lisa-profile.png
+
+brittany:
+  name: Brittany Hickman
+  title: Operations @ Rising Orchards / IgorBox
+  image_url: /img/blog/brittany-profile.png
