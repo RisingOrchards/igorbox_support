@@ -1,11 +1,14 @@
 ---
 slug: project-update-beta
-title: Project Update - Beta
-authors: [mheijmans]
-tags: [product-update, IgorBox, Beta]
+title: Project Update - October '23
+authors: [mike]
+tags: ["Product Updates", IgorBox, Beta]
+image: /img/blog/more-delays-blog.png
 ---
 
 It's the 16th of October and we would love to be so much further along than we are today. We have had an incredible amount of setbacks and delays, but we are still working on the beta and we are still working on getting it out to you as soon as possible. At the same time, I want to be transparent about what's been going on and why we are where we are.
+
+<!-- truncate -->
 
 ## The Good
 

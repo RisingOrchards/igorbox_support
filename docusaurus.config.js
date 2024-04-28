@@ -48,14 +48,15 @@ const config = {
 
         blog: {
           showReadingTime: true,
-          path: "releases",
-          routeBasePath: "changelog",
+          path: "blog",
+          routeBasePath: "blog",
           postsPerPage: 10,
+          //blogSidebarTitle: "All posts",
+          //blogSidebarCount: "ALL",
           feedOptions: {
             type: "all",
-            title: "IgorBox ChangeLog",
-            description:
-              "Information about IgorBox releases and their changes.",
+            title: "IgorBox Blog",
+            description: "The latest news and updates from the IgorBox team.",
             copyright: `Copyright © ${new Date().getFullYear()} Rising Orchards, LLC`,
           },
           // Please change this to your repo.
@@ -97,10 +98,20 @@ const config = {
             position: "left",
             label: "Documentation",
           },
-          { to: "/changelog", label: "ChangeLog", position: "left" },
+          { to: "/blog", label: "Blog", position: "left" },
+          {
+            href: "/docs/contact",
+            label: "Contact Support",
+            position: "left",
+          },
           {
             href: "https://www.igorbox.com",
             label: "IgorBox Home",
+            position: "left",
+          },
+          {
+            href: "https://store.igorbox.com",
+            label: "IgorBox Store",
             position: "left",
           },
           {
@@ -151,16 +162,20 @@ const config = {
             title: "More",
             items: [
               {
-                label: "IgorBox ChangeLog",
-                to: "/changelog",
+                label: "IgorBox Blog",
+                to: "/blog",
+              },
+              {
+                label: "IgorBox Home",
+                href: "https://www.igorbox.com",
+              },
+              {
+                label: "Store",
+                href: "https://store.igorbox.com",
               },
               {
                 label: "Company News",
                 href: "https://risingorchards.com/news",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/RisingOrchards/igorbox_support",
               },
             ],
           },
@@ -175,6 +190,11 @@ const config = {
         accountId: 23439067,
         async: false, // OPTIONAL: sets the async attribute on the script tag, defaults to false
         defer: false, // OPTIONAL: sets the defer attribute on the script tag, defaults to false
+      },
+      colorMode: {
+        defaultMode: "dark",
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
       },
     }),
 };
