@@ -1,9 +1,8 @@
 ---
 slug: transworld-2024-feedback
-title: We Heard You at Transworld 2024
+title: We Heard You at Transworld
 authors: [mike]
 tags: ["Product Updates", IgorBox, Beta]
-# image: /img/blog/more-delays-blog.png
 ---
 
 We had a great time at Transworld 2024 and we wanted to thank everyone who stopped by our booth to check out the IgorBox controllers and give us feedback. We heard you loud and clear and we are working on making the changes that many of you suggested. We are also working on a few other surprises that we will be announcing soon.
@@ -12,13 +11,13 @@ We had a great time at Transworld 2024 and we wanted to thank everyone who stopp
 
 Here are some of the items that we heard from you that we have been busy working on:
 
-- Multiple user access support
 - The output box needs an onboard input trigger
-- DMX support
 - Backup modes for when the network is down
+- Multiple user access support
 - More detailed documentation
 - Easier setup and configuration
 - Easier to use programming interface
+- DMX support
 
 We are also working on a few other surprises that we will be announcing soon.
 
