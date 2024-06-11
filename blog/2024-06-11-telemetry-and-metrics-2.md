@@ -20,17 +20,17 @@ Before we can talk about what changed, we need to talk about what we had before.
 
 I want to stress that I don't believe telemetry is a "nice to have" feature/toy. I believe it is a "must have" feature. You can't improve what you can't measure and you can't measure what you can't see. We needed to fix this and we needed to fix it fast.
 
-### How Did It Work Before?
+## How Did It Work Before?
 
 When an IgorBox is online, it would capture all the metrics onboard and every 60 seconds it would send a message to the server with all the metrics. This meant that the data wouldn't be real-time and the box needed to use its onboard (and limited) resources to save telemetry data and handle shipping that data on a schedule. Beyond that, if the IgorBox lost connection to the cloud servers, it caused all kinds of strange problems with the box and firmware.
 
-### How Does It Work Now?
+## How Does It Work Now?
 
 We have completely re-architected the telemetry system to be more reliable, more real-time, and to completely remove the requirement on the IgorBox and its limited resources. The last thing is a huge win because the IgorBox can now focus on doing what it does best, controlling things!
 
 When an IgorBox changes its state (ie: a relay turns on or off, a sensor value changes, etc), it sends a message to the server with that data. This notification is used to keep the cloud server up to date with the state of the IgorBox. This system was already in place, working well, and is just part of the firmware that runs the IgorBox peripherals. Basically, it is sending this notification data anyway so why not use it for telemetry? This means that the telemetry data is now real-time and we have some really cool plans for this aspect of the data in the future so stay tuned!
 
-Anyway, the server receives this notification and a telemetry watcher receives the data and stores it in a time-series database in its raw form. So we are getting up to the second data stored in a reliable way. We can then use this data to generate graphs, reports, and rollups. As an example you can see that we have rolled up a full day into a single graph with a sum for each hour or you can zoom in to see the data for a single minute!
+Anyway, the server receives this notification and a telemetry watcher receives the data and stores it in a time-series database in its raw form. So we are getting up to the millisecond data stored in a reliable way. We can then use this data to generate graphs, reports, and rollups. As an example you can see that we have rolled up a full day into a single graph with a sum for each hour or you can zoom in to see the data for a single minute!
 
 ![Graphs](/img/blog/graphs1.png)
 
