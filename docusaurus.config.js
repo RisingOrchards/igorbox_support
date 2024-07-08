@@ -133,12 +133,12 @@ const config = {
             title: "Getting Started Docs",
             items: [
               {
-                label: "Setup Your IgorBox",
-                to: "/docs/intro",
+                label: "Connect your IgorBox",
+                to: "/docs/igorbox/connect",
               },
               {
-                label: "Control Your IgorBox",
-                to: "/docs/intro",
+                label: "Getting Started with LabRat",
+                to: "/docs/category/labrat",
               },
             ],
           },
@@ -147,7 +147,7 @@ const config = {
             items: [
               {
                 label: "Join the Discord",
-                href: "https://discord.gg/urGRjudMM2",
+                href: "https://discord.igorbox.com",
               },
               {
                 label: "Subscribe on YouTube",

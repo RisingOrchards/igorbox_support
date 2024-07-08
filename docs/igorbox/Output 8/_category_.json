@@ -1,0 +1,12 @@
+{
+  "position": 100,
+  "label": "Output 8",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "The Output 8 Docs",
+    "description": "The Output 8 is our 8 channel relay output box to control up to 8 things."
+  }
+}

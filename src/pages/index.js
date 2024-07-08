@@ -20,6 +20,13 @@ function HomepageHeader() {
         <div className="text--center padding-horiz--md">
           <Link
             className="button button--secondary button--lg margin--sm"
+            to="/docs/igorbox/connect"
+          >
+            Connect your IgorBox
+          </Link>
+
+          <Link
+            className="button button--secondary button--lg margin--sm"
             to="/docs/category/labrat"
           >
             Get Started with your LabRat
