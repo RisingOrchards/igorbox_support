@@ -1,0 +1,12 @@
+{
+  "position": 10,
+  "label": "IgorBox",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "Get Started with your IgorBox",
+    "description": "The IgorBox is our flagship product line."
+  }
+}
