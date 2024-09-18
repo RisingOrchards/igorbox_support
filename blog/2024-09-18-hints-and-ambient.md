@@ -5,7 +5,9 @@ authors: [lisa]
 tags: ["Product Updates", IgorBox, Beta, Features]
 ---
 
-We have a couple cool new features we want to talk about today. The first of which is the hints system!
+We have a couple cool new features we want to talk about today including a new hints system and ambient composition support for IgorBoxes. We also have a new Firmware release (version 1.0.5) that includes a bunch of bug fixes and improvements. Let's dive in!
+
+<!-- truncate -->
 
 ## Hints System
 
