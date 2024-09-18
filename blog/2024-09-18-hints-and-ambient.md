@@ -15,6 +15,14 @@ Starting today, you'll be able to toggle hints on and off in the IgorBox web int
 
 ![Hints Button](/img/blog/hint-button.png)
 
+If you're on a smaller screen like a mobile device, you tap on the top left "hamburger" menu and you'll find the "Show Hints" toggle there.
+
+![Hints Button Mobile](/img/blog/hint-button-mobile.png)
+
+:::note
+The hints system relies on mouse hover actions, so it is not available on touch devices. We are still trying to figure out a good way to implement hints on touch devices, so stay tuned for updates on that.
+:::
+
 When the hints system is active, hovering over elements on a page will give a detailed explaination and even some pro-tips on how to use that element. This is a great way to learn how to use the IgorBox web interface and to get the most out of it.
 
 ![Hints Example](/img/blog/hints-header.png)
