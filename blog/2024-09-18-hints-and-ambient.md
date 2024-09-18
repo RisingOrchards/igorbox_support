@@ -9,7 +9,7 @@ We have a couple cool new features we want to talk about today. The first of whi
 
 ## Hints System
 
-Starting today, you'll be able to toggle hints on and off in the IgorBox web interface. This is a great way to get a little extra help when you're first starting out or if you're trying to figure out how to do something new. If you look at the top right of the header next to your name, there's a little "i" icon. Clicking on that will toggle hints on and off. When it's green, hints are on. When it's gray, hints are off.
+Starting today, you'll be able to toggle hints on and off in the IgorBox web interface. This is a great way to get a little extra help when you're first starting out or if you're trying to figure out how to do something new. If you click on your name in the top right corner of the screen, you'll see a "Show Hints" toggle that you can use to turn hints on and off.
 
 ![Hints Button](/img/blog/hint-button.png)
 
