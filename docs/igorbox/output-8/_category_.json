@@ -6,7 +6,7 @@
   "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "The Output 8 Docs",
-    "description": "The Output 8 is our 8 channel relay output box to control up to 8 things."
+    "title": "The Output 8",
+    "description": "The Output 8 is our 8 channel relay output box to control up to 8 switchable things."
   }
 }
