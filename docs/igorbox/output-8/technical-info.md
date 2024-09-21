@@ -40,7 +40,7 @@ We realize these relays are rated for AC voltage at mains levels. **We absolutel
 
 ## LEDs and Indicators
 
-We designed the system to go dark with the change of configuration. This means that the LEDs are software controlled. This allows us to change the behavior of the LEDs based on the configuration of the relay. As an example, why setting a channel to "normal closed", the firmware will turn the relay on and the LED off. This way, the LED will show the state of the channel (based on your composition or manual control), not the state of the relay.
+We designed the system to go dark with the change of configuration in the web interface. This means that the LEDs are software controlled. This allows us to change the behavior of the LEDs based on the configuration of the relay. As an example, why setting a channel to "normal closed", the firmware will turn the relay on and the LED off. This way, the LED will show the state of the channel (based on your composition or manual control), not the state of the relay.
 
 If you elect to turn the LEDs of in the web console, the firmware will turn them off and they will stay off until you turn them back on or you go into manual control mode.
 
@@ -48,7 +48,7 @@ If you elect to turn the LEDs of in the web console, the firmware will turn them
 
 The onboard audio Digital to Analog Converter (DAC) is a [Texas Instruments PCM5102A](https://www.ti.com/product/PCM5102A). This is a 24-bit DAC that can handle sample rates well into the audiophile range.
 
-Being audio snobs ourselves, we wanted to make sure that the audio quality was top-notch, so we spent a great deal of time and testing to make sure the audio circuits are very clean and free of noise.
+Being audio snobs ourselves, we spent a great deal of time designing and testing to make sure the audio sound is clean and free of noise even at high amplifaction levels.
 
 Beyond this, we support lossless audio formats like FLAC and WAV, so you can be sure that your audio will sound great! (We also support MP3 and AAC for those that need smaller file sizes).
 
