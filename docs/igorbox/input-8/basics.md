@@ -3,7 +3,7 @@ sidebar_position: 1
 description: "Getting started with your Input 8 IgorBox"
 ---
 
-# Getttin Started
+# Getting Started
 
 The IgorBox Input 8 is our flagship 8 input device. It is designed to be a simple and reliable way to read and control up to 8 inputs from IgorBox.com. The Input 8 is perfect for reading sensors, buttons, footswitches, and other devices that provide a simple on/off voltage signal.
 
