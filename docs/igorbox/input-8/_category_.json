@@ -1,0 +1,12 @@
+{
+  "position": 200,
+  "label": "Input 8",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "The Input 8",
+    "description": "The Input 8 is our 8 channel optically isolated input box to trigger shows."
+  }
+}
