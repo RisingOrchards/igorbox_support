@@ -130,11 +130,23 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Getting Started Docs",
+            title: "Getting Started",
             items: [
+              {
+                label: "IgorBox Basics",
+                to: "/docs/igorbox/getting-started",
+              },
               {
                 label: "Connect your IgorBox",
                 to: "/docs/igorbox/connect",
+              },
+              {
+                label: "Getting Started with Output 8",
+                to: "/docs/category/output-8",
+              },
+              {
+                label: "Getting Started with Input 8",
+                to: "/docs/category/input-8",
               },
               {
                 label: "Getting Started with LabRat",
@@ -179,8 +191,12 @@ const config = {
                 href: "https://store.igorbox.com",
               },
               {
-                label: "Company News",
-                href: "https://risingorchards.com/news",
+                label: "Feedback and Bug Reports",
+                href: "https://feedback.igorbox.com",
+              },
+              {
+                label: "System Status",
+                href: "https://status.igorbox.com",
               },
             ],
           },
