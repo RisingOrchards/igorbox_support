@@ -19,17 +19,39 @@ function HomepageHeader() {
         </div>
         <div className="text--center padding-horiz--md">
           <Link
-            className="button button--secondary button--lg margin--sm"
-            to="/docs/igorbox/connect"
+            className="button--secondary button--lg margin--sm btn-grad"
+            to="/docs/intro"
           >
-            Connect your IgorBox
+            Get Started with your IgorBox
           </Link>
-
+        </div>
+        <div className="buttons__bar">
+          <p>Jump to specific device documentation:</p>
+        </div>
+        <div className="text--center padding-horiz--md">
+          <Link
+            className="button button--secondary button--lg margin--sm"
+            to="/docs/igorbox/getting-started"
+          >
+            IgorBox Basics
+          </Link>
+          <Link
+            className="button button--secondary button--lg margin--sm"
+            to="/docs/category/output-8"
+          >
+            Output 8
+          </Link>
+          <Link
+            className="button button--secondary button--lg margin--sm"
+            to="/docs/category/input-8"
+          >
+            Input 8
+          </Link>
           <Link
             className="button button--secondary button--lg margin--sm"
             to="/docs/category/labrat"
           >
-            Get Started with your LabRat
+            Lab Rat
           </Link>
         </div>
       </div>

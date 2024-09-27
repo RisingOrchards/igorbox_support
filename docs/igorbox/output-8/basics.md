@@ -3,7 +3,7 @@ sidebar_position: 1
 description: "Getting started with an Output 8 IgorBox"
 ---
 
-# Getting Started
+# Getting Started with Output 8
 
 The IgorBox Output 8 is our flagship 8 relay output device. It is designed to be a simple and reliable way to control and program up to 8 relays from IgorBox.com. The Output 8 is perfect for controlling pnuematics, lights, motors, and other devices that require a simple on/off control.
 
