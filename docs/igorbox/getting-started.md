@@ -40,13 +40,13 @@ In addition to using a dedicated network, we recommend hiding the SSID of the ne
 
 The IgorBox Output 8 is our flagship 8 relay output device. It is designed to be a simple and reliable way to control and program up to 8 relays from IgorBox.com. The Output 8 is perfect for controlling pnuematics, lights, motors, and other devices that require a simple on/off control.
 
-You can read the Output 8 [Documentation](/docs/igorbox/output-8) for more information.
+You can read the Output 8 [Documentation](/docs/category/output-8) for more information.
 
 ### IgorBox Input 8
 
 The IgorBox Input 8 is our flagship 8 input device. It is designed to be a simple and reliable way to read and control up to 8 inputs from IgorBox.com. The Input 8 is perfect for reading sensors, buttons, footswitches, and other devices that provide a simple on/off voltage signal.
 
-You can read the Input 8 [Documentation](/docs/igorbox/input-8) for more information.
+You can read the Input 8 [Documentation](/docs/category/input-8) for more information.
 
 ### IgorBox DMX
 
