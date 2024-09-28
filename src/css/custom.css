@@ -17,6 +17,11 @@
   font-size: 1.5em;
 }
 
+.action-button {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 .btn-grad {
   background-image: linear-gradient(
     to right,
@@ -35,6 +40,7 @@
   border: 2px solid #fff;
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
+  display: block;
 }
 
 .btn-grad:hover {
