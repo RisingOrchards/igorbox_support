@@ -81,10 +81,7 @@ const config = {
     ],
   ],
 
-  plugins: [
-    require.resolve("docusaurus-lunr-search"),
-    require.resolve("docusaurus-plugin-hubspot"),
-  ],
+  plugins: [require.resolve("docusaurus-lunr-search")],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -206,11 +203,6 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-      },
-      hubspot: {
-        accountId: 23439067,
-        async: false, // OPTIONAL: sets the async attribute on the script tag, defaults to false
-        defer: false, // OPTIONAL: sets the defer attribute on the script tag, defaults to false
       },
       colorMode: {
         defaultMode: "dark",

@@ -26,7 +26,6 @@
     "@tabler/icons-react": "2.34.0",
     "clsx": "^1.2.1",
     "docusaurus-lunr-search": "^3.5.0",
-    "docusaurus-plugin-hubspot": "^1.0.1",
     "prism-react-renderer": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
