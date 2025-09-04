@@ -2,23 +2,87 @@
 sidebar_position: 5
 ---
 
-# Configuring the LabRat G2
+import Link from "@docusaurus/Link";
+
+# Configuration
 
 We offer a couple ways to configure your new LabRat G2. No more menu driving on a tiny screen with a single knob.
 
 ## SD Card Configuration
 
+<div
+  style={{
+    textAlign: "center",
+    margin: "2rem 0",
+    padding: "2rem",
+    background:
+      "linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%)",
+    borderRadius: "12px",
+    border: "1px solid rgba(102, 126, 234, 0.2)",
+  }}
+>
+  <Link
+    to="./configurator"
+    style={{
+      display: "inline-block",
+      padding: "1rem 3rem",
+      fontSize: "1.25rem",
+      fontWeight: 700,
+      color: "white",
+      background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      borderRadius: "8px",
+      textDecoration: "none",
+      boxShadow: "0 4px 14px rgba(102, 126, 234, 0.4)",
+      transition: "transform 0.2s ease, box-shadow 0.2s ease",
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.transform = "translateY(-2px)";
+      e.currentTarget.style.boxShadow = "0 6px 20px rgba(102, 126, 234, 0.5)";
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.transform = "translateY(0)";
+      e.currentTarget.style.boxShadow = "0 4px 14px rgba(102, 126, 234, 0.4)";
+    }}
+  >
+    🛠️ Use the Configuration Generator Tool
+  </Link>
+  <p
+    style={{
+      marginTop: "1.25rem",
+      marginBottom: 0,
+      fontSize: "1rem",
+      color: "var(--ifm-color-emphasis-800)",
+      fontWeight: 500,
+    }}
+  >
+    <strong style={{ color: "var(--ifm-color-primary-darker)" }}>
+      No coding required!
+    </strong>{" "}
+    Generate your config.json file with our easy-to-use tool.
+  </p>
+  <p
+    style={{
+      marginTop: "0.5rem",
+      fontSize: "0.875rem",
+      color: "var(--ifm-color-emphasis-600)",
+      fontStyle: "italic",
+    }}
+  >
+    Perfect for beginners • Visual interface • Instant download
+  </p>
+</div>
+
 For almost everything, you can configure it with the SD Card. This includes behavior settings (ie: Random Retrigger or Delay Trigger), WiFi connection, even firmware updating and resetting the memory.
 
-:::info
-Don't worry about creating and editing configuration files in a text editor. We provide a [LabRat G2 Configurator](./configurator) for you to just plugin your values, and generate the file for the SD Card.
+:::tip
+If you prefer a visual interface over editing JSON files, we highly recommend using our [Configuration Generator Tool](./configurator) above. It will create a properly formatted config.json file that you can download and copy to your SD card.
 :::
 
 ### Hot Reload
 
 The micro SD Card is "hot loadable" which means that inserting the card while the LabRat is on, it will read and update without rebooting.
 
-It's important to understand what happens when you pull the card while it's running thought. In an effort to prevent interruption in your show, we don't immediately revert to what's stored on the LabRat's internal memory. Pulling the SD Card will leave everything running the it was. The only thing is that audio is played from the SD Card, so pulling the card, will stop any audio playback.
+It's important to understand what happens when you pull the card while it's running thought. In an effort to prevent interruption in your show, we don't immediately revert to what's stored on the LabRat's internal memory. Pulling the SD Card will leave everything running the way it was. The only thing is that audio is played from the SD Card, so pulling the card, will stop any audio playback.
 
 When you insert the card, the system will read the card and update settings immediately.
 
