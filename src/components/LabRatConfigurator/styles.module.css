@@ -343,6 +343,11 @@
   color: var(--ifm-font-color-base);
 }
 
+[data-theme='dark'] .select option {
+  background: #1b1b1d;
+  color: #e1e1e3;
+}
+
 [data-theme='dark'] .input:hover,
 [data-theme='dark'] .select:hover {
   border-color: rgba(134, 142, 150, 0.5);

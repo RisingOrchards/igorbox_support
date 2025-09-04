@@ -51,7 +51,13 @@ function HomepageHeader() {
             className="button button--secondary button--lg margin--sm"
             to="/docs/category/labrat"
           >
-            Lab Rat
+            LabRat
+          </Link>
+          <Link
+            className="button button--secondary button--lg margin--sm"
+            to="/docs/labrat/g2/configurator"
+          >
+            LabRat G2 Configurator
           </Link>
         </div>
       </div>
