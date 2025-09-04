@@ -14,6 +14,22 @@ For almost everything, you can configure it with the SD Card. This includes beha
 Don't worry about creating and editing configuration files in a text editor. We provide a [LabRat G2 Configurator](./configurator) for you to just plugin your values, and generate the file for the SD Card.
 :::
 
+### Hot Reload
+
+The micro SD Card is "hot loadable" which means that inserting the card while the LabRat is on, it will read and update without rebooting.
+
+It's important to understand what happens when you pull the card while it's running thought. In an effort to prevent interruption in your show, we don't immediately revert to what's stored on the LabRat's internal memory. Pulling the SD Card will leave everything running the it was. The only thing is that audio is played from the SD Card, so pulling the card, will stop any audio playback.
+
+When you insert the card, the system will read the card and update settings immediately.
+
+:::warning
+In some cases, a hot reload may cause the LabRat to do something unintended. This is can happen when the card is actively being read or written to, like when ambient audio is actively playing off of the SD Card. The system is very good at correcting for these cases, but sometimes a reboot is best to reset things fully.
+:::
+
+:::tip
+When in doubt --> Reboot it Out
+:::
+
 ### File and Folder Structure
 
 When an SD Card is inserted for the first time, the LabRat will place the folder structure for you.
