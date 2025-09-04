@@ -25,7 +25,7 @@ For the latest news about the IgorBox MKII:
 
 ## Need Help with Current Products?
 
-- [IgorBox Original Documentation](../igorbox/getting-started)
-- [LabRat G1 Documentation](../labrat/g1/quick_start)
-- [LabRat G2 Documentation](../labrat/g2/)
+- [IgorBox Original Documentation](/docs/igorbox/getting-started)
+- [LabRat G1 Documentation](/docs/labrat/g1/quick_start)
+- [LabRat G2 Documentation](/docs/labrat/g2/overview)
 - [Contact Support](/docs/contact)
