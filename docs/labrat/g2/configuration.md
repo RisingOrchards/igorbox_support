@@ -1,0 +1,118 @@
+---
+sidebar_position: 5
+---
+
+# Configuring the LabRat G2
+
+We offer a couple ways to configure your new LabRat G2. No more menu driving on a tiny screen with a single knob.
+
+## SD Card Configuration
+
+For almost everything, you can configure it with the SD Card. This includes behavior settings (ie: Random Retrigger or Delay Trigger), WiFi connection, even firmware updating and resetting the memory.
+
+:::info
+Don't worry about creating and editing configuration files in a text editor. We provide a [LabRat G2 Configurator](./configurator) for you to just plugin your values, and generate the file for the SD Card.
+:::
+
+### File and Folder Structure
+
+When an SD Card is inserted for the first time, the LabRat will place the folder structure for you.
+
+```
+  SD Card/
+    ├── media/
+    │   ├── audio_file1.mp3
+    │   └── another_audiofile.flac
+    ├── routines/
+    │   ├── igorbox_routine.json
+    │   └── another_routine.json
+    └── triggers/
+        └── igorbox_trigger.json
+```
+
+:::info
+You can use any folder structure inside the media folder that makes sense for you.
+:::
+
+:::note
+The routines and triggers folder are used by IgorBox mode and do nothing in other modes.
+:::
+
+### General Configuration
+
+The general configuration is handled through a file named `config.json`. This file configures everything on the LabRat G2.
+
+An Example config file looks like this:
+
+```json
+{
+  "configMode": "SDCARD", // can be "SDCARD", "STANDARD", or "IGORBOX"
+  "show": {
+    "mode": "DELAY",
+    "delaySecs": 0,
+    "onTimeSecs": 5,
+    "resetSecs": 5,
+    "audio": "sound.mp3", // (looks in the media folder for this file ie: /media/sound.mp3)
+    "audioDelaySecs": 0
+  },
+  "ambient": {
+    "audio": "ambient_sound_1.flac", // (looks in the media folder for this file ie: /media/ambient_sound_1.flac)
+    "ambientDelaySecs": 0
+  }
+}
+```
+
+### Config Mode
+
+There are 3 config modes:
+
+- `SDCARD` - in this mode, the SDCARD is used to control the LabRat. Nothing is saved to the onboard flash in this case.
+- `STANDARD` - in this mode, the configuration in the `config.json` is saved to the onboard flash memory.
+- `IGORBOX` - in this mode, the LabRat syncs to your IgorBox account and is able to do full show playback!
+
+### Show Settings
+
+This section configures the main LabRat G2 functions.
+
+You can set the following values:
+
+- `mode` - Can be `DELAY`, `RETRIGGER`, or `MOTION` (if installed)
+- `delaySecs` - This is the delay (in seconds) to wait after a trigger happens before activating the output
+- `rangeSecs` - This is used by `RETRIGGER` mode for time range for the random retrigger to happen in
+- `onTimeSecs` - This is how long the output relay should stay on (setting this to 0 will cause it to blip on)
+- `resetSecs` - This is the time to wait after the output turns off before a trigger can happen again
+- `audio` - the audio file to play when the trigger happens (looks for this file in the `/media` directory)
+- `audioDelaySecs` - This is the time to wait after a trigger before playing the audio file
+
+:::info
+For more info on Modes you can read our examples in the [LabRat G1 Docs](/docs/labrat/g1/modes)
+:::
+
+### Ambient Settings
+
+This section sets the background audio when the LabRat is not triggered.
+
+- `audio` - The audio file to play in a loop. This file must be in the media directory of the SD Card
+- `ambientDelaySecs` - This is the amount of time to wait before starting the Ambient loop after a trigger has completed
+
+## WiFi
+
+Connecting your LabRat to your WiFi is super easy.
+
+Create a file on your SD Card called `wifi.json` with the contents:
+
+```json
+{
+  "ssid": "<ssid>",
+  "password": "<password>"
+}
+```
+
+This is the minimum config for a secure wiFi access point.
+
+If you need to set more advanced options, these settings are also supported:
+
+- `authType` - you can set a specific auth method (`WPA2` is the default)
+- `ip` - a static ip address (requires gateway and subnet to be set)
+- `gateway` - the static ip gateway setting
+- `subnet` - the subnet for your static ip address

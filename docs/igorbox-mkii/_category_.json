@@ -1,0 +1,12 @@
+{
+  "position": 15,
+  "label": "IgorBox MKII",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "IgorBox MKII Documentation",
+    "description": "The next generation of IgorBox - enhanced features and capabilities for advanced automation control."
+  }
+}

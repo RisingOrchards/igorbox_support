@@ -1,0 +1,39 @@
+---
+sidebar_position: 10
+---
+
+import LabRatConfigurator from "@site/src/components/LabRatConfigurator";
+
+# LabRat G2 Configurator
+
+Use this tool to generate a `config.json` file for your LabRat G2. Simply fill in your desired settings and click "Download config.json" to get your configuration file.
+
+<LabRatConfigurator />
+
+## About the Configurator
+
+This configurator helps you create the configuration file mentioned in the [Configuration Guide](./configuration). It generates a properly formatted `config.json` file that you can copy to your SD card.
+
+### Supported Features
+
+- **Configuration Modes**: SD Card, Standard (save to memory), or IgorBox sync
+- **Trigger Modes**: Delay, Random Retrigger, or Motion detection
+- **Timing Settings**: Configure delays, on-time, and reset periods
+- **Audio Support**: Add trigger sounds and ambient background audio
+- **Live Preview**: See your configuration in JSON format before downloading
+
+### Tips for Using the Configurator
+
+1. **Audio Files**: Make sure your audio file names match exactly what you'll put in the `/media` folder on your SD card
+2. **Timing Values**: All time values are in seconds - you can use decimal values (e.g., 0.5 for half a second)
+3. **Optional Fields**: Leave audio fields blank if you don't want to use audio features
+4. **Mode Selection**: Choose the configuration mode that best fits your use case:
+   - **SD Card Mode**: Best for testing and frequent changes
+   - **Standard Mode**: Good for permanent installations
+   - **IgorBox Mode**: For advanced show synchronization
+
+### Need Help?
+
+- Review the full [Configuration Documentation](./configuration) for detailed explanations
+- Check the [LabRat G1 Modes](../g1/modes) for examples of different trigger modes
+- Join our [Discord community](https://discord.igorbox.com) for support
