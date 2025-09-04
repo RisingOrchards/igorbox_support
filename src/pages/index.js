@@ -25,6 +25,14 @@ function HomepageHeader() {
             Get Started with your IgorBox
           </Link>
         </div>
+        <div className="text--center padding-horiz--md action-button">
+          <Link
+            className="button--secondary button--lg margin--sm btn-grad"
+            to="/docs/labrat/g2/configurator"
+          >
+            LabRat G2 Configurator Tool
+          </Link>
+        </div>
         <div className="buttons__bar">
           <p>Jump to specific device documentation:</p>
         </div>
@@ -51,7 +59,7 @@ function HomepageHeader() {
             className="button button--secondary button--lg margin--sm"
             to="/docs/category/labrat"
           >
-            Lab Rat
+            LabRat
           </Link>
         </div>
       </div>
