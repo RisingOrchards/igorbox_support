@@ -1,0 +1,12 @@
+{
+  "position": 30,
+  "label": "Community",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "Community",
+    "description": "Join the IgorBox community on Discord, learn about our Discord bot Carl, and connect with other users."
+  }
+}

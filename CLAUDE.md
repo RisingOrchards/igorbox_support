@@ -15,6 +15,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Recent Updates
 
+### Community Documentation (October 2024)
+- Added new `/docs/community/` section for community-related documentation
+- Created Discord Bot (Carl) documentation with public-facing commands
+- Includes information about joining Discord server at https://discord.igorbox.com
+
 ### Documentation Reorganization (September 2024)
 - Restructured documentation to support multiple product versions:
   - LabRat split into G1 (original) and G2 (new) folders
@@ -37,13 +42,15 @@ This is a Docusaurus v3 documentation site with:
   - `/igorbox-mkii/` - IgorBox MKII documentation (placeholder for future release)
   - `/labrat/g1/` - LabRat G1 (original) documentation
   - `/labrat/g2/` - LabRat G2 documentation (new redesigned version)
+  - `/community/` - Community resources including Discord bot documentation
 - `/blog/` - Blog posts in markdown format
 - `/src/pages/` - Custom React pages (home page)
 - `/src/components/` - React components for custom functionality
 - `/src/theme/` - Theme overrides for Docusaurus components
 - `/static/` - Static assets (images, files)
 - `docusaurus.config.js` - Main configuration including navigation, footer, and plugins
-- `sidebars.js` - Documentation sidebar configuration
+- `sidebars.js` - Documentation sidebar configuration (uses auto-generated sidebars)
+- `_category_.json` - Category configuration files in each directory control sidebar appearance and ordering
 
 ### Product Versioning Strategy
 Documentation is organized by product line and generation/version:
@@ -64,6 +71,8 @@ Documentation is organized by product line and generation/version:
 - GitHub Repo: https://github.com/RisingOrchards/igorbox_support
 - Store: https://store.igorbox.com
 - Main Site: https://www.igorbox.com
+- Discord: https://discord.igorbox.com
+- Account Portal: https://account.igorbox.com
 
 ### Deployment
 - Automatic deployment to Vercel on merge to main branch
