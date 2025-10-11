@@ -21,7 +21,7 @@ Learn more about our [Discord Bot (Carl)](/docs/community/discord-bot) and avail
 
 ## Email
 
-If its outside of normal support hours, or you prefer to email us, you can email us at [help@igorbox.com](mailto:help@igorbox.com).
+If it's outside of normal support hours, or you prefer to email us, you can email us at [help@igorbox.com](mailto:help@igorbox.com).
 
 ## Phone
 

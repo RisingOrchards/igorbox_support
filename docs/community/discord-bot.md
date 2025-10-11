@@ -27,6 +27,8 @@ Type `/` in any channel and select a command from the menu. This is the easiest 
 
 **Example:** `/help`, `/remind_me`, `/dad-joke`
 
+![Carl's slash commands](./images/carlcommands.jpg)
+
 ### 2. @Mentions (In Server Channels)
 
 Mention **@Carl** followed by keywords in any server channel.
@@ -68,6 +70,22 @@ Show all available commands based on your role
 **Usage:** `/help`
 
 **Also works:** `@Carl help` or DM `help`
+
+### /set_timezone
+
+Set your timezone for personalized time displays
+
+**Usage:** `/set_timezone <timezone>`
+
+**Examples:**
+
+- `/set_timezone America/New_York`
+- `/set_timezone America/Chicago`
+- `/set_timezone America/Los_Angeles`
+- `/set_timezone Europe/London`
+- `/set_timezone Asia/Tokyo`
+
+This ensures all times Carl shows you are in your local timezone, and your reminders fire at the right time for you.
 
 ### /verify_me
 
