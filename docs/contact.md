@@ -8,9 +8,20 @@ Our support team is available to help you with any questions you may have about 
 
 The standard support team hours are Monday through Friday, 8am to 6pm Eastern Time.
 
+## Discord (Recommended for Quick Help)
+
+Join our Discord community at [discord.igorbox.com](https://discord.igorbox.com) for the fastest support! Our community and staff are active and ready to help.
+
+- Ask questions in the **help-and-support** forum channel
+- Get help from other IgorBox users
+- Mention **@Staff** or **@Engineering** for technical issues
+- Use our Discord bot **Carl** for automated assistance
+
+Learn more about our [Discord Bot (Carl)](/docs/community/discord-bot) and available commands.
+
 ## Email
 
-If its outside of normal support hours, or you prefer to email us, you can email us at [help@igorbox.com](mailto:help@igorbox.com).
+If it's outside of normal support hours, or you prefer to email us, you can email us at [help@igorbox.com](mailto:help@igorbox.com).
 
 ## Phone
 
