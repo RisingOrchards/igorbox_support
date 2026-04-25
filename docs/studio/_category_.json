@@ -1,0 +1,12 @@
+{
+  "position": 15,
+  "label": "IgorBox Studio",
+  "collapsible": true,
+  "collapsed": false,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "IgorBox Studio",
+    "description": "The web app where you build, deploy, and monitor your show. Timeline editor, Logic Rules, webhooks, controller groups, ambient routines, manual control."
+  }
+}

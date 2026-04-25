@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Shared concepts",
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "Shared Controller Concepts",
+    "description": "Concepts that apply to every IgorBox controller in the current lineup — provisioning, wiring, status indicators, the front button, error codes, and more."
+  }
+}

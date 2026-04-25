@@ -1,0 +1,12 @@
+{
+  "position": 10,
+  "label": "IgorBox MKI",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "gray",
+  "link": {
+    "type": "generated-index",
+    "title": "IgorBox MKI (Legacy)",
+    "description": "The original IgorBox lineup: Output 8 and Input 8. No longer in active production. For new attractions, see the Output 8 MKII and Input 16 under Controllers."
+  }
+}

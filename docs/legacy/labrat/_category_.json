@@ -1,0 +1,12 @@
+{
+  "position": 20,
+  "label": "LabRat",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "gray",
+  "link": {
+    "type": "generated-index",
+    "title": "LabRat (Legacy)",
+    "description": "The LabRat is a simple 1 input, 1 motion, 1 output box that can trigger many types of animated props/decorations. No longer in active production but remains supported."
+  }
+}

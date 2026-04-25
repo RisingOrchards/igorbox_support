@@ -1,5 +1,6 @@
 ---
 sidebar_position: 900
+description: "How to reach the IgorBox support team"
 ---
 
 # Contacting Support

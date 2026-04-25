@@ -1,0 +1,12 @@
+{
+  "position": 90,
+  "label": "Legacy Products",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "gray",
+  "link": {
+    "type": "generated-index",
+    "title": "Legacy Products",
+    "description": "Documentation for IgorBox products that are no longer in active production. These products remain supported, but new attractions should look at the current lineup under Controllers."
+  }
+}

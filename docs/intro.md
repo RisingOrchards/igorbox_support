@@ -2,16 +2,33 @@
 sidebar_position: 1
 pagination_next: null
 pagination_prev: null
+description: "Welcome to the IgorBox documentation"
 ---
 
-# Getting Started
+# Welcome
 
-The IgorBox system is a networked show controller system that allows you to control your show from anywhere in the world. The system is made up of a series of devices that can be connected to your account and programmed through the web interface. We designed the system to grow with your needs so you can start small and expand as your show grows.
+IgorBox is a cloud-connected show control platform built for haunts, escape rooms, and immersive attractions. Program your show in **IgorBox Studio**, deploy it to your **controllers**, and let the platform keep everything in sync, monitored, and updateable from anywhere — even when the internet isn't.
 
-You will find categories in the left navigation. Each category contains information about a specific device or topic. If you are new to IgorBox, we recommend starting with the **[IgorBox Basics](/docs/igorbox/getting-started) guide**.
+## The current lineup
 
-Also, don't forget there is a search bar at the top of the page that you can use to find specific information.
+| Controller | What it's for |
+| --- | --- |
+| [Output 8 MKII](/docs/controllers/output-8-mkii/overview) | Eight outputs with software-configurable Multistate Relay™ technology — switch any channel between standard relay and solid-state on the fly. |
+| [Input 16](/docs/controllers/input-16/overview) | Sixteen optically isolated inputs (6–48V AC/DC). Centralize triggers across an attraction or build elaborate escape room puzzles. |
+| [LED Controller](/docs/controllers/led-controller/overview) | Sixteen dimmable channels for panel LEDs, pinspots, puzzle boards, or motor speed control. |
+
+Every controller speaks the same language: WAGO® connectors on every terminal, Easywire™ guided wiring, Magic Provision setup, Ethernet or WiFi, and a stereo audio output.
+
+## The platform
+
+[**IgorBox Studio**](/docs/studio/overview) is the web app where you do everything else: create shows on a video-editor-style timeline, wire up game logic with [Logic Rules](/docs/studio/logic-rules/overview), call out to other systems with [webhooks](/docs/studio/webhooks/inbound), monitor your devices, and push updates over the air.
+
+## Where to start
+
+- New to IgorBox? Start with [IgorBox Studio: Getting Started](/docs/studio/getting-started).
+- Have a controller in hand? Jump to its overview above.
+- Looking for the [Output 8 MKI / Input 8 / LabRat](/docs/legacy/igorbox-mki/getting-started) documentation? It's archived under Legacy Products.
 
 :::important
-We are here to help! If you have any questions or need assistance, feel free to reach out to us on Discord at [discord.igorbox.com](https://discord.igorbox.com) or [contact support](/docs/contact). We even have a phone number if you prefer to talk to someone directly! If you reach our voicemail, please leave a message and we will get back to you as soon as possible.
+We're here to help. If you have questions, find us on Discord at [discord.igorbox.com](https://discord.igorbox.com) or [contact support](/docs/contact). There's a phone number on the contact page if you'd rather talk to someone — leave a voicemail and we'll call back.
 :::

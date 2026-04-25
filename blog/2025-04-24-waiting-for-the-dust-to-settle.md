@@ -7,17 +7,17 @@ tags: ["Haunt Industry", IgorBox, Tradeshows]
 
 Back in February I wrote a blog post explaining why we weren't going to make it to Transworld. You can read that [here](/blog/not-making-transworld).
 
-I wanted to expand a little on what the plans for IgorBox are in the face of all the uncertainty in the United States manufacturing and trade climate. It's no secret that a majority of our electronics components are made in China and we utilize a manufacturer located in Hong Kong for our circuit board assembly. This is problematic for us given that tariffs are so uncertain right now.
+I wanted to expand a little on what the plans for IgorBox are in the face of all the uncertainty in the United States manufacturing and trade climate. Like a lot of small electronics businesses, our supply chain reaches overseas, and the recent tariff changes are squeezing us in ways we have to plan around.
+
+<!-- truncate -->
 
 To start, I want to give a small break down of how the tariffs affect us and our products.
 
-Firstly, I want to talk about the manufacture and assembly of our PCBs. This is a bulk of the underlying cost of our devices. To make the numbers easier, I'm going to use some round numbers.
+Firstly, the manufacture and assembly of our PCBs makes up a large share of the underlying cost of our devices. With the current tariff rates, the effective import cost of a finished PCB can be more than double what we pay our manufacturer for it. Our margins aren't large enough to absorb that, so without changes we'd have to raise prices in ways we're not comfortable with.
 
-If the PCB costs us $100 to make, with the Tariff rate (currently) at 145%, we would need to pay the government $145 to import that PCB. This means the effective cost of that PCB is now $245. I hope you can see how this is not good for a small electronics business like ours. I can tell you that our margin is not that high so we are forced to increase prices beyond what we are comfortable with if we change nothing.
+Based on this, it's clear that we need to revisit where our manufacturing is done if tariffs stay where they are. That's a real challenge for us — we recently finished tooling and stocking up at our existing manufacturing partner, and shifting takes time and money. We've paused new production while we evaluate alternative partners and run samples and test builds with them.
 
-Based on this first problem, it's clear that we need to move manufacturing out of Hong Kong if the tariffs are going to continue like this. This presents a bit of a challenge for us at IgorBox because we literally just finished tooling and stocking up in the Hong Kong location back in November. We have halted our operations with the Hong Kong manufacturer for the moment while we explore other options. We have been working to identify alternatives and have a few we are working with for samples and test runs.
-
-This brings us to the second issue I mentioned. Most electronic components are made in China. We rely heavily on the Espressif ESP32 micro controllers and many of our other components are manufactured in China. Regardless of manufacturing location for our PCBs, the components are subject to the 145% tariff as well. To try and reduce this cost, we have launched a full review of all of our schematics to find alternative options for some of the more expensive components.
+The second issue is the components themselves. A lot of the parts we use are subject to the same tariffs no matter where the boards are assembled. To reduce that exposure, we've launched a full review of our schematics to identify alternative parts for the most expensive items where we can do so without compromising quality.
 
 With all this said, I am sure we are not the only electronics company in this situation and I know that many of our friends, colleagues, partners, and competitors also face this same dilemma. I'm also positive that we are all looking at similar options and avenues to ease the retail costs while delivering quality products. I know that paying more for the same thing is not something anyone is interested in doing, and I certainly don't want to raise prices either.
 

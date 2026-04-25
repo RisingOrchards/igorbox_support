@@ -1,0 +1,11 @@
+{
+  "position": 25,
+  "label": "Webhooks",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "title": "Webhooks",
+    "description": "Trigger your IgorBox show from external systems, and have your show fire HTTP requests out to other services."
+  }
+}
