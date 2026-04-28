@@ -1,0 +1,11 @@
+{
+  "position": 10,
+  "label": "Timeline Editor",
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "Timeline Editor",
+    "description": "The video-editor-style show editor — tracks, clips, PWM envelopes, audio, live preview, deploys, and version history."
+  }
+}

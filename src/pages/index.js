@@ -28,38 +28,38 @@ function HomepageHeader() {
         <div className="text--center padding-horiz--md action-button">
           <Link
             className="button--secondary button--lg margin--sm btn-grad"
-            to="/docs/labrat/g2/configurator"
+            to="/docs/studio/getting-started"
           >
-            LabRat G2 Configurator Tool
+            IgorBox Studio Quick Start
           </Link>
         </div>
         <div className="buttons__bar">
-          <p>Jump to specific device documentation:</p>
+          <p>Jump to specific controller documentation:</p>
         </div>
         <div className="text--center padding-horiz--md">
           <Link
             className="button button--secondary button--lg margin--sm"
-            to="/docs/igorbox/getting-started"
+            to="/docs/controllers/output-8-mkii/overview"
           >
-            IgorBox Basics
+            Output 8 MKII
           </Link>
           <Link
             className="button button--secondary button--lg margin--sm"
-            to="/docs/category/output-8"
+            to="/docs/controllers/input-16/overview"
           >
-            Output 8
+            Input 16
           </Link>
           <Link
             className="button button--secondary button--lg margin--sm"
-            to="/docs/category/input-8"
+            to="/docs/controllers/led-controller/overview"
           >
-            Input 8
+            LED Controller
           </Link>
           <Link
             className="button button--secondary button--lg margin--sm"
-            to="/docs/category/labrat"
+            to="/docs/studio/overview"
           >
-            LabRat
+            IgorBox Studio
           </Link>
         </div>
       </div>

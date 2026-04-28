@@ -81,7 +81,44 @@ const config = {
     ],
   ],
 
-  plugins: [require.resolve("docusaurus-lunr-search")],
+  plugins: [
+    require.resolve("docusaurus-lunr-search"),
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        redirects: [
+          // Legacy IgorBox MKI archive
+          { from: "/contact", to: "/docs/contact" },
+          { from: "/docs/igorbox/getting-started", to: "/docs/legacy/igorbox-mki/getting-started" },
+          { from: "/docs/igorbox/connect", to: "/docs/legacy/igorbox-mki/connect" },
+          { from: "/docs/igorbox/wifi", to: "/docs/legacy/igorbox-mki/wifi" },
+          { from: "/docs/igorbox/local_management", to: "/docs/legacy/igorbox-mki/local_management" },
+          { from: "/docs/igorbox/output-8/basics", to: "/docs/legacy/igorbox-mki/output-8/basics" },
+          { from: "/docs/igorbox/output-8/wiring-guide", to: "/docs/legacy/igorbox-mki/output-8/wiring-guide" },
+          { from: "/docs/igorbox/output-8/error-codes", to: "/docs/legacy/igorbox-mki/output-8/error-codes" },
+          { from: "/docs/igorbox/output-8/technical-info", to: "/docs/legacy/igorbox-mki/output-8/technical-info" },
+          { from: "/docs/igorbox/input-8/basics", to: "/docs/legacy/igorbox-mki/input-8/basics" },
+          { from: "/docs/igorbox/input-8/wiring-guide", to: "/docs/legacy/igorbox-mki/input-8/wiring-guide" },
+          { from: "/docs/igorbox/input-8/error-codes", to: "/docs/legacy/igorbox-mki/input-8/error-codes" },
+          { from: "/docs/igorbox/input-8/technical-info", to: "/docs/legacy/igorbox-mki/input-8/technical-info" },
+          // Legacy LabRat archive
+          { from: "/docs/labrat/g1/quick_start", to: "/docs/legacy/labrat/g1/quick_start" },
+          { from: "/docs/labrat/g1/modes", to: "/docs/legacy/labrat/g1/modes" },
+          { from: "/docs/labrat/g1/ui", to: "/docs/legacy/labrat/g1/ui" },
+          { from: "/docs/labrat/g1/tech_specs", to: "/docs/legacy/labrat/g1/tech_specs" },
+          { from: "/docs/labrat/g2/overview", to: "/docs/legacy/labrat/g2/overview" },
+          { from: "/docs/labrat/g2/configuration", to: "/docs/legacy/labrat/g2/configuration" },
+          { from: "/docs/labrat/g2/configurator", to: "/docs/legacy/labrat/g2/configurator" },
+          { from: "/docs/labrat/g2/firmware", to: "/docs/legacy/labrat/g2/firmware" },
+          { from: "/docs/labrat/g2/reset", to: "/docs/legacy/labrat/g2/reset" },
+          // Old category landing pages — redirect to a real page inside each category
+          { from: "/docs/category/output-8", to: "/docs/legacy/igorbox-mki/output-8/basics" },
+          { from: "/docs/category/input-8", to: "/docs/legacy/igorbox-mki/input-8/basics" },
+          { from: "/docs/category/labrat", to: "/docs/legacy/labrat/g2/overview" },
+        ],
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -130,24 +167,24 @@ const config = {
             title: "Getting Started",
             items: [
               {
-                label: "IgorBox Basics",
-                to: "/docs/igorbox/getting-started",
+                label: "Documentation Home",
+                to: "/docs/intro",
               },
               {
-                label: "Connect your IgorBox",
-                to: "/docs/igorbox/connect",
+                label: "Output 8 MKII",
+                to: "/docs/controllers/output-8-mkii/overview",
               },
               {
-                label: "Getting Started with Output 8",
-                to: "/docs/category/output-8",
+                label: "Input 16",
+                to: "/docs/controllers/input-16/overview",
               },
               {
-                label: "Getting Started with Input 8",
-                to: "/docs/category/input-8",
+                label: "LED Controller",
+                to: "/docs/controllers/led-controller/overview",
               },
               {
-                label: "Getting Started with LabRat",
-                to: "/docs/category/labrat",
+                label: "IgorBox Studio",
+                to: "/docs/studio/overview",
               },
             ],
           },

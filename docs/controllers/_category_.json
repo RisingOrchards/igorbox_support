@@ -1,0 +1,12 @@
+{
+  "position": 10,
+  "label": "Controllers",
+  "collapsible": true,
+  "collapsed": false,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "IgorBox Controllers",
+    "description": "Hardware reference for the current IgorBox controller lineup: Output 8 MKII, Input 16, and LED Controller. Plus shared concepts that apply to every controller — Easywire™, Magic Provision, the front button, and more."
+  }
+}

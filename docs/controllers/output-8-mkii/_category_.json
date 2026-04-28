@@ -1,0 +1,12 @@
+{
+  "position": 10,
+  "label": "Output 8 MKII",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "Output 8 MKII",
+    "description": "The next evolution of the Output 8. Software-configurable Multistate Relay™ outputs, two high-current relays, two optically isolated inputs, WAGO® terminals, Easywire™."
+  }
+}

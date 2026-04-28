@@ -1,0 +1,12 @@
+{
+  "position": 20,
+  "label": "Input 16",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "Input 16",
+    "description": "Sixteen optically isolated inputs for centralized triggering, escape room puzzle logic, and immersive game design. WAGO® terminals, Easywire™, remote channel banks via Ethernet."
+  }
+}

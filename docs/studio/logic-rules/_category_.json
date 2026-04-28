@@ -1,0 +1,11 @@
+{
+  "position": 20,
+  "label": "Logic Rules",
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "Logic Rules",
+    "description": "Wire inputs to outputs with delays, counters, latches, and random logic — without writing code."
+  }
+}

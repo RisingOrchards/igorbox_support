@@ -1,0 +1,198 @@
+---
+sidebar_position: 5
+---
+
+import Link from "@docusaurus/Link";
+
+# Configuration
+
+We offer a couple ways to configure your new LabRat G2. No more menu driving on a tiny screen with a single knob.
+
+## SD Card Configuration
+
+<div
+  style={{
+    textAlign: "center",
+    margin: "2rem 0",
+    padding: "2rem",
+    background:
+      "linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%)",
+    borderRadius: "12px",
+    border: "1px solid rgba(102, 126, 234, 0.2)",
+  }}
+>
+  <Link
+    to="./configurator"
+    style={{
+      display: "inline-block",
+      padding: "1rem 3rem",
+      fontSize: "1.25rem",
+      fontWeight: 700,
+      color: "white",
+      background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      borderRadius: "8px",
+      textDecoration: "none",
+      boxShadow: "0 4px 14px rgba(102, 126, 234, 0.4)",
+      transition: "transform 0.2s ease, box-shadow 0.2s ease",
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.transform = "translateY(-2px)";
+      e.currentTarget.style.boxShadow = "0 6px 20px rgba(102, 126, 234, 0.5)";
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.transform = "translateY(0)";
+      e.currentTarget.style.boxShadow = "0 4px 14px rgba(102, 126, 234, 0.4)";
+    }}
+  >
+    🛠️ Use the Configuration Generator Tool
+  </Link>
+  <p
+    style={{
+      marginTop: "1.25rem",
+      marginBottom: 0,
+      fontSize: "1rem",
+      color: "var(--ifm-color-emphasis-800)",
+      fontWeight: 500,
+    }}
+  >
+    <strong style={{ color: "var(--ifm-color-primary-darker)" }}>
+      No coding required!
+    </strong>{" "}
+    Generate your config.json file with our easy-to-use tool.
+  </p>
+  <p
+    style={{
+      marginTop: "0.5rem",
+      fontSize: "0.875rem",
+      color: "var(--ifm-color-emphasis-600)",
+      fontStyle: "italic",
+    }}
+  >
+    Perfect for beginners • Visual interface • Instant download
+  </p>
+</div>
+
+For almost everything, you can configure it with the SD Card. This includes behavior settings (ie: Random Retrigger or Delay Trigger), WiFi connection, even firmware updating and resetting the memory.
+
+:::tip
+If you prefer a visual interface over editing JSON files, we highly recommend using our [Configuration Generator Tool](./configurator) above. It will create a properly formatted config.json file that you can download and copy to your SD card.
+:::
+
+### Hot Reload
+
+The micro SD Card is "hot loadable" which means that inserting the card while the LabRat is on, it will read and update without rebooting.
+
+It's important to understand what happens when you pull the card while it's running thought. In an effort to prevent interruption in your show, we don't immediately revert to what's stored on the LabRat's internal memory. Pulling the SD Card will leave everything running the way it was. The only thing is that audio is played from the SD Card, so pulling the card, will stop any audio playback.
+
+When you insert the card, the system will read the card and update settings immediately.
+
+:::warning
+In some cases, a hot reload may cause the LabRat to do something unintended. This is can happen when the card is actively being read or written to, like when ambient audio is actively playing off of the SD Card. The system is very good at correcting for these cases, but sometimes a reboot is best to reset things fully.
+:::
+
+:::tip
+When in doubt --> Reboot it Out
+:::
+
+### File and Folder Structure
+
+When an SD Card is inserted for the first time, the LabRat will place the folder structure for you.
+
+```
+  SD Card/
+    ├── media/
+    │   ├── audio_file1.mp3
+    │   └── another_audiofile.flac
+    ├── routines/
+    │   ├── igorbox_routine.json
+    │   └── another_routine.json
+    └── triggers/
+        └── igorbox_trigger.json
+```
+
+:::info
+You can use any folder structure inside the media folder that makes sense for you.
+:::
+
+:::note
+The routines and triggers folder are used by IgorBox mode and do nothing in other modes.
+:::
+
+### General Configuration
+
+The general configuration is handled through a file named `config.json`. This file configures everything on the LabRat G2.
+
+An Example config file looks like this:
+
+```json
+{
+  "configMode": "SDCARD", // can be "SDCARD", "STANDARD", or "IGORBOX"
+  "show": {
+    "mode": "DELAY",
+    "delaySecs": 0,
+    "onTimeSecs": 5,
+    "resetSecs": 5,
+    "audio": "sound.mp3", // (looks in the media folder for this file ie: /media/sound.mp3)
+    "audioDelaySecs": 0
+  },
+  "ambient": {
+    "audio": "ambient_sound_1.flac", // (looks in the media folder for this file ie: /media/ambient_sound_1.flac)
+    "ambientDelaySecs": 0
+  }
+}
+```
+
+### Config Mode
+
+There are 3 config modes:
+
+- `SDCARD` - in this mode, the SDCARD is used to control the LabRat. Nothing is saved to the onboard flash in this case.
+- `STANDARD` - in this mode, the configuration in the `config.json` is saved to the onboard flash memory.
+- `IGORBOX` - in this mode, the LabRat syncs to your IgorBox account and is able to do full show playback!
+
+### Show Settings
+
+This section configures the main LabRat G2 functions.
+
+You can set the following values:
+
+- `mode` - Can be `DELAY`, `RETRIGGER`, or `MOTION` (if installed)
+- `delaySecs` - This is the delay (in seconds) to wait after a trigger happens before activating the output
+- `rangeSecs` - This is used by `RETRIGGER` mode for time range for the random retrigger to happen in
+- `onTimeSecs` - This is how long the output relay should stay on (setting this to 0 will cause it to blip on)
+- `resetSecs` - This is the time to wait after the output turns off before a trigger can happen again
+- `audio` - the audio file to play when the trigger happens (looks for this file in the `/media` directory)
+- `audioDelaySecs` - This is the time to wait after a trigger before playing the audio file
+
+:::info
+For more info on Modes you can read our examples in the [LabRat G1 Docs](/docs/legacy/labrat/g1/modes)
+:::
+
+### Ambient Settings
+
+This section sets the background audio when the LabRat is not triggered.
+
+- `audio` - The audio file to play in a loop. This file must be in the media directory of the SD Card
+- `ambientDelaySecs` - This is the amount of time to wait before starting the Ambient loop after a trigger has completed
+
+## WiFi
+
+Connecting your LabRat to your WiFi is super easy.
+
+Create a file on your SD Card called `wifi.json` with the contents:
+
+```json
+{
+  "ssid": "<ssid>",
+  "password": "<password>"
+}
+```
+
+This is the minimum config for a secure wiFi access point.
+
+If you need to set more advanced options, these settings are also supported:
+
+- `authType` - you can set a specific auth method (`WPA2` is the default)
+- `ip` - a static ip address (requires gateway and subnet to be set)
+- `gateway` - the static ip gateway setting
+- `subnet` - the subnet for your static ip address

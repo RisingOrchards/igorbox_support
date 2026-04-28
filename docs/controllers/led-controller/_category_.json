@@ -1,0 +1,12 @@
+{
+  "position": 30,
+  "label": "LED Controller",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "LED Controller",
+    "description": "Sixteen dimmable PWM channels for panel LEDs, pinspots, puzzle boards, and motor speed control. Pair it with the RGBW-PWR breakout for up to 120W of lighting per controller."
+  }
+}
