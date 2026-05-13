@@ -11,14 +11,11 @@ const FeatureList = [
   {
     title: "Video Tutorials",
     icon: <IconBrandYoutube size="8rem" stroke={1} />,
-    //url: "https://www.youtube.com/playlist?list=PLfVK6bChUJrnvhsadbSC-Gs42l93bEPQE",
+    url: "https://www.youtube.com/@igorboxcontrol/playlists?view=1&sort=dd&shelf_id=4",
     description: (
       <>
         We have video tutorials to help you get started and configure your
         IgorBox for those that are visual learners.
-        <br />
-        <br />
-        <i>Coming Soon</i>
       </>
     ),
   },
