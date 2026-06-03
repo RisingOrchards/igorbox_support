@@ -84,6 +84,12 @@ const config = {
   plugins: [
     require.resolve("docusaurus-lunr-search"),
     [
+      "docusaurus-plugin-mcp-server",
+      {
+        server: { name: "igorbox-docs", version: "1.0.0" },
+      },
+    ],
+    [
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
