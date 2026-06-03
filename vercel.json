@@ -1,0 +1,6 @@
+{
+  "functions": {
+    "api/mcp.mjs": { "includeFiles": "build/mcp/**" }
+  },
+  "rewrites": [{ "source": "/mcp", "destination": "/api/mcp" }]
+}
