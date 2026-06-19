@@ -35,9 +35,16 @@ For each wired input, you choose when it fires the show:
 - **Off** — when the input turns off (button released, sensor clears).
 - **Both** — either change fires it.
 
-## Play or stop
+## Trigger actions
 
-A trigger's **action** is normally **Play**, but you can set it to **Stop** instead — so one input plays a scene and another stops it. When a show is stopped, the controller returns to its [ambient routine](/docs/studio/ambient-routines) if one is set.
+A trigger's **action** is what happens when the input fires. You can pick:
+
+- **Play** — play the show.
+- **Stop** — stop the show; the controller returns to its [ambient routine](/docs/studio/ambient-routines) if one is set.
+- **Soft Lock** — lock the target controller: stops the running show and blocks new ones until it's unlocked. (The same lock as the front button's [Safety Lock](/docs/studio/front-button-modes) mode.)
+- **Hard Lock** — a stronger [Hard Lock](/docs/studio/front-button-modes): stops everything and keeps the controller locked until it's rebooted.
+
+Play and Stop target a **show**; the two locks target one or more **controllers** you choose. Because triggers reach across your whole Studio, you can wire one input to lock a *different* controller — perfect for a single "stop everything" or emergency-stop button.
 
 ## Where a trigger runs
 

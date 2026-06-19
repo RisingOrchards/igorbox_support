@@ -35,7 +35,7 @@ When you set this mode, the front button shows up as an input in the [Logic Rule
 
 ### Safety Lock
 
-A short press toggles a lock that **immediately stops the currently running show and prevents new shows from being triggered** on the controller. Press the button again to unlock — but this only works if the button is what locked it. If the controller was locked another way (by a Logic Rule or a system event), pressing the button will not unlock it.
+A short press toggles a lock that **immediately stops the currently running show and prevents new shows from being triggered** on the controller. Press the button again to unlock — but this only works if the button is what locked it. If the controller was locked another way — for example, by a **Trigger** set to lock it — pressing the button will not unlock it.
 
 The status LED indicates the locked state, and Studio shows the controller as **Locked**.
 
@@ -57,9 +57,9 @@ You can choose what each output does while the controller is locked, hold its cu
 
 #### Safe States
 
-In the channel configuration tab, when hard lock is active, you'll see "Safe State" for each channel. The default is to hold like the Soft Lock does. This will pause all action exactly where it is when the Hard Lock is activated.
+In the channel configuration tab, when hard lock is active, you'll see "Safe State" for each channel. The default is to hold like the Safety Lock does. This will pause all action exactly where it is when the Hard Lock is activated.
 
-Unlike a Soft Lock, you can override this. You can force something to "off" or 0. This can be a logical off state like "Off" on an inverted channel would turn it "On"... or a true power off state like a maglock that is on an inverted channel actually is powered off and safely opens. You can also choose a specific setting you want the channel to go to. This can be useful for turning on lights to full brightness or parking an animatronic in a safe way. 
+Unlike a Safety Lock, you can override this. You can force something to "off" or 0. This can be a logical off state like "Off" on an inverted channel would turn it "On"... or a true power off state like a maglock that is on an inverted channel actually is powered off and safely opens. You can also choose a specific setting you want the channel to go to. This can be useful for turning on lights to full brightness or parking an animatronic in a safe way. 
 
 ## Interaction with Logic Rules
 

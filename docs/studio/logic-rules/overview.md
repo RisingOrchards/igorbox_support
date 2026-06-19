@@ -29,6 +29,10 @@ For the simple case — "this input plays this show" — you don't need a rule a
 
 Reach for the full Logic Rules editor (**Rules** in the sidebar) when a scene depends on more than a single input — combinations, timing, counting, or state. Drag in whatever building blocks you need; the rest of this section covers them.
 
+:::info
+**Triggers are free; Logic Rules are a paid feature.** Triggers — wiring an input to play, stop, or lock a show or controller — are included on every plan. The full Logic Rules editor (gates, timers, counters, puzzles) is available on the **Builder** plan and up.
+:::
+
 ## Rules run on the controller
 
 Rules run on your controllers, not in the cloud. That means rule logic continues to work even if the cloud goes offline. The cloud's only job is to author and push out the rules — once they're on the box, they're independent.
