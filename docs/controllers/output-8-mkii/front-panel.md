@@ -16,7 +16,7 @@ From left to right:
 | Element | What it tells you |
 | --- | --- |
 | Status LED | Overall controller state — see [Status LED](/docs/controllers/shared/status-led) |
-| 8 RGB channel indicators | One per output channel. Lit when the channel is active; brightness tracks dimming level on solid-state-mode channels. |
+| 8 RGB channel indicators | One per output channel. Lit when the channel is active — see [Channel indicators](#channel-indicators) below. |
 | Front button | Configurable per controller — see [Front Button](/docs/controllers/shared/front-button) |
 
 ## Channel indicators

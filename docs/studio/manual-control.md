@@ -19,8 +19,8 @@ The controller's status LED pulses **blue** to indicate it's in manual control m
 
 The manual control panel shows one row per channel:
 
-- **Relay outputs** — a toggle button. Click to flip on/off.
-- **Dimmable outputs** (LED Controller channels, Multistate channels in solid-state mode) — a slider, 0–100%.
+- **Switching outputs** (Output 8 MKII relay and Multistate channels — either mode — and Input 16 relays) — a toggle button. Click to flip on/off.
+- **Dimmable outputs** (LED Controller channels) — a slider, 0–100%.
 - **Servo outputs** — a slider, 0–180°.
 - **Channel indicators** — drive the front-panel LED color directly, independent of any wired output.
 

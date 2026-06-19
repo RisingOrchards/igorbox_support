@@ -14,7 +14,7 @@ Magic Provision is how you connect a brand-new controller to your IgorBox Studio
 - A user account that's allowed to add controllers
 
 :::tip
-Add your WiFi credentials to your Studio account under **Studio Settings** *before* provisioning your controller. When it provisions, it will pick those up automatically — you can unplug the ethernet afterward and it'll roam to WiFi on the next boot.
+Add your WiFi credentials to your Studio account under **Studio Settings** _before_ provisioning your controller. When it provisions, it will pick those up automatically — you can unplug the ethernet afterward and it'll roam to WiFi on the next boot.
 :::
 
 ## Step by step
@@ -41,13 +41,13 @@ If it stays in slow blue blink for more than a couple of minutes after you've ad
 
 ## Troubleshooting
 
-| What you see | What's likely happening |
-| --- | --- |
-| You typed the setup ID in Studio but Studio doesn't find it | The controller may already be associated with another Studio account (common with second-hand hardware). [Contact support](/docs/contact) and we can help sort out the transfer. |
-| Setup ID typo | The setup ID is case-insensitive, but the digits matter. Re-read the sticker. The character after `0` is a zero, not a letter `O`. |
+| What you see                                                        | What's likely happening                                                                                                                                                                                                                                   |
+| ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| You typed the setup ID in Studio but Studio doesn't find it         | The controller may already be associated with another Studio account (common with second-hand hardware). [Contact support](/docs/contact) and we can help sort out the transfer.                                                                          |
+| Setup ID typo                                                       | The setup ID is case-insensitive, but the digits matter. Re-read the sticker.                                                                                                                                                                             |
 | Controller stays in slow blue blink after you've added it in Studio | The controller can't reach our provisioning service. Check the [Connectivity](connectivity) requirements (DNS, outbound HTTPS to the IgorBox domains). If you're on WiFi, plug in ethernet temporarily — provisioning is much more forgiving over a wire. |
-| LED stays orange (slow breath) for more than ~30 seconds | The controller didn't get past boot. Power-cycle it. If it persists, see [Error Codes](error-codes). |
-| LED is solid red and blinking in bursts | Hardware error during boot. Count the blinks per burst and check [Error Codes](error-codes). |
+| LED stays orange (slow breath) for more than ~30 seconds            | The controller didn't get past boot. Power-cycle it. If it persists, see [Error Codes](error-codes).                                                                                                                                                      |
+| LED is solid red and blinking in bursts                             | Hardware error during boot. Count the blinks per burst and check [Error Codes](error-codes).                                                                                                                                                              |
 
 ## Re-provisioning a used controller
 

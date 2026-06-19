@@ -45,9 +45,9 @@ Do not use a power supply that is rated for more than 24VDC. Doing so can and wi
 
 ### Why use a different power supply?
 
-The voltage you supply will be exposed on the "Power" section in the middle of the I/O connector block. This can be a convenient way to get power to devices through jumpering (which we'll cover in the [Wiring Guide](/docs/legacy/igorbox-mki/output-8/wiring-guide)).
+The voltage you supply will be exposed on the "Power" section in the middle of the I/O connector block. This can be a convenient way to get power to devices through jumpering (which we'll cover in the [Wiring Guide](/docs/legacy/igorbox-mki/input-8/wiring-guide)).
 
-But basically, if you have 24VDC devices, you can power them directly from the Output 8 without needing a separate power supply.
+But basically, if you have 24VDC devices, you can power them directly from the Input 8 without needing a separate power supply.
 
 :::info
 The internal wiring bus is rated for 2 amps. If you need to power more than 2 amps, you will need to use an external power supply.
@@ -55,7 +55,7 @@ The internal wiring bus is rated for 2 amps. If you need to power more than 2 am
 
 ## Status LED
 
-The Status LED is a single color LED that indicates the status of the Output 8 using blink patterns.
+The Status LED is a single color LED that indicates the status of the Input 8 using blink patterns.
 
 | _Pattern_                       | _Meaning_                                                                                    |
 | ------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -97,6 +97,6 @@ The front button will only stop plabyack of a composition on it's own IgorBox. I
 
 ## Stereo Line Output
 
-The Output 8 has a stereo line output that can be used to connect to an external amplifier or speaker system. The line output is a 3.5mm stereo jack that outputs high quality line level signal.
+The Input 8 has a stereo line output that can be used to connect to an external amplifier or speaker system. The line output is a 3.5mm stereo jack that outputs high quality line level signal.
 
 The line output is always active and will output the audio from the currently playing composition.

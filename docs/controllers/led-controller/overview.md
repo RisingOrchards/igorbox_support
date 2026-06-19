@@ -7,7 +7,7 @@ description: "What the LED Controller is and how to get started with it"
 
 The LED Controller is a 16-channel low-current dimmable controller. Each onboard channel is a smooth dimming output, perfect for indicator-level loads — puzzle-board LEDs, signal indicators, low-power "puzzle solved" lights, or driving an external power stage that does the heavy switching.
 
-For real lighting loads — panel LEDs, pinspots, LED strips — pair it with the [RGBW-PWR breakout](rgbw-pwr-breakout). The breakout is what gets you up to 120 W of lighting per board.
+For real lighting loads — panel LEDs, pinspots, LED strips — pair it with the [RGBW-PWR breakout](rgbw-pwr-breakout). The breakout adds a power stage so four channels can drive up to 120W of lighting per board.
 
 It also has two isolated inputs you can wire into Logic Rules just like any other input.
 
@@ -27,8 +27,8 @@ Photo coming soon.
 | Storage | 32 GB onboard |
 | Front panel | Status LED, RGB channel indicators, configurable [front button](/docs/controllers/shared/front-button) |
 | Power | 9–24V DC, center-positive barrel jack |
-| Expansion | [RGBW-PWR breakout](rgbw-pwr-breakout) for up to 120W of lighting |
-| Remote channel banks | Yes — channels 9–12 and 13–16 can be hosted on other controllers |
+| Expansion | [RGBW-PWR breakout](rgbw-pwr-breakout) — higher-current / different-voltage output for 4 channels, up to 120W per board |
+| Channel breakouts | Channels 9–16 ship on two included [breakout boards](channel-breakouts), connected by a standard Ethernet cable |
 
 ## What 20 mA means in practice
 
@@ -69,6 +69,6 @@ For those, use the [RGBW-PWR breakout](rgbw-pwr-breakout). The breakout takes th
 - [Wiring Guide](wiring-guide)
 - [RGBW-PWR Breakout](rgbw-pwr-breakout) — the accessory for real lighting and motor loads
 - [Motor Speed Control](motor-speed-control)
-- [Remote Channel Banks](remote-channel-banks)
+- [Channel Breakout Boards](channel-breakouts)
 - [Front Panel](front-panel)
 - [Tech Specs](tech-specs)

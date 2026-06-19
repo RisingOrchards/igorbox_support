@@ -7,7 +7,7 @@ description: "What the Output 8 MKII is and how to get started with it"
 
 The Output 8 MKII is the next generation of the original Output 8, refined with feedback from the early-access program. It's the everyday workhorse of the IgorBox lineup — eight outputs, two isolated inputs, and Easywire™ guided wiring on every terminal.
 
-The marquee feature is our **Multistate Relay™** technology: six of the eight outputs can switch between standard relay and solid-state mode in software. You don't have to decide at install time whether a channel is for a slow-coil solenoid or a flicker-effect light — flip the mode in Studio and it's done.
+The marquee feature is our **Multistate Relay™** technology: six of the eight outputs can switch between standard relay and solid-state mode in software. You don't have to decide at install time whether a channel needs an isolated dry contact or a powered output driven straight off the controller's supply — flip the mode in Studio and it's done.
 
 :::caution
 Photo coming soon.
@@ -30,7 +30,7 @@ Photo coming soon.
 
 - **Pneumatic solenoids** — the 3A relays handle the inrush of slow-coil 24V valves
 - **Show lighting** — switch panel LEDs, pinspots, par cans, and floods
-- **Wiper motors and small DC motors** — Multistate Relay™ in solid-state mode gives clean speed control
+- **Powered DC loads** — Multistate Relay™ in solid-state mode drives solenoids and lights straight off the controller's supply, no extra power wiring
 - **Trigger inputs** — the two isolated inputs handle 6–48V AC/DC trigger signals
 
 ## Quick start

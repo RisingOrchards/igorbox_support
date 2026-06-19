@@ -5,20 +5,22 @@ description: "How Multistate Relay™ lets a single channel switch between relay
 
 # Multistate Relay™
 
-The big feature on the Output 8 MKII is **Multistate Relay™** — six of the eight output channels can act as either a standard mechanical relay *or* a solid-state output, and you flip between them in software.
+The big feature on the Output 8 MKII is **Multistate Relay™** — six of the eight output channels can act as either a standard mechanical relay _or_ a solid-state output, and you flip between them in software.
 
-You don't have to commit to a hardware role at install time. Wire the channel once, and let the show decide whether each cue wants a clean ON/OFF (relay) or a smooth dimming ramp (solid-state).
+In Standard relay mode, you have a bare contact relay. You can use it like a light switch. If you switch to "Solid State" mode, the power that you use to power the controller is passed through to the channel's output. You can use this to activate solenoids without jumper wires.
+
+Both modes switch ON and OFF — the difference is what's on the terminals. Relay mode gives you an isolated dry contact you pass your own power through. Solid-state mode hands you the controller's own supply voltage, already live, so you can drive a load straight off the box.
 
 ## Why it matters
 
-Traditional show controllers force you to choose a channel type when you specify the box. Want dimming on channel 5? Order the version with a solid-state board. Want to switch a 24V solenoid on channel 6? Order the relay version. Need both? Order two boxes.
+Traditional show controllers make you commit to a channel type when you order the box. Want an isolated dry contact on channel 5? Order the relay version. Want a powered output on channel 6 so you can fire a solenoid without running extra power wires? Order the solid-state version. Need both? Order two boxes.
 
 Multistate Relay™ collapses the decision. The same Output 8 MKII can run a haunt scene with:
 
-- **Channel 1 (relay mode)** — bumping a 24V pneumatic monster
-- **Channel 2 (solid-state mode)** — fading a panel LED in and out
-- **Channel 3 (solid-state mode)** — driving a small DC motor with smooth speed control
-- **Channel 4 (relay mode)** — switching a 12V mister
+- **Channel 1 (relay mode)** — switching a 24V pneumatic monster fed from its own supply
+- **Channel 2 (solid-state mode)** — powering a panel light straight off the controller, no jumper wiring
+- **Channel 3 (relay mode)** — switching a 12V mister on an isolated contact
+- **Channel 4 (solid-state mode)** — firing a 24V solenoid directly from the box's power
 - **Channel 7 (standard 3A relay)** — kicking a high-inrush wiper motor
 - **Channel 8 (standard 3A relay)** — switching a 24V show-control beacon
 
@@ -26,8 +28,8 @@ All on one box. All from one show in the timeline editor.
 
 ## When to use which mode
 
-- **Relay mode** — for switching things ON and OFF: AC loads, slow-coil solenoids, anything that doesn't need to dim.
-- **Solid-state mode** — for dimming and smooth ramps: panel LEDs, DC motor speed control, anything that needs to fade.
+- **Relay mode** — when the load brings its own power, runs on AC, or needs to be electrically isolated from the controller. The channel is a bare contact: you pass your own power through it, just like a switch.
+- **Solid-state mode** — when the load runs on the same DC voltage as the controller and you want to power it straight from the box. The channel sources the controller's supply, so the output is already live when it switches on — no jumper wires from the passthrough zone. DC only.
 
 Each Multistate channel is rated for **1.5A** in either mode. If you need more current, use channels 7 or 8 (the standard 3A relays).
 
@@ -40,9 +42,10 @@ Don't switch modes mid-cue — the channel needs a moment to transition.
 ## Limits
 
 - **Voltage**: 9–24V DC working range. Don't run mains through any IgorBox.
-- **AC loads**: only on relay-mode Multistate channels and on the two standard 3A relays. Solid-state mode is DC only.
+- **Solid-state output voltage**: whatever you feed the controller's supply. The channel passes the box's own power through, so it can't output a voltage you aren't already supplying.
+- **AC loads**: only on relay-mode Multistate channels and on the two standard 3A relays — those are dry contacts. Solid-state mode sources the controller's DC supply, so it's DC only.
 
 ## See also
 
 - [Wiring Guide](wiring-guide) — example wiring for both relay-mode and solid-state-mode loads
-- [Lighting](/docs/studio/timeline-editor/pwm-and-lighting) — driving solid-state-mode channels from the timeline
+- [Tech Specs](tech-specs) — current and voltage ratings for every channel

@@ -5,7 +5,7 @@ description: "Building dimming cues with control points and envelopes"
 
 # Lighting
 
-Lighting tracks are how you build dimming cues for the LED Controller, the Output 8 MKII's Multistate channels (in solid-state mode), and any other dimmable hardware. Servo tracks behave the same way; just substitute "0–180°" for "0–100%".
+Lighting tracks are how you build dimming cues for the LED Controller and any other dimmable hardware. (The Output 8 MKII's channels switch on and off rather than dim — those go on a relay track instead.) Servo tracks behave the same way; just substitute "0–180°" for "0–100%".
 
 ## Control points
 
