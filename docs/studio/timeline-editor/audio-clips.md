@@ -14,7 +14,7 @@ Two ways:
 - **Plus button** on an audio track header — opens the Media Browser. Pick a file or upload a new one. The clip lands at the playhead.
 - **Double-click empty space** in the audio track content area — same Media Browser, clip lands at the click position.
 
-The Media Browser is your audio library. Upload your audio there — most common formats work (WAV, FLAC, MP3, AAC/M4A, OGG and more), and Studio converts anything the controller can't play directly.
+The Media Browser is your audio library. Upload your audio there — supported formats are WAV, FLAC, and MP3, and Studio converts anything the controller can't play directly.
 
 ## Drag types
 
@@ -54,19 +54,17 @@ The right half automatically stays in sync with the audio so playback continues 
 
 ## Audio formats
 
-You can upload most common audio formats — WAV, FLAC, MP3, AAC/M4A, OGG and more — and Studio converts anything the controller can't play directly.
+You can upload WAV, FLAC, and MP3 files — and Studio converts anything the controller can't play directly.
 
 For best results, use **44.1 kHz, 16-bit, lossless** (WAV or FLAC). Studio flags anything outside that sweet spot on the media card. If a clip's format still isn't playable on the target controller, the deploy is blocked until you re-export it — see [Deploys and Versions](deploys-and-versions).
 
-## Multi-track audio
+## Layering sounds
 
-Each audio track is independent. You can have:
+The controller plays **one audio clip at a time**. Starting a new clip stops whatever was playing — clips don't stack or play on top of each other.
 
-- One track for ambient bed
-- One track for cue stingers
-- One track for dialog
+So if you want layered audio — an ambient bed *under* a stinger *under* dialog — mix those sounds together into a single audio file before you bring it into Studio. Drop that one combined file on a track, and everything in it plays together. Reach for this whenever you need more than one sound at the same moment.
 
-…all playing simultaneously.
+You can still use multiple audio tracks to stay organized while editing, but remember that on the controller the most recent clip to start is the one you'll hear.
 
 ## Track-level mute
 

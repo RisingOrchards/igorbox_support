@@ -19,7 +19,9 @@ There are three kinds:
 
 Watches a physical input on a controller — an opto-isolated input on an Input 16, Output 8 MKII, or LED Controller, or the front button (when the front button is set to Trigger mode).
 
-Fires when the input is asserted (button pressed, sensor active, etc.) and again when it stops.
+The input can be on **this controller or any other controller in your account** — so a button or sensor on one box can be a condition in a rule running on another. They just need to be on the same local network.
+
+You can choose when it reacts: when the signal turns **On** (button pressed, sensor active), when it turns **Off** (button released, sensor clear), or on **both**.
 
 The most common input. Wire a button to one of these and point it at a show — done.
 
@@ -33,7 +35,7 @@ Studio gives you the URL when you set up the [inbound webhook](/docs/studio/webh
 
 A signal another rule **on the same controller** can fire and listen for — handy for chaining rules together when one big rule would be too tangled.
 
-To *listen* for one, add an **Input** block and point it at the named trigger instead of a physical input. To *send* one, use the Named Trigger output (under Outputs, below). To coordinate *across* controllers, use a Show Trigger instead — those reach any show in your Studio.
+To *listen* for one, add an **Input** block and point it at the named trigger instead of a physical input. To *send* one, use the Named Trigger output (under Outputs, below). To coordinate *across* controllers, you have two options: watch another controller's input directly (see the Input block above), or use a Show Trigger to fire any show in your Studio.
 
 ## Logic
 
@@ -58,6 +60,12 @@ Fires when an **odd number** of its inputs is firing. With two inputs, that mean
 Holds a signal for a set amount of time before passing it along.
 
 Use for "wait two seconds after the door opens, then trigger the scare."
+
+You can also choose what happens if it fires *again* while it's still counting down:
+
+- **Restart** — throws away the old countdown and starts the full wait over from the top. Good for "keep resetting the timer as long as the guest keeps moving."
+- **Add time** — adds another full wait onto whatever's left, so repeated fires push the result further out.
+- **Hold** — ignores the extra fires and lets the original countdown finish on schedule.
 
 ### Counter
 
@@ -99,9 +107,9 @@ Resets stateful blocks (latches, counters, sequences) back to their starting sta
 
 ### Show Trigger
 
-Plays a show on a controller. Pick which show, pick which controller. Fire it from a rule.
+Plays a show — pick which show and which controller, then fire it from a rule. The show can live on a *different* controller than the rule, so one box's logic can drive a scene on another (same local network). Set its **action** to **Stop** instead of **Play** to end a show from a rule. A rule can hold several of these to fire or stop multiple shows at once — e.g. lighting on one box and audio on another from a single condition.
 
-The most common output. Most rules end with one or more of these.
+The most common output. Most rules end with one or more of these. (For a plain input-to-show link with no logic, you don't need a rule — see [Triggers](/docs/studio/triggers).)
 
 ### Webhook Emitter
 
@@ -118,6 +126,15 @@ Forces a specific output channel on (or off) and **holds it there** until it's r
 ### Play Sound
 
 Plays a sound straight from a rule (and can stop it again) — handy for a quick audio cue without building a whole show around it.
+
+### Lock Controller
+
+A rule doesn't only have to start or stop shows — it can also lock the controller.
+
+- **Safety Lock** — stops whatever show is running right away and blocks any new one from starting. Use it as an emergency stop.
+- **Hard Lock** — does the same, but stays locked until the controller is rebooted or power-cycled. Use it when a lockout should *not* be easy to clear.
+
+Wire one of these to a panic button, a tamper sensor, or any condition that should put the room into a safe, stopped state.
 
 ## Tips
 

@@ -28,6 +28,10 @@ In the Logic Rules editor, drag a **Webhook Emitter** block into the graph. Pick
 
 When the input fires, the webhook is called.
 
+:::note
+Outbound webhooks won't fire while the controller is locked (Safety Lock or Hard Lock), while it's in Manual Control, or while it's still starting up. In any of those states, rules that send webhooks are effectively paused.
+:::
+
 ## Where outbound webhooks can point
 
 Outbound webhooks must point to **public internet** addresses. They can't reach private/internal IPs, `localhost`, or addresses on your local network — that's a safety thing to prevent surprises.

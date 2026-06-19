@@ -28,6 +28,6 @@ Pick a show from **Then play another show** and that show starts automatically t
 A show plays until it ends (or loops) — unless something stops it. You can stop a running show by:
 
 - Pressing the **front button** when it's set to [Stop mode](/docs/studio/front-button-modes).
-- Firing a rule (or a show **Trigger**) whose **Show Trigger** action is set to **Stop** — see [Show Triggers](/docs/studio/logic-rules/show-triggers).
+- Firing a **Trigger** (or a rule) whose action is set to **Stop** — see [Triggers](/docs/studio/triggers).
 
 When a show is stopped, the controller returns to its [ambient routine](/docs/studio/ambient-routines) if one is set.

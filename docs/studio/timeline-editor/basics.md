@@ -30,12 +30,13 @@ A **track** is a row in the editor. Each track corresponds to one channel of one
 
 Track types:
 
-- **Relay** — for relay outputs (like the Output 8 MKII). Clips are simple ON pulses.
+- **Relay** — for relay outputs (like the Output 8 MKII). Clips are simple On pulses.
 - **Lighting** — for dimmable channels. Clips are envelopes you draw with control points.
-- **Servo** — for servo outputs. Same as lighting, but the value is an angle.
 - **Audio** — for audio clips. Per-clip volume, slip editing, waveform display.
 
-The editor only shows tracks for channels the targeted controllers actually have. If a show targets a controller without any servos, you won't see any servo tracks.
+The editor only shows tracks for channels the targeted controllers actually have. If a show targets a controller without any audio, you won't see any audio tracks.
+
+There's no separate track type for motors. To drive a motor's speed, use a regular dimmable (lighting) channel on the LED Controller.
 
 ## Tools
 
@@ -55,7 +56,7 @@ The toolbar in the transport gives you these tools:
 
 Switch to **Draw** mode. Click and drag in the track. You've created an ON pulse from your start drag to your release. Switch back to Select; drag the clip to move it, drag its edges to resize.
 
-### Lighting / Servo
+### Lighting
 
 In Draw mode on a lighting track, click anywhere in the track area to place a control point. The horizontal position becomes the time; the vertical position becomes the value. Click-and-hold to drag the control point you just placed. Hit Escape to bail out.
 

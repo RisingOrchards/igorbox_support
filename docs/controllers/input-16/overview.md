@@ -7,9 +7,7 @@ description: "What the Input 16 is and how to get started with it"
 
 The Input 16 is the central nervous system of your attraction. Sixteen isolated inputs in a single box, plus two relay outputs you can use for locks, small effects, or triggers to other systems. Buttons, footswitches, reed sensors, IR beams, RFID readers, escape room puzzle pieces, prop sensors — wire them all into one IgorBox and let [Logic Rules](/docs/studio/logic-rules/overview) do the rest.
 
-:::caution
-Photo coming soon.
-:::
+![https://assets.igorbox.cloud/product/input-16.png](https://assets.igorbox.cloud/product/input-16.png)
 
 ## What's in the box
 
@@ -20,7 +18,7 @@ Photo coming soon.
 | Connectors | WAGO® on every terminal |
 | Audio | Stereo line out (3.5 mm) |
 | Storage | 32 GB onboard |
-| Front panel | Status LED, RGB channel indicators, configurable [front button](/docs/controllers/shared/front-button) |
+| Front panel | Status LED, per-input activity lights (purple when on) and relay state lights, configurable [front button](/docs/controllers/shared/front-button) |
 | Power | 9–24V DC, center-positive barrel jack |
 | Channel breakouts | Inputs 9–16 ship on two included [breakout boards](channel-breakouts), connected by a standard Ethernet cable |
 
@@ -36,6 +34,8 @@ Photo coming soon.
 Putting all your inputs in one place changes how you design a show. With distributed inputs, you have to think about which controller "owns" each sensor and how triggers fan out across the network. With centralized inputs, you can treat every sensor as a global event.
 
 For escape rooms in particular, this is a huge unlock: you can build the entire room's puzzle logic visually as a single rule, with all 16 inputs feeding into it.
+
+And it isn't unique to the Input 16 — across IgorBox, every input is a global event. Any input on any controller can trigger any show on any other controller, or be used as a condition inside a [Logic Rule](/docs/studio/logic-rules/overview) running anywhere on your network. The Input 16 simply gives you the most inputs in one box; a single button on an Output 8 MKII three rooms away can feed the same rule.
 
 ## The two relay outputs
 

@@ -57,13 +57,13 @@ The internal wiring bus is rated for 2 amps. If you need to power more than 2 am
 
 The Status LED is a single color LED that indicates the status of the Input 8 using blink patterns.
 
-| _Pattern_                       | _Meaning_                                                                                    |
-| ------------------------------- | -------------------------------------------------------------------------------------------- |
-| Slow Pulse (3 second cycle)     | The IgorBox is booting up                                                                    |
-| Steady On                       | The IgorBox is running and all systems are nominal                                           |
-| Slow Blink (2 second cycle)     | The IgorBox cannot reach the Internet but still has network (Degraded state)                 |
-| Fast Blink (1 second cycle)     | The IgorBox is in "Lockout Mode"                                                             |
-| Fast Pulse (1 second cycle)     | The IgorBox is in "Manual Mode"                                                              |
+| _Pattern_ | _Meaning_ |
+| --- | --- |
+| Slow Pulse (3 second cycle) | The IgorBox is booting up |
+| Steady On | The IgorBox is running and all systems are nominal |
+| Slow Blink (2 second cycle) | The IgorBox cannot reach the Internet but still has network (Degraded state) |
+| Fast Blink (1 second cycle) | The IgorBox is in "Lockout Mode" |
+| Fast Pulse (1 second cycle) | The IgorBox is in "Manual Mode" |
 | Blinking in groups with a pause | This is an unrecoverable error and the number of blinks in the group indicate the error code |
 
 _you can read more about error codes in the [Error Codes Guide](/docs/legacy/igorbox-mki/input-8/error-codes)_

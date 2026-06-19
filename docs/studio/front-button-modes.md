@@ -35,7 +35,7 @@ When you set this mode, the front button shows up as an input in the [Logic Rule
 
 ### Safety Lock
 
-A short press toggles a software lock that **prevents new shows from being triggered** on the controller. Already-playing shows continue to play to completion. Press the button again to unlock.
+A short press toggles a lock that **immediately stops the currently running show and prevents new shows from being triggered** on the controller. Press the button again to unlock — but this only works if the button is what locked it. If the controller was locked another way (by a Logic Rule or a system event), pressing the button will not unlock it.
 
 The status LED indicates the locked state, and Studio shows the controller as **Locked**.
 
@@ -47,6 +47,10 @@ A short press engages a stronger lock: **all playback stops immediately and noth
 
 **Use when:** electrical work, repairs, construction inside an attraction. Hard Lock turns a controller into a brick until someone power-cycles it.
 
+:::note
+You can choose what each output does while the controller is locked — hold its current state, or switch off. This is set per channel in Studio.
+:::
+
 ## Interaction with Logic Rules
 
 When the mode is **Trigger**, the front button shows up as an input in the Logic Rules editor. You can use it as the input to any rule, just like a wired input.
@@ -55,4 +59,4 @@ When the mode is anything else, the front button is **filtered out** of the Logi
 
 ## Interaction with Manual Control
 
-The front button doesn't fire Logic Rules during Manual Control — you're driving the channels directly. Pressing the front button while Manual Control is active does the basic mode behavior (Stop, Safety Lock, Hard Lock) but doesn't fire any rules.
+While Manual Control is active, the front button does nothing on the controller — it won't Stop, Safety Lock, or Hard Lock, and it won't fire any Logic Rules. You're driving the channels directly. The press is simply reported back to Studio.

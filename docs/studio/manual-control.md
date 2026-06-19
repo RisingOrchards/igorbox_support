@@ -21,16 +21,21 @@ The manual control panel shows one row per channel:
 
 - **Switching outputs** (Output 8 MKII relay and Multistate channels — either mode — and Input 16 relays) — a toggle button. Click to flip on/off.
 - **Dimmable outputs** (LED Controller channels) — a slider, 0–100%.
-- **Servo outputs** — a slider, 0–180°.
 - **Channel indicators** — drive the front-panel LED color directly, independent of any wired output.
 
 Drag a slider — the load follows. Click a button — the relay clicks.
+
+:::note
+A channel that a [Logic Rule](logic-rules/overview) is currently driving can't be changed from Manual Control. It shows as unavailable for as long as the rule is holding it.
+:::
 
 ## Ending manual control
 
 Click **End Manual Control**. The controller releases its channels and goes back to whatever it was doing before — typically the [ambient routine](ambient-routines).
 
 Manual Control also ends automatically if you close the browser tab, lose your network connection, or start manual control from another tab on the same controller.
+
+If the controller loses contact with Studio, Manual Control ends on its own after about 30 seconds and the channels return to their normal programmed behavior. A manual session you forget about can't leave outputs stuck.
 
 ## Manual Control vs. Live Preview
 

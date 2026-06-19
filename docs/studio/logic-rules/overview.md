@@ -7,13 +7,15 @@ description: "What Logic Rules are"
 
 Logic Rules are how you go from "the input fired" to "the right thing happens" — without writing any code.
 
+If all you want is "this input plays this show," you don't even need a rule — that's a [**Trigger**](/docs/studio/triggers), and you can wire one up in seconds. Reach for a Logic Rule when you need *logic* in between: combining several inputs, timers, counters, latches, or random choices.
+
 A **rule** is a graph of building blocks connected by lines. You drag inputs (button presses, sensor activations, timers, webhooks) onto a canvas, drop in some logic (and, or, delay, counter, latch, random), and connect them to outputs (fire a show, send a webhook, notify another rule).
 
 If you've used a "no-code" automation tool before — Twilio Studio, Node-RED, IFTTT — the metaphor is the same. We've just specialized it for show control.
 
 ## What Logic Rules are good for
 
-- **Show triggers** — "when this button is pressed, fire this show"
+- **Conditional show firing** — "fire this show only when both the door and the floor plate are on"
 - **Escape room puzzle logic** — "when all four switches are flipped, unlock the next phase"
 - **Counter-based effects** — "every fifth time someone walks past the sensor, fire the rare scare instead"
 - **Random selection** — "when this trigger fires, randomly pick one of three shows"
@@ -21,22 +23,29 @@ If you've used a "no-code" automation tool before — Twilio Studio, Node-RED, I
 - **Multi-controller coordination** — "input on this box triggers an output on that box"
 - **Webhooks in and out** — bridge to outside systems
 
-## Two ways to build them
+## Triggers vs. Logic Rules
 
-### From the timeline editor (show triggers)
+For the simple case — "this input plays this show" — you don't need a rule at all. Use a [Trigger](/docs/studio/triggers): quicker to set up, and all most shows need.
 
-Every show has a **Triggers** chip in the metadata bar. Click it for a simple editor that lets you wire inputs to fire the show you're editing. This handles the most common case: "when this input fires, play this show." No logic gates, no counters — just inputs to shows.
-
-### From the full Logic Rules editor
-
-For anything more complex (gates, delays, counters, random, multi-rule coordination), use the full editor at **Rules** in the sidebar. Drag in any building blocks you need.
+Reach for the full Logic Rules editor (**Rules** in the sidebar) when a scene depends on more than a single input — combinations, timing, counting, or state. Drag in whatever building blocks you need; the rest of this section covers them.
 
 ## Rules run on the controller
 
 Rules run on your controllers, not in the cloud. That means rule logic continues to work even if the cloud goes offline. The cloud's only job is to author and push out the rules — once they're on the box, they're independent.
 
+## Rules span your whole system
+
+A rule isn't limited to the controller it runs on. From a single rule you can:
+
+- **use an input from any controller as a condition** — a button or sensor on one box can drive logic running on another, and
+- **fire a show on any other controller** — light up one box and play audio on a second from the same condition.
+
+So one box's sensor can feed the puzzle logic on a second box and launch scenes on a third. The only requirement is that your controllers are on the same local network (see [Connectivity](/docs/controllers/shared/connectivity)).
+
+(For a plain input-to-show link with no logic, you don't need a rule at all — see [Triggers](/docs/studio/triggers), which work across controllers too.)
+
 ## Where to next
 
 - [Building Blocks](node-reference) — what each block does, in plain English
-- [Show Triggers](show-triggers) — the simplest and most common pattern
+- [Triggers](/docs/studio/triggers) — fire a show straight from an input, no rule needed
 - [Examples](examples) — recipes for haunts, escape rooms, and immersive events

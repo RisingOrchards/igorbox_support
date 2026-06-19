@@ -5,7 +5,7 @@ description: "Building dimming cues with control points and envelopes"
 
 # Lighting
 
-Lighting tracks are how you build dimming cues for the LED Controller and any other dimmable hardware. (The Output 8 MKII's channels switch on and off rather than dim — those go on a relay track instead.) Servo tracks behave the same way; just substitute "0–180°" for "0–100%".
+Lighting tracks are how you build dimming cues for the LED Controller and any other dimmable hardware. (The Output 8 MKII's channels switch on and off rather than dim — those go on a relay track instead.)
 
 ## Control points
 
@@ -74,15 +74,15 @@ The dimming control points above set how *bright* a single channel is. **Color**
 
 ### Set up a color group first
 
-Color lives on a **color group**, which you create on the controller:
+Color lives on a **color group** — a Studio feature that ties several dimmable channels together so they're set as one. You build it in Studio:
 
-1. Open the controller in Studio → **Configuration** tab → **Color Groups**.
+1. Open **Color Groups** in Studio.
 2. Click **Add color group**.
 3. Pick the **Kind** — RGB (3 channels), RGBW (4 channels), or RGBAW (5 channels).
-4. Assign each slot (**Red**, **Green**, **Blue**, and **White** / **Amber** where applicable) to one of the controller's dimmable channels.
+4. Assign each slot (**Red**, **Green**, **Blue**, and **White** / **Amber** where applicable) to one of the dimmable channels.
 5. Save.
 
-You need at least three spare (ungrouped) dimmable channels to make a group. Once it exists, the group shows up in Manual Control as a single color picker, and as its own track on the timeline.
+You need at least three spare (ungrouped) dimmable channels to make a group. Once it exists, picking a color sets the values of all the tagged channels together. The group shows up in Manual Control as a single color picker, and as its own track on the timeline.
 
 ### Author color on the timeline
 

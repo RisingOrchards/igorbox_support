@@ -23,13 +23,13 @@ You'll want a 3.5 mm TRS to dual-RCA or 3.5 mm to dual-1/4" cable for most amps 
 
 Audio plays from the controller's onboard storage — no streaming from the cloud, so latency is low and reliability is high.
 
-| Format    | Supported | Notes                           |
-| --------- | --------- | ------------------------------- |
-| WAV (PCM) | Yes       | Lossless, biggest files         |
-| FLAC      | Yes       | Lossless, much smaller than WAV |
-| MP3       | Yes       | Lossy, smallest files           |
-| AAC       | No        |                                 |
-| AIFF      | No        |                                 |
+| Format | Supported | Notes |
+| --- | --- | --- |
+| WAV (PCM) | Yes | Lossless, biggest files |
+| FLAC | Yes | Lossless, much smaller than WAV |
+| MP3 | Yes | Lossy, smallest files |
+| AAC | No |  |
+| AIFF | No |  |
 
 For best playback fidelity, use **44.1 kHz, 16-bit, lossless** (WAV or FLAC). Studio will warn you if you upload media that's outside this sweet spot and it will prevent you from using incompatible audio formats.
 
@@ -38,6 +38,10 @@ For best playback fidelity, use **44.1 kHz, 16-bit, lossless** (WAV or FLAC). St
 The line output produces signal whenever something is playing — show playback, the ambient routine, Live Preview, or Manual Control playback.
 
 If nothing is playing, the output is silent.
+
+:::note
+When a controller powers on, it plays a brief welcome sound out the audio output — a robotic voice saying "IgorBox" — so you'll know it's awake and the audio path is working. See [Boot Sequence](boot-sequence) for what else happens at startup.
+:::
 
 ## Master volume
 
