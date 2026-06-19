@@ -5,15 +5,15 @@ description: "Drive any channel live, in real time, from the browser"
 
 # Manual Control
 
-Manual Control is exactly what it sounds like: you grab the channels of a controller (or group) and drive them yourself, in real time, from your browser. Sliders, buttons, color pickers — every change you make hits the hardware right away.
+Manual Control is exactly what it sounds like: you grab the channels of a controller and drive them yourself, in real time, from your browser. Sliders, buttons, color pickers — every change you make hits the hardware right away.
 
 It's the fastest way to verify wiring, debug a flaky sensor, troubleshoot a stuck show, or just demonstrate the system to someone walking by.
 
 ## Starting manual control
 
-From a controller's Overview tab, click **Manual Control**. From a group's page, click Manual Control on the group's overview.
+From a controller's Overview tab, click **Start Manual Control**.
 
-The controller's status LED pulses **blue** to indicate it's in manual control mode. Show playback is paused while you have control.
+The controller's status LED blinks **orange** to indicate it's in manual control mode. Show playback is paused while you have control.
 
 ## Driving channels
 
@@ -43,4 +43,4 @@ Starting one ends the other.
 
 ## Permissions
 
-Manual Control requires the **Control Devices** permission in your Studio role. Viewers can't drive channels; editors and admins can. Set per-user roles in your Studio's Settings → Members.
+Manual Control requires permission to control your controllers. Viewers can't drive channels; editors and admins can. Set per-user roles in your Studio's **Settings → Members**.

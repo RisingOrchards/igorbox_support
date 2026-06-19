@@ -1,15 +1,15 @@
 ---
 sidebar_position: 3
-description: "Use placeholder variables in outbound webhook bodies and headers"
+description: "Use placeholder variables in outbound webhook bodies"
 ---
 
 # Template Variables
 
-Outbound webhook bodies and header values support template variables — placeholders that get filled in with real values at the moment the webhook fires. This lets a single webhook configuration adapt to whatever rule fired it.
+Outbound webhook bodies support template variables — placeholders that get filled in with real values at the moment the webhook fires. This lets a single webhook configuration adapt to whatever rule fired it.
 
 ## Syntax
 
-Variables are wrapped in double curly braces — for example, `{{variable}}` inside a body or header value gets replaced when the webhook fires.
+Variables are wrapped in double curly braces — for example, `{{variable}}` inside a body gets replaced when the webhook fires.
 
 ## Available variables
 
@@ -29,8 +29,4 @@ Set the webhook URL to your Slack incoming-webhook URL, and write a body that mi
 
 Replace each `<...>` with the corresponding `{{variable}}` from the in-Studio template editor. Once it fires, you'll get a Slack message like:
 
-> Show 'Welcome Scene' fired on Front Hallway at 2026-04-26 19:42:13Z
-
-## Example: Header values
-
-Templates work in headers too — useful for adding context for the receiver without parsing the body. In the headers section of your webhook, set a header like `X-Igorbox-Controller` to a `{{variable}}` that holds the controller's name (again, pick from the in-Studio reference). Your receiver can then route or log on the header alone.
+> Show 'Welcome Scene' fired on Front Hallway at 2026-04-26T19:42:13.000Z

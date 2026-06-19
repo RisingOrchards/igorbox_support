@@ -14,7 +14,7 @@ Two ways:
 - **Plus button** on an audio track header — opens the Media Browser. Pick a file or upload a new one. The clip lands at the playhead.
 - **Double-click empty space** in the audio track content area — same Media Browser, clip lands at the click position.
 
-The Media Browser is your audio library. Upload `.wav`, `.flac`, `.mp3`, or `.aac` files.
+The Media Browser is your audio library. Upload your audio there — most common formats work (WAV, FLAC, MP3, AAC/M4A, OGG and more), and Studio converts anything the controller can't play directly.
 
 ## Drag types
 
@@ -54,9 +54,9 @@ The right half automatically stays in sync with the audio so playback continues 
 
 ## Audio formats
 
-The controller plays `.wav`, `.flac`, `.mp3`, and `.aac`.
+You can upload most common audio formats — WAV, FLAC, MP3, AAC/M4A, OGG and more — and Studio converts anything the controller can't play directly.
 
-For best results, use **44.1 kHz, 16-bit, lossless** (WAV or FLAC). Studio shows a warning on the media card if you upload something outside that sweet spot.
+For best results, use **44.1 kHz, 16-bit, lossless** (WAV or FLAC). Studio flags anything outside that sweet spot on the media card. If a clip's format still isn't playable on the target controller, the deploy is blocked until you re-export it — see [Deploys and Versions](deploys-and-versions).
 
 ## Multi-track audio
 

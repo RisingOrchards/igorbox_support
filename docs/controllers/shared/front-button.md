@@ -12,14 +12,14 @@ There are four modes:
 | Mode | What a press does | When to use it |
 | --- | --- | --- |
 | **Stop** *(default)* | Stops the currently playing show on this controller and returns to the ambient routine. | Most installs — gives you an emergency "kill" button. |
-| **Trigger** | Fires the show you've assigned to the front button. | Demo modes, walk-around testing, manually re-triggering a haunt scene. |
+| **Trigger** | Makes the button act as an input you can wire to a show (or any rule) in Logic Rules. | Demo modes, walk-around testing, manually re-triggering a haunt scene. |
 | **Safety Lock** | Toggles a lock that prevents anyone from triggering shows on this controller. Playback already in progress continues. | Maintenance windows, daytime in a haunt, walk-throughs. |
-| **Hard Lock** | Hard-stops everything and locks the controller. Nothing plays until you unlock it. | Repairs, electrical work, construction. |
+| **Hard Lock** | Hard-stops everything and locks the controller. Nothing plays until the controller is rebooted (power-cycled). | Repairs, electrical work, construction. |
 
 You can change the mode any time from the controller's Configuration tab in Studio.
 
 :::tip
-**Stop** only stops playback on the controller you press the button on. If your show spans multiple controllers, you'll want to set up a [Logic Rule](/docs/studio/logic-rules/overview) or a controller [group](/docs/studio/controller-groups) so a single button press stops everything together.
+**Stop** only stops playback on the controller you press the button on. If your show spans multiple controllers, set up a [Logic Rule](/docs/studio/logic-rules/overview) so a single button press can stop them together.
 :::
 
 ## Holding the button (always available)

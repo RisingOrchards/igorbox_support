@@ -27,25 +27,25 @@ This is the safest default. It's an "emergency stop" that anyone can press witho
 
 ### Trigger
 
-A short press fires the show you've assigned to the front button.
+A short press acts like a wired input — it fires whatever you've wired the front button to.
 
-When you set this mode, Studio surfaces a **Show** picker where you choose which show to fire. Press the button — the show plays.
+When you set this mode, the front button shows up as an input in the [Logic Rules](logic-rules/overview) editor (and in a show's Triggers editor). Wire it to a show — or to anything else — and a press fires it. There's no separate "show to fire" picker on the front-button setting itself; you choose what it does by wiring it in a rule.
 
 **Use when:** you want demo modes ("press the button to see a sample of every effect"), walkthrough rehearsal cues, or a manual-fire backup for a sensor that's acting up.
 
 ### Safety Lock
 
-A short press toggles a software lock that **prevents new shows from being triggered** on the controller. Already-playing shows continue to play to completion.
+A short press toggles a software lock that **prevents new shows from being triggered** on the controller. Already-playing shows continue to play to completion. Press the button again to unlock.
 
-The status LED indicates the locked state, and Studio shows a lock badge on the controller.
+The status LED indicates the locked state, and Studio shows the controller as **Locked**.
 
 **Use when:** maintenance windows, daytime hours in a haunt, walk-throughs where you don't want sensors firing scenes.
 
 ### Hard Lock
 
-A short press toggles a stronger lock: **all playback stops immediately and nothing can play** until the lock is released. Even Manual Control and Live Preview are blocked.
+A short press engages a stronger lock: **all playback stops immediately and nothing can play.** Even Manual Control and Live Preview are blocked. Unlike Safety Lock, a Hard Lock is **not** cleared by pressing the button again — the controller stays locked until it's **rebooted (power-cycled)**.
 
-**Use when:** electrical work, repairs, construction inside an attraction. Hard Lock turns a controller into a brick until someone explicitly unlocks it.
+**Use when:** electrical work, repairs, construction inside an attraction. Hard Lock turns a controller into a brick until someone power-cycles it.
 
 ## Interaction with Logic Rules
 

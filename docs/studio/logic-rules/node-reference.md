@@ -31,9 +31,9 @@ Studio gives you the URL when you set up the [inbound webhook](/docs/studio/webh
 
 ### Named Trigger
 
-A signal from another rule **on the same controller**. Lets one rule fire something that another rule listens for.
+A signal another rule **on the same controller** can fire and listen for — handy for chaining rules together when one big rule would be too tangled.
 
-Use it to chain rules together when one big rule would be too tangled. To coordinate *across* controllers, use a Show Trigger instead — those reach any show in your Studio.
+To *listen* for one, add an **Input** block and point it at the named trigger instead of a physical input. To *send* one, use the Named Trigger output (under Outputs, below). To coordinate *across* controllers, use a Show Trigger instead — those reach any show in your Studio.
 
 ## Logic
 
@@ -51,7 +51,7 @@ Fires when **not all** of its inputs are firing. Useful for "all-but" logic.
 
 ### Either-Or (Xor)
 
-Fires when **exactly one** of its inputs is firing — this *or* that, but not both.
+Fires when an **odd number** of its inputs is firing. With two inputs, that means one *or* the other, but not both.
 
 ### Delay
 
@@ -63,7 +63,7 @@ Use for "wait two seconds after the door opens, then trigger the scare."
 
 Counts how many times something fires, then fires itself on the Nth time.
 
-Wire a sensor to it, set the count to 5, and you've got a "fire the rare scare on every fifth guest" pattern.
+Wire a sensor to it, set the count to 5, and you've got a "fire the rare scare on the fifth guest" pattern. By default it fires once when it reaches the target and stays on until reset — turn on its **Auto-reset** option if you want it to re-arm and fire on *every* fifth guest.
 
 ### Latch
 
@@ -79,11 +79,27 @@ Routes a fire to one of several outputs at random. Useful for "every time a gues
 
 Set how many outputs you want (2 to 8). Each fire picks one of them with equal odds.
 
+### Input Mask
+
+Watches several inputs at once and fires when they match a specific on/off pattern. Perfect for combination locks — "these three switches on, that one off."
+
+### Sequence
+
+Fires when its inputs are triggered in the **right order**. Get the order wrong and it tells you (it has a separate "wrong input" output you can wire to a "try again" cue). The classic escape-room combination puzzle.
+
+### Morse Code
+
+Listens to a single input — a button, a telegraph key — for a **Morse-code pattern**. It has separate outputs for the correct code, a wrong attempt, and a timeout.
+
+### Reset
+
+Resets stateful blocks (latches, counters, sequences) back to their starting state. Wire a "reset the room" button to it so you can re-arm a puzzle between groups.
+
 ## Outputs
 
 ### Show Trigger
 
-Plays a show on a controller or group. Pick which show, pick which controller. Fire it from a rule.
+Plays a show on a controller. Pick which show, pick which controller. Fire it from a rule.
 
 The most common output. Most rules end with one or more of these.
 
@@ -94,6 +110,14 @@ Fires an [outbound webhook](/docs/studio/webhooks/outbound) to call out to some 
 ### Named Trigger (output)
 
 Sends a named signal that other rules **on the same controller** can listen for. The pair to the Named Trigger input above. Used to chain rules together on one box — not across controllers.
+
+### Channel Hold
+
+Forces a specific output channel on (or off) and **holds it there** until it's released. Useful for "keep this maglock powered until the puzzle is solved."
+
+### Play Sound
+
+Plays a sound straight from a rule (and can stop it again) — handy for a quick audio cue without building a whole show around it.
 
 ## Tips
 

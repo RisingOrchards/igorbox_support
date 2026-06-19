@@ -17,20 +17,23 @@ You'll receive an email invitation with a link. Click the link, sign in with ema
 
 1. From the dashboard, click **Add Controller**.
 2. Power on your controller and connect it to your network — see [Connectivity](/docs/controllers/shared/connectivity) if it's not already on WiFi.
-3. Read the **8-character setup ID** off the controller's display.
-4. Type the setup ID into Studio.
+3. Find the **8-character setup ID** on the controller's serial-number sticker.
+4. Enter the setup ID in the **Setup Token** field.
 5. Pick a name (something like "Front Door" or "Coffin Room"), add tags if you want.
-6. Click **Provision**.
+6. Click **Add to Account**.
 
 Within a few seconds, the controller appears in your Studio with a green online indicator. Full details: [Magic Provision](/docs/controllers/shared/magic-provision).
 
 ## Step 3 — Open the controller
 
-Click the controller in the dashboard. You'll see four tabs:
+Click the controller in the dashboard. You'll see a row of tabs across the top:
 
-- **Overview** — at-a-glance status, current state, manual control button
+- **Overview** — at-a-glance status, current state, and the **Start Manual Control** button
+- **Shows** — the shows deployed to this controller
+- **Triggers** — inputs wired to fire shows on this controller
+- **Events** — recent activity for this controller
 - **Configuration** — channel names, voltage settings, front button mode, ambient show
-- **Provisioning** — setup ID and re-provisioning options
+- **Provisioning** — setup ID and re-provisioning options (shown for magic-provisioned controllers)
 - **Technical Details** — telemetry from the device
 
 Spend a minute looking around. Don't change anything yet.
@@ -39,7 +42,7 @@ Spend a minute looking around. Don't change anything yet.
 
 Before building a show, verify your wiring works.
 
-1. Click **Manual Control** in the controller's Overview tab.
+1. Click **Start Manual Control** in the controller's Overview tab.
 2. The channel sliders appear. Drag a slider, click a button, watch the channel react.
 3. The front-panel indicator on the controller will follow your input in real time. So will the actual wired load.
 
@@ -49,7 +52,7 @@ See [Manual Control](manual-control) for the full reference.
 
 ## Step 5 — Make a show
 
-1. From the sidebar, click **Shows** → **New Show**.
+1. From the top navigation, click **Shows**, then **Create Show**.
 2. Give it a name and a duration (the default 10 seconds is fine for a first show).
 3. Add the controller you just provisioned to the show's targets.
 
@@ -107,4 +110,3 @@ You've got the skeleton. From here, it's all depth:
 - [Timeline editor: Audio Clips](timeline-editor/audio-clips) — slip editing, per-clip volume, multi-track audio
 - [Logic Rules](logic-rules/overview) — game logic without code
 - [Webhooks](webhooks/inbound) — trigger shows from outside systems
-- [Controller Groups](controller-groups) — multi-controller synchronized playback

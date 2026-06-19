@@ -54,8 +54,10 @@ This is a quality-of-life feature: when you delete a show, you'd hate to discove
 
 A show plays until it ends naturally, or until something explicitly stops it. To stop a show from a rule:
 
-- Wire an input to the show trigger's **stop** port (instead of **play**).
+- Add a **Show Trigger** node pointed at the show and set its **action** to **Stop** (the default is **Start**), then wire your input to it.
 - When that input fires, the show stops and the controller returns to its [ambient routine](/docs/studio/ambient-routines) if one is configured.
+
+In the simple **Triggers** editor, this is a per-row **Action** of **Stop** instead of **Play**.
 
 ## Multi-show rules
 

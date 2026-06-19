@@ -40,7 +40,9 @@ Most guests get the regular scare. Every fifth one gets a special one.
                    └─► [Show: "Regular Scare"]
 ```
 
-The Counter only fires on the 5th time its input fires. The regular scare fires every time. So guests 1–4 see Regular, guest 5 sees Rare *and* Regular.
+The Counter only fires once its input has fired 5 times. The regular scare fires every time. So guests 1–4 see Regular, guest 5 sees Rare *and* Regular.
+
+Turn on the Counter's **Auto-reset** option so it resets to zero after it fires — otherwise it stays triggered after the 5th guest and every guest after that also gets the rare scare.
 
 If you want guest 5 to see Rare *instead of* Regular, add a Not-And gate to suppress Regular on the 5th guest.
 

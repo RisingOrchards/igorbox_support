@@ -17,11 +17,11 @@ Editor screenshots coming soon.
 
 When you open a show, you see:
 
-- **Metadata bar (top)** — show name, duration, target controllers and groups, ambient badge if applicable, Triggers and Logic Rules buttons
+- **Metadata bar (top)** — show name, duration, target controllers, ambient badge if applicable, the deployed-state badge, the Triggers and Logic Rules buttons, and the **Live Preview** and **Deploy** buttons
 - **Status bar (just below)** — Ready / Saving / Buffering / Waiting for audio
-- **Transport (top right)** — Play, Stop, scrub, zoom, follow-playhead toggle, Live Preview, Deploy
+- **Transport** — Play, Stop, scrub, volume, undo/redo, the tools, zoom, snap, loop region, and the follow-playhead toggle
 - **Ruler** — time scale (in seconds and frames)
-- **Track headers (left)** — one per channel, plus audio tracks; collapsible by controller or group
+- **Track headers (left)** — one per channel, plus audio tracks; collapsible by controller
 - **Track content (center, scrollable)** — where clips live
 
 ## Tracks
@@ -39,14 +39,15 @@ The editor only shows tracks for channels the targeted controllers actually have
 
 ## Tools
 
-The toolbar in the transport gives you four tools:
+The toolbar in the transport gives you these tools:
 
 | Tool | What it does |
 | --- | --- |
 | **Select** *(default)* | Click clips to select. Drag to move or resize. |
 | **Draw** | Click-drag on a track to create a clip; on a lighting track, click anywhere to place a control point. |
 | **Split** | Click on a clip to cut it in two. |
-| **Delete** | Click a clip to delete it. |
+| **Remove** | Click a clip to delete it. |
+| **Range** | Select a span of time — used for color and range-based generators. |
 
 ## Adding clips
 
@@ -75,13 +76,13 @@ You can also double-click on empty space in an audio track to do the same thing.
 | Resize left | Drag the left edge |
 | Slip (audio only) | Alt-drag the body of an audio clip — moves the audio content within the clip without changing its position or duration |
 | Split | Split tool, click on the clip |
-| Delete | Select + Delete/Backspace, or Delete tool + click |
+| Delete | Select + Delete/Backspace, or Remove tool + click |
 
 Clips on the same track **can't overlap**. Drag a clip into another and it snaps to the gap after.
 
 ## Snap
 
-Clips snap to a grid. The snap interval is set in the transport (default: 1 second; options for half-second, frame-precise, no snap).
+Clips snap to a grid. The snap interval is set in the transport (default: 1 second; options for half-second, frame-precise, audio transients, or no snap).
 
 ## Undo / redo
 
