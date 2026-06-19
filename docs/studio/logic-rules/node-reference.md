@@ -64,8 +64,8 @@ Use for "wait two seconds after the door opens, then trigger the scare."
 You can also choose what happens if it fires *again* while it's still counting down:
 
 - **Restart** — throws away the old countdown and starts the full wait over from the top. Good for "keep resetting the timer as long as the guest keeps moving."
-- **Add time** — adds another full wait onto whatever's left, so repeated fires push the result further out.
-- **Hold** — ignores the extra fires and lets the original countdown finish on schedule.
+- **Accumulate** — adds another full wait onto whatever's left, so repeated fires push the result further out.
+- **Latch** — ignores the extra fires and lets the original countdown finish on schedule.
 
 ### Counter
 
@@ -126,15 +126,6 @@ Forces a specific output channel on (or off) and **holds it there** until it's r
 ### Play Sound
 
 Plays a sound straight from a rule (and can stop it again) — handy for a quick audio cue without building a whole show around it.
-
-### Lock Controller
-
-A rule doesn't only have to start or stop shows — it can also lock the controller.
-
-- **Safety Lock** — stops whatever show is running right away and blocks any new one from starting. Use it as an emergency stop.
-- **Hard Lock** — does the same, but stays locked until the controller is rebooted or power-cycled. Use it when a lockout should *not* be easy to clear.
-
-Wire one of these to a panic button, a tamper sensor, or any condition that should put the room into a safe, stopped state.
 
 ## Tips
 

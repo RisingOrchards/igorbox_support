@@ -50,9 +50,9 @@ Sometimes a trigger fires while the show is still running — a guest steps on t
 | Setting | What happens |
 | --- | --- |
 | **Restart** | The show stops where it is and starts over from the beginning. Good for a scare that should always begin fresh. |
-| **Ignore while playing** | The new trigger is skipped until the show finishes on its own. Good for a scene you never want to interrupt. |
+| **Skip if Playing** | The new trigger is skipped until the show finishes on its own. Good for a scene you never want to interrupt. |
 | **Toggle** | The first trigger starts the show; the next one stops it. Handy for a button or lever that turns a scene on and off. |
-| **Take over** | Stops whatever is currently playing and immediately plays this show. Useful when this scene should always take over. |
+| **Take Over** | Stops whatever is currently playing and immediately plays this show. Useful when this scene should always take over. |
 
 Pick whichever matches how the scene should feel to your guests. If you want a show to keep cycling on its own rather than respond to repeat triggers, see [Looping & Chaining](/docs/studio/timeline-editor/looping-and-chaining).
 
