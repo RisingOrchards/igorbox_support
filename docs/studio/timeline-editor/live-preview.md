@@ -28,9 +28,7 @@ Anything you'd do while editing — Live Preview doesn't lock the editor.
 
 ## Audio during Live Preview
 
-During Live Preview, audio plays from your **browser**, through your computer's audio output. Your laptop's volume becomes the cue, synced to the lights and relays. When you deploy, the audio gets bundled with the show and plays from the controller's onboard storage instead.
-
-This split keeps Live Preview fast (no audio uploads while you're iterating).
+During Live Preview, audio plays from your **controller**, through the controller's output. On the first play, it may take several minutes for the audio files to be synced to the controller. This is a one time operation and subsequent plays should sync quickly from the draft on each play. We sync the draft show to the controller on every play event to preserve sync for preview.
 
 ## Ending Live Preview
 
@@ -40,7 +38,8 @@ Live Preview also ends if you close the editor tab, lose your network connection
 
 ## Good to know
 
-- Audio is browser-side, so playback fidelity during Live Preview depends on your computer's audio output. A laptop speaker is fine for blocking out timing; for dialing in mix levels, plug in monitors.
+- Live Preview syncs the current draft to the controller. This includes audio. On the first run, it may take some time for audio files to download but this is a one time operation.
+- Audio plays back on the controller when in live preview.
 - Live Preview uses the same permissions as Manual Control — you need permission to control your controllers.
 
 ## Live Preview vs. Manual Control
