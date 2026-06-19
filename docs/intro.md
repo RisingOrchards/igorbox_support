@@ -11,11 +11,11 @@ IgorBox is a cloud-connected show control platform built for haunts, escape room
 
 ## The current lineup
 
-| Controller                                                  | What it's for                                                                                                                                 |
-| ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Output 8 MKII](/docs/controllers/output-8-mkii/overview)   | Eight outputs with software-configurable Multistate Relay™ technology — switch any channel between standard relay and solid-state on the fly. |
-| [Input 16](/docs/controllers/input-16/overview)             | Sixteen optically isolated inputs (6–48V AC/DC). Centralize triggers across an attraction or build elaborate escape room puzzles.             |
-| [LED Controller](/docs/controllers/led-controller/overview) | Sixteen dimmable channels for panel LEDs, pinspots, puzzle boards, or motor speed control.                                                    |
+| Controller | What it's for |
+| --- | --- |
+| [Output 8 MKII](/docs/controllers/output-8-mkii/overview) | Eight outputs — six with software-switchable Multistate Relay™ technology (standard relay or solid-state) plus two standard relays. |
+| [Input 16](/docs/controllers/input-16/overview) | Sixteen optically isolated inputs (6–48V AC/DC). Centralize triggers across an attraction or build elaborate escape room puzzles. |
+| [LED Controller](/docs/controllers/led-controller/overview) | Sixteen low-current dimmable channels for puzzle-board indicators and signal-level use — pair it with the RGBW-PWR breakout to drive real lighting (panel LEDs, pinspots, strips) and motor speed control. |
 
 Every controller speaks the same language: WAGO® connectors on every terminal, Easywire™ guided wiring, Magic Provision setup, Ethernet or WiFi, and a stereo audio output.
 

@@ -11,9 +11,7 @@ For real lighting loads — panel LEDs, pinspots, LED strips — pair it with th
 
 It also has two isolated inputs you can wire into Logic Rules just like any other input.
 
-:::caution
-Photo coming soon.
-:::
+![LED Controller Back Panel](https://assets.igorbox.cloud/product/led.png)
 
 ## What's in the box
 

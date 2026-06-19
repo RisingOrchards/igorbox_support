@@ -21,3 +21,5 @@ yarn-error.log*
 
 .mcp.json
 CLAUDE.md
+
+.vscode

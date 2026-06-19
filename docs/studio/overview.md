@@ -15,7 +15,6 @@ Each customer has their own private Studio at `https://<your-org>.igorbox.studio
 - **Build shows** on a video-editor-style timeline — relays, lights, audio, motors, all in one place
 - **Set up game logic** (sensors, buttons, sequences, counters) without writing any code
 - **Trigger your show from outside systems** with webhooks (and trigger outside systems from your show)
-- **Group multiple controllers** so they play one synchronized show
 - **Run an ambient show** that loops whenever nothing else is playing
 - **Drive any channel live from the browser** to test wiring, demo to a customer, or run a manual show
 - **Push updates over the air** to every controller, any time, from anywhere

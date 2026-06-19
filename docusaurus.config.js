@@ -93,6 +93,8 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
+          // Studio docs restructure — Triggers split out of Logic Rules
+          { from: "/docs/studio/logic-rules/show-triggers", to: "/docs/studio/triggers" },
           // Legacy IgorBox MKI archive
           { from: "/contact", to: "/docs/contact" },
           { from: "/docs/igorbox/getting-started", to: "/docs/legacy/igorbox-mki/getting-started" },

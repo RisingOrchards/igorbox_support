@@ -9,11 +9,11 @@ Every IgorBox controller has both Ethernet and WiFi built in. You don't pick one
 
 ## Ethernet vs. WiFi
 
-|                     | Ethernet                                          | WiFi                                                    |
-| ------------------- | ------------------------------------------------- | ------------------------------------------------------- |
-| Speed               | Plenty                                            | Plenty                                                  |
-| Range               | Limited by cable                                  | Anywhere your access point reaches                      |
-| Reliability         | Bulletproof                                       | Depends on your access point                            |
+|  | Ethernet | WiFi |
+| --- | --- | --- |
+| Speed | Plenty | Plenty |
+| Range | Limited by cable | Anywhere your access point reaches |
+| Reliability | Bulletproof | Depends on your access point |
 | **Recommended for** | Permanent installs, anywhere you can pull a cable | Temporary installs, hard-to-cable locations, prop carts |
 
 :::tip

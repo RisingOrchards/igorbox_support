@@ -7,14 +7,18 @@ description: "Have your IgorBox show fire off notifications to other systems"
 
 An **outbound webhook** lets a [Logic Rule](/docs/studio/logic-rules/overview) call out to an external URL whenever something happens. Your show can post to Slack when a scene fires, push to a stats dashboard, hit a third-party service — anything that accepts an HTTP request.
 
+:::info
+Webhooks are available on the **Pro** and **Enterprise** plans. If your plan doesn't include them, you'll see an upgrade prompt where the webhook tools would be.
+:::
+
 ## Setting up an outbound webhook
 
-1. Sidebar → **Webhooks** → **New Outbound Webhook**.
+1. From the top navigation, open **Logic Rules**, then the **Webhooks** tab. Click **New Webhook** and set **Direction** to **Outbound**.
 2. Give it a name.
 3. Configure:
    - **URL** — the external endpoint
    - **Method** — usually POST
-   - **Headers** — optional (typically `Content-Type: application/json`, plus any auth headers your service needs)
+   - **Headers** — optional. Studio sends `Content-Type: application/json` automatically. An `Authorization` header isn't supported — if your service needs a token, use a custom header name (like `X-API-Key`) or put the token in the URL.
    - **Body** — optional; supports [template variables](template-variables) so the message can include the controller name, timestamp, etc.
 4. Save.
 
@@ -23,6 +27,10 @@ An **outbound webhook** lets a [Logic Rule](/docs/studio/logic-rules/overview) c
 In the Logic Rules editor, drag a **Webhook Emitter** block into the graph. Pick the outbound webhook you set up. Wire any signal to its input.
 
 When the input fires, the webhook is called.
+
+:::note
+Outbound webhooks won't fire while the controller is locked (Safety Lock or Hard Lock), while it's in Manual Control, or while it's still starting up. In any of those states, rules that send webhooks are effectively paused.
+:::
 
 ## Where outbound webhooks can point
 
@@ -36,4 +44,4 @@ If you're integrating with a service where every event matters, build retry logi
 
 ## Audit log
 
-Every outbound webhook call is logged. Open the webhook in Studio → **History** tab to see when it fired, what it sent, and what response came back. Useful for debugging "why didn't my Slack message show up?"
+Every outbound webhook call is logged. Open the webhook's **Delivery Logs** (the history icon on the webhook row) to see when it fired, the response code, how long it took, and any error. Useful for debugging "why didn't my Slack message show up?"

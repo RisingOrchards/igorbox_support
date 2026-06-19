@@ -19,7 +19,9 @@ There are three kinds:
 
 Watches a physical input on a controller — an opto-isolated input on an Input 16, Output 8 MKII, or LED Controller, or the front button (when the front button is set to Trigger mode).
 
-Fires when the input is asserted (button pressed, sensor active, etc.) and again when it stops.
+The input can be on **this controller or any other controller in your account** — so a button or sensor on one box can be a condition in a rule running on another. They just need to be on the same local network.
+
+You can choose when it reacts: when the signal turns **On** (button pressed, sensor active), when it turns **Off** (button released, sensor clear), or on **both**.
 
 The most common input. Wire a button to one of these and point it at a show — done.
 
@@ -31,9 +33,9 @@ Studio gives you the URL when you set up the [inbound webhook](/docs/studio/webh
 
 ### Named Trigger
 
-A signal from another rule **on the same controller**. Lets one rule fire something that another rule listens for.
+A signal another rule **on the same controller** can fire and listen for — handy for chaining rules together when one big rule would be too tangled.
 
-Use it to chain rules together when one big rule would be too tangled. To coordinate *across* controllers, use a Show Trigger instead — those reach any show in your Studio.
+To *listen* for one, add an **Input** block and point it at the named trigger instead of a physical input. To *send* one, use the Named Trigger output (under Outputs, below). To coordinate *across* controllers, you have two options: watch another controller's input directly (see the Input block above), or use a Show Trigger to fire any show in your Studio.
 
 ## Logic
 
@@ -51,7 +53,7 @@ Fires when **not all** of its inputs are firing. Useful for "all-but" logic.
 
 ### Either-Or (Xor)
 
-Fires when **exactly one** of its inputs is firing — this *or* that, but not both.
+Fires when an **odd number** of its inputs is firing. With two inputs, that means one *or* the other, but not both.
 
 ### Delay
 
@@ -59,11 +61,17 @@ Holds a signal for a set amount of time before passing it along.
 
 Use for "wait two seconds after the door opens, then trigger the scare."
 
+You can also choose what happens if it fires *again* while it's still counting down:
+
+- **Restart** — throws away the old countdown and starts the full wait over from the top. Good for "keep resetting the timer as long as the guest keeps moving."
+- **Accumulate** — adds another full wait onto whatever's left, so repeated fires push the result further out.
+- **Latch** — ignores the extra fires and lets the original countdown finish on schedule.
+
 ### Counter
 
 Counts how many times something fires, then fires itself on the Nth time.
 
-Wire a sensor to it, set the count to 5, and you've got a "fire the rare scare on every fifth guest" pattern.
+Wire a sensor to it, set the count to 5, and you've got a "fire the rare scare on the fifth guest" pattern. By default it fires once when it reaches the target and stays on until reset — turn on its **Auto-reset** option if you want it to re-arm and fire on *every* fifth guest.
 
 ### Latch
 
@@ -79,13 +87,29 @@ Routes a fire to one of several outputs at random. Useful for "every time a gues
 
 Set how many outputs you want (2 to 8). Each fire picks one of them with equal odds.
 
+### Input Mask
+
+Watches several inputs at once and fires when they match a specific on/off pattern. Perfect for combination locks — "these three switches on, that one off."
+
+### Sequence
+
+Fires when its inputs are triggered in the **right order**. Get the order wrong and it tells you (it has a separate "wrong input" output you can wire to a "try again" cue). The classic escape-room combination puzzle.
+
+### Morse Code
+
+Listens to a single input — a button, a telegraph key — for a **Morse-code pattern**. It has separate outputs for the correct code, a wrong attempt, and a timeout.
+
+### Reset
+
+Resets stateful blocks (latches, counters, sequences) back to their starting state. Wire a "reset the room" button to it so you can re-arm a puzzle between groups.
+
 ## Outputs
 
 ### Show Trigger
 
-Plays a show on a controller or group. Pick which show, pick which controller. Fire it from a rule.
+Plays a show — pick which show and which controller, then fire it from a rule. The show can live on a *different* controller than the rule, so one box's logic can drive a scene on another (same local network). Set its **action** to **Stop** instead of **Play** to end a show from a rule. A rule can hold several of these to fire or stop multiple shows at once — e.g. lighting on one box and audio on another from a single condition.
 
-The most common output. Most rules end with one or more of these.
+The most common output. Most rules end with one or more of these. (For a plain input-to-show link with no logic, you don't need a rule — see [Triggers](/docs/studio/triggers).)
 
 ### Webhook Emitter
 
@@ -94,6 +118,14 @@ Fires an [outbound webhook](/docs/studio/webhooks/outbound) to call out to some 
 ### Named Trigger (output)
 
 Sends a named signal that other rules **on the same controller** can listen for. The pair to the Named Trigger input above. Used to chain rules together on one box — not across controllers.
+
+### Channel Hold
+
+Forces a specific output channel on (or off) and **holds it there** until it's released. Useful for "keep this maglock powered until the puzzle is solved."
+
+### Play Sound
+
+Plays a sound straight from a rule (and can stop it again) — handy for a quick audio cue without building a whole show around it.
 
 ## Tips
 

@@ -5,16 +5,14 @@ description: "What's on the front of the LED Controller"
 
 # Front Panel
 
-The LED Controller's front panel mirrors the dimming behavior of the channels themselves — each channel's RGB indicator dims with the channel, giving you a real-time visual of your show even if the lights are off-stage.
+The LED Controller's front panel mirrors the dimming behavior of channels 1–8 — each indicator dims with its channel, giving you a real-time visual of your show even if the lights are off-stage. Channels 9–16 are shown on the rear panel.
 
-:::caution
-Photo coming soon.
-:::
+![Front Panel](https://assets.igorbox.cloud/product/IgorBox-Front-square.png)
 
 | Element | What it tells you |
 | --- | --- |
 | Status LED | Overall controller state — see [Status LED](/docs/controllers/shared/status-led) |
-| 16 RGB channel indicators (outputs) | One per dimmable channel. Brightness tracks the channel's dimming level. |
+| 8 RGB channel indicators (outputs) | One each for channels 1–8. Brightness tracks the channel's dimming level. Channels 9–16 are shown on the rear panel. |
 | 2 RGB channel indicators (inputs) | One per isolated input. Lit when the input is active. |
 | Front button | Configurable per controller — see [Front Button](/docs/controllers/shared/front-button) |
 
@@ -22,9 +20,9 @@ Photo coming soon.
 
 Each output channel's indicator dims smoothly with the channel — at 0% the indicator is off, at 100% it's full brightness, and everywhere in between scales accordingly.
 
-The color is configurable in Studio (Configuration tab → Channel → Indicator Color). Default is white; many users color-code by zone or by show.
+The color is configurable in Studio (Configuration tab → Channel → Indicator Color). Default is orange; many users color-code by zone or by show.
 
-This makes the front panel a useful debugging tool: even if your panel LEDs are unplugged or pointing the wrong way, you can read the channel state straight off the box.
+This makes the front panel a handy way to check your show at a glance: even if your stage lights are unplugged or pointing the wrong way, you can see what each channel is doing right on the box.
 
 ## Indicator brightness
 

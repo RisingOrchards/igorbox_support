@@ -9,9 +9,7 @@ The Output 8 MKII is the next generation of the original Output 8, refined with 
 
 The marquee feature is our **Multistate Relay™** technology: six of the eight outputs can switch between standard relay and solid-state mode in software. You don't have to decide at install time whether a channel needs an isolated dry contact or a powered output driven straight off the controller's supply — flip the mode in Studio and it's done.
 
-:::caution
-Photo coming soon.
-:::
+![Output 8 Back Panel](https://assets.igorbox.cloud/product/output-8.png)
 
 ## What's in the box
 
@@ -36,7 +34,7 @@ Photo coming soon.
 ## Quick start
 
 1. **Power it up** with the included 12V supply (or anything 9–24V DC, center-positive).
-2. **Connect to the network** — plug in Ethernet, or follow the on-device captive portal to join WiFi. See [Connectivity](/docs/controllers/shared/connectivity).
+2. **Connect to the network** — plug in Ethernet. If you'd rather use WiFi, add your WiFi network in **Studio Settings** before you provision: the controller picks it up automatically when it joins your account, and from then on it can roam to WiFi. See [Connectivity](/docs/controllers/shared/connectivity) and [Magic Provision](/docs/controllers/shared/magic-provision).
 3. **[Magic Provision](/docs/controllers/shared/magic-provision)** — read the setup ID and add it in Studio.
 4. **Wire your channels** with [Easywire™](/docs/controllers/shared/easywire) walking you through each terminal.
 5. **Build a show** in the [timeline editor](/docs/studio/timeline-editor/basics).

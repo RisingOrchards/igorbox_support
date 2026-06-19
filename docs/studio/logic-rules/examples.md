@@ -15,7 +15,7 @@ The hello world. Wire a button to a show.
 [Input: "Front Door Button"] ────► [Show: "Welcome Scene"]
 ```
 
-Use the [Triggers button](show-triggers) on the show — this is exactly what it's for.
+Use the [Triggers button](/docs/studio/triggers) on the show — this is exactly what it's for.
 
 ## 2. Random scare from a pool
 
@@ -40,7 +40,9 @@ Most guests get the regular scare. Every fifth one gets a special one.
                    └─► [Show: "Regular Scare"]
 ```
 
-The Counter only fires on the 5th time its input fires. The regular scare fires every time. So guests 1–4 see Regular, guest 5 sees Rare *and* Regular.
+The Counter only fires once its input has fired 5 times. The regular scare fires every time. So guests 1–4 see Regular, guest 5 sees Rare *and* Regular.
+
+By default the Counter fires once when it reaches 5 and then won't fire again until it's reset. Turn on its **Auto-reset** option to have it re-arm automatically after each interval — so the rare scare fires on the 5th guest, the 10th, the 15th, and so on.
 
 If you want guest 5 to see Rare *instead of* Regular, add a Not-And gate to suppress Regular on the 5th guest.
 
@@ -67,7 +69,7 @@ On Box A:
                     └─► [Show Trigger: "Audio Show"]
 ```
 
-A rule on any controller can fire a **Show Trigger** for any show in your Studio — including shows that run on other controllers. So Box A's input launches the lights on Box B and the audio on Box C just by firing each show's trigger. Show Triggers are the cross-controller mechanism; Named Triggers, by contrast, only chain rules within the same controller.
+A rule on any controller can fire a **Show Trigger** for any show in your Studio — including shows that run on other controllers. So Box A's input launches the lights on Box B and the audio on Box C just by firing each show's trigger. Firing shows across controllers is one cross-controller path; you can also watch another controller's input directly inside a rule (see the [Input block](node-reference)). Named Triggers, by contrast, only chain rules within the same controller.
 
 ## 6. Webhook bridge
 

@@ -7,29 +7,23 @@ description: "What's on the front of the Input 16"
 
 The Input 16 front panel is dominated by its sixteen channel indicator LEDs — one for each input — plus indicators for the two onboard relay outputs.
 
-:::caution
-Photo coming soon.
-:::
+
+![Front Panel](https://assets.igorbox.cloud/product/IgorBox-Front-square.png)
 
 | Element | What it tells you |
 | --- | --- |
 | Status LED | Overall controller state — see [Status LED](/docs/controllers/shared/status-led) |
-| 16 RGB channel indicators (inputs) | One per input. Lit when the input is active. Color is configurable per channel in Studio. |
-| 2 RGB channel indicators (outputs) | One per relay output. Lit when the channel is on. |
+| 16 input indicators | One per input. Lights purple when that input is on. |
+| 2 relay output indicators | One per relay output. Green when the output is on; orange if the output is set to inverted. |
 | Front button | Configurable per controller — see [Front Button](/docs/controllers/shared/front-button) |
 
 ## Channel indicators
 
-Each input has a dedicated RGB LED. By default it's white when the input is active and off otherwise — but every channel's color can be configured in Studio (Configuration tab → click the channel → Indicator Color).
+Each input has a dedicated indicator that lights **purple** when that input is on, and is off otherwise. This is fixed — the input indicators always show purple, so you can tell at a glance which inputs are active just by looking at the front panel.
 
-This is more useful than it sounds. Color-code your inputs by puzzle, by zone, or by sensor type, and you can tell at a glance what's happening just by looking at the front panel:
+The two relay outputs have their own indicators. Each one is **green** when the output is on. If you set an output to inverted, its indicator shows **orange** instead. The indicators always reflect the state the controller is commanding.
 
-- **Cyan** = scene-1 sensors
-- **Magenta** = scene-2 sensors
-- **Green** = "puzzle solved" indicators
-- **Red** = E-stop / fault inputs
-
-The front-panel brightness is also dimmable globally (Configuration tab → Channel LEDs → Brightness). Useful in dark haunt scenes where any glow would be distracting.
+If the lights would be distracting — for example in a dark haunt scene — you can turn the front-panel indicators off in Studio.
 
 ## Inputs 9–16
 

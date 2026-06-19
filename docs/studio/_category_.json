@@ -7,6 +7,6 @@
   "link": {
     "type": "generated-index",
     "title": "IgorBox Studio",
-    "description": "The web app where you build, deploy, and monitor your show. Timeline editor, Logic Rules, webhooks, controller groups, ambient routines, manual control."
+    "description": "The web app where you build, deploy, and monitor your show. Timeline editor, Logic Rules, webhooks, ambient routines, manual control, and Studio settings."
   }
 }

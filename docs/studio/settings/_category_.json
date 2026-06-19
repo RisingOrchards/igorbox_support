@@ -1,0 +1,11 @@
+{
+  "position": 70,
+  "label": "Settings",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "title": "Studio Settings",
+    "description": "Manage your team, WiFi networks, security, and the audit log for your Studio."
+  }
+}

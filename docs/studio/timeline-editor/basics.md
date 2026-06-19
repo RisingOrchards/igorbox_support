@@ -17,11 +17,11 @@ Editor screenshots coming soon.
 
 When you open a show, you see:
 
-- **Metadata bar (top)** — show name, duration, target controllers and groups, ambient badge if applicable, Triggers and Logic Rules buttons
+- **Metadata bar (top)** — show name, duration, target controllers, ambient badge if applicable, the deployed-state badge, the Triggers and Logic Rules buttons, and the **Live Preview** and **Deploy** buttons
 - **Status bar (just below)** — Ready / Saving / Buffering / Waiting for audio
-- **Transport (top right)** — Play, Stop, scrub, zoom, follow-playhead toggle, Live Preview, Deploy
+- **Transport** — Play, Stop, scrub, volume, undo/redo, the tools, zoom, snap, loop region, and the follow-playhead toggle
 - **Ruler** — time scale (in seconds and frames)
-- **Track headers (left)** — one per channel, plus audio tracks; collapsible by controller or group
+- **Track headers (left)** — one per channel, plus audio tracks; collapsible by controller
 - **Track content (center, scrollable)** — where clips live
 
 ## Tracks
@@ -30,23 +30,25 @@ A **track** is a row in the editor. Each track corresponds to one channel of one
 
 Track types:
 
-- **Relay** — for relay outputs (like the Output 8 MKII). Clips are simple ON pulses.
+- **Relay** — for relay outputs (like the Output 8 MKII). Clips are simple On pulses.
 - **Lighting** — for dimmable channels. Clips are envelopes you draw with control points.
-- **Servo** — for servo outputs. Same as lighting, but the value is an angle.
 - **Audio** — for audio clips. Per-clip volume, slip editing, waveform display.
 
-The editor only shows tracks for channels the targeted controllers actually have. If a show targets a controller without any servos, you won't see any servo tracks.
+The editor only shows tracks for channels the targeted controllers actually have. If a show targets a controller without any audio, you won't see any audio tracks.
+
+There's no separate track type for motors. To drive a motor's speed, use a regular dimmable (lighting) channel on the LED Controller.
 
 ## Tools
 
-The toolbar in the transport gives you four tools:
+The toolbar in the transport gives you these tools:
 
 | Tool | What it does |
 | --- | --- |
 | **Select** *(default)* | Click clips to select. Drag to move or resize. |
 | **Draw** | Click-drag on a track to create a clip; on a lighting track, click anywhere to place a control point. |
 | **Split** | Click on a clip to cut it in two. |
-| **Delete** | Click a clip to delete it. |
+| **Remove** | Click a clip to delete it. |
+| **Range** | Select a span of time — used for color and range-based generators. |
 
 ## Adding clips
 
@@ -54,7 +56,7 @@ The toolbar in the transport gives you four tools:
 
 Switch to **Draw** mode. Click and drag in the track. You've created an ON pulse from your start drag to your release. Switch back to Select; drag the clip to move it, drag its edges to resize.
 
-### Lighting / Servo
+### Lighting
 
 In Draw mode on a lighting track, click anywhere in the track area to place a control point. The horizontal position becomes the time; the vertical position becomes the value. Click-and-hold to drag the control point you just placed. Hit Escape to bail out.
 
@@ -75,13 +77,13 @@ You can also double-click on empty space in an audio track to do the same thing.
 | Resize left | Drag the left edge |
 | Slip (audio only) | Alt-drag the body of an audio clip — moves the audio content within the clip without changing its position or duration |
 | Split | Split tool, click on the clip |
-| Delete | Select + Delete/Backspace, or Delete tool + click |
+| Delete | Select + Delete/Backspace, or Remove tool + click |
 
 Clips on the same track **can't overlap**. Drag a clip into another and it snaps to the gap after.
 
 ## Snap
 
-Clips snap to a grid. The snap interval is set in the transport (default: 1 second; options for half-second, frame-precise, no snap).
+Clips snap to a grid. The snap interval is set in the transport (default: 1 second; options for half-second, frame-precise, audio transients, or no snap).
 
 ## Undo / redo
 

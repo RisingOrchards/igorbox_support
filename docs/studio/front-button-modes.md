@@ -27,25 +27,39 @@ This is the safest default. It's an "emergency stop" that anyone can press witho
 
 ### Trigger
 
-A short press fires the show you've assigned to the front button.
+A short press acts like a wired input — it fires whatever you've wired the front button to.
 
-When you set this mode, Studio surfaces a **Show** picker where you choose which show to fire. Press the button — the show plays.
+When you set this mode, the front button shows up as an input in the [Logic Rules](logic-rules/overview) editor (and in a show's Triggers editor). Wire it to a show — or to anything else — and a press fires it. There's no separate "show to fire" picker on the front-button setting itself; you choose what it does by wiring it in a rule.
 
 **Use when:** you want demo modes ("press the button to see a sample of every effect"), walkthrough rehearsal cues, or a manual-fire backup for a sensor that's acting up.
 
 ### Safety Lock
 
-A short press toggles a software lock that **prevents new shows from being triggered** on the controller. Already-playing shows continue to play to completion.
+A short press toggles a lock that **immediately stops the currently running show and prevents new shows from being triggered** on the controller. Press the button again to unlock — but this only works if the button is what locked it. If the controller was locked another way (by a Logic Rule or a system event), pressing the button will not unlock it.
 
-The status LED indicates the locked state, and Studio shows a lock badge on the controller.
+The status LED indicates the locked state, and Studio shows the controller as **Locked**.
 
-**Use when:** maintenance windows, daytime hours in a haunt, walk-throughs where you don't want sensors firing scenes.
+**Use when:** maintenance windows, daytime hours in a haunt, walk-throughs where you don't want sensors firing scenes. Like a software lockout/tagout flow. 
+
+:::note
+This pauses everything exactly where it's at. All channels are held until released.
+:::
 
 ### Hard Lock
 
-A short press toggles a stronger lock: **all playback stops immediately and nothing can play** until the lock is released. Even Manual Control and Live Preview are blocked.
+A short press engages a stronger lock: **all playback stops immediately and nothing can play.** Even Manual Control and Live Preview are blocked. Unlike Safety Lock, a Hard Lock is **not** cleared by pressing the button again — the controller stays locked until it's **rebooted (power-cycled)**.
 
-**Use when:** electrical work, repairs, construction inside an attraction. Hard Lock turns a controller into a brick until someone explicitly unlocks it.
+**Use when:** you need to stop the controller completely requiring manual intervention. Emergency stops, fire alarms, etc.
+
+:::note
+You can choose what each output does while the controller is locked, hold its current state, or switch off. This is set per channel in Studio. This is set with Safe States on the channels.
+:::
+
+#### Safe States
+
+In the channel configuration tab, when hard lock is active, you'll see "Safe State" for each channel. The default is to hold like the Soft Lock does. This will pause all action exactly where it is when the Hard Lock is activated.
+
+Unlike a Soft Lock, you can override this. You can force something to "off" or 0. This can be a logical off state like "Off" on an inverted channel would turn it "On"... or a true power off state like a maglock that is on an inverted channel actually is powered off and safely opens. You can also choose a specific setting you want the channel to go to. This can be useful for turning on lights to full brightness or parking an animatronic in a safe way. 
 
 ## Interaction with Logic Rules
 
@@ -55,4 +69,4 @@ When the mode is anything else, the front button is **filtered out** of the Logi
 
 ## Interaction with Manual Control
 
-The front button doesn't fire Logic Rules during Manual Control — you're driving the channels directly. Pressing the front button while Manual Control is active does the basic mode behavior (Stop, Safety Lock, Hard Lock) but doesn't fire any rules.
+While Manual Control is active, the front button does nothing on the controller — it won't Stop, Safety Lock, or Hard Lock, and it won't fire any Logic Rules. You're driving the channels directly. The press is simply reported back to Studio.
