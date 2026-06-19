@@ -7,9 +7,8 @@ description: "What's on the front of the Input 16"
 
 The Input 16 front panel is dominated by its sixteen channel indicator LEDs — one for each input — plus indicators for the two onboard relay outputs.
 
-:::caution
-Photo coming soon.
-:::
+
+![Front Panel](https://assets.igorbox.cloud/product/IgorBox-Front-square.png)
 
 | Element | What it tells you |
 | --- | --- |

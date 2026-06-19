@@ -9,9 +9,7 @@ The Output 8 MKII is the next generation of the original Output 8, refined with 
 
 The marquee feature is our **Multistate Relay™** technology: six of the eight outputs can switch between standard relay and solid-state mode in software. You don't have to decide at install time whether a channel needs an isolated dry contact or a powered output driven straight off the controller's supply — flip the mode in Studio and it's done.
 
-:::caution
-Photo coming soon.
-:::
+![Output 8 Back Panel](https://assets.igorbox.cloud/product/output-8.png)
 
 ## What's in the box
 

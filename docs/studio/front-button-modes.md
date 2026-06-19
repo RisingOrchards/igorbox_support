@@ -39,17 +39,27 @@ A short press toggles a lock that **immediately stops the currently running show
 
 The status LED indicates the locked state, and Studio shows the controller as **Locked**.
 
-**Use when:** maintenance windows, daytime hours in a haunt, walk-throughs where you don't want sensors firing scenes.
+**Use when:** maintenance windows, daytime hours in a haunt, walk-throughs where you don't want sensors firing scenes. Like a software lockout/tagout flow. 
+
+:::note
+This pauses everything exactly where it's at. All channels are held until released.
+:::
 
 ### Hard Lock
 
 A short press engages a stronger lock: **all playback stops immediately and nothing can play.** Even Manual Control and Live Preview are blocked. Unlike Safety Lock, a Hard Lock is **not** cleared by pressing the button again — the controller stays locked until it's **rebooted (power-cycled)**.
 
-**Use when:** electrical work, repairs, construction inside an attraction. Hard Lock turns a controller into a brick until someone power-cycles it.
+**Use when:** you need to stop the controller completely requiring manual intervention. Emergency stops, fire alarms, etc.
 
 :::note
-You can choose what each output does while the controller is locked — hold its current state, or switch off. This is set per channel in Studio.
+You can choose what each output does while the controller is locked, hold its current state, or switch off. This is set per channel in Studio. This is set with Safe States on the channels.
 :::
+
+#### Safe States
+
+In the channel configuration tab, when hard lock is active, you'll see "Safe State" for each channel. The default is to hold like the Soft Lock does. This will pause all action exactly where it is when the Hard Lock is activated.
+
+Unlike a Soft Lock, you can override this. You can force something to "off" or 0. This can be a logical off state like "Off" on an inverted channel would turn it "On"... or a true power off state like a maglock that is on an inverted channel actually is powered off and safely opens. You can also choose a specific setting you want the channel to go to. This can be useful for turning on lights to full brightness or parking an animatronic in a safe way. 
 
 ## Interaction with Logic Rules
 

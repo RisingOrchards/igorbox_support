@@ -7,9 +7,7 @@ description: "What's on the front of the Output 8 MKII"
 
 The Output 8 MKII front panel is laid out for fast at-a-glance status checks during a show.
 
-:::caution
-Photo coming soon.
-:::
+![Front Panel](https://assets.igorbox.cloud/product/IgorBox-Front-square.png)
 
 From left to right:
 

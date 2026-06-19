@@ -7,9 +7,7 @@ description: "What's on the front of the LED Controller"
 
 The LED Controller's front panel mirrors the dimming behavior of channels 1–8 — each indicator dims with its channel, giving you a real-time visual of your show even if the lights are off-stage. Channels 9–16 are shown on the rear panel.
 
-:::caution
-Photo coming soon.
-:::
+![Front Panel](https://assets.igorbox.cloud/product/IgorBox-Front-square.png)
 
 | Element | What it tells you |
 | --- | --- |

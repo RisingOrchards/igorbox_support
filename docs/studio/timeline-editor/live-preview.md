@@ -28,7 +28,7 @@ Anything you'd do while editing — Live Preview doesn't lock the editor.
 
 ## Audio during Live Preview
 
-During Live Preview, audio plays from your **controller**, through the controller's output. On the first play, it may take several minutes for the audio files to be synced to the controller. This is a one time operation and subsequent plays should sync quickly from the draft on each play. We sync the draft show to the controller on every play event to preserve sync for preview.
+During Live Preview, audio plays from your **controller**, through the controller's output. On the first play, it may take several minutes for the audio files to be synced to the controller. This is a one time operation and subsequent plays should sync quickly from the draft on each play. We sync the draft show to the controller on every play event to preserve sync for preview but only sync audio files when the controller doesn't have it already on the controller.
 
 ## Ending Live Preview
 
