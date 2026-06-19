@@ -28,7 +28,7 @@ Every guest who walks past the sensor gets a scare, but you have three different
                                     └─► [Show: "Scare C"]
 ```
 
-Configure the Random block's weights to control how often each scare fires. Equal weights for uniform random; want Scare A to be 50% likely and B/C 25% each? Set weights to 2/1/1.
+Set the Random block's output count to match your number of scares (here, three). Each guest gets one of the three picked at random, with equal odds. Want one scare to come up more often? Wire it to two of the outputs.
 
 ## 3. "Rare scare" every Nth guest
 
@@ -59,20 +59,15 @@ Each Latch captures a switch flip and holds it on. The And gate fires when all f
 
 ## 5. Multi-controller coordination
 
-Input on Box A triggers an output on Box B and an output on Box C.
+Input on Box A fires a lighting show on Box B and an audio show on Box C.
 
 ```
 On Box A:
-[Input: "Trigger"] ──► [Named Trigger out: "scene-fire"]
-
-On Box B:
-[Named Trigger in: "scene-fire"] ──► [Show: "Lights Show"]
-
-On Box C:
-[Named Trigger in: "scene-fire"] ──► [Show: "Audio Show"]
+[Input: "Trigger"] ─┬─► [Show Trigger: "Lights Show"]
+                    └─► [Show Trigger: "Audio Show"]
 ```
 
-Named Triggers are how IgorBox controllers can talk to each other natively. Works regardless of which controller the input is on or which controllers the outputs are on, as long as they're all in the same Studio.
+A rule on any controller can fire a **Show Trigger** for any show in your Studio — including shows that run on other controllers. So Box A's input launches the lights on Box B and the audio on Box C just by firing each show's trigger. Show Triggers are the cross-controller mechanism; Named Triggers, by contrast, only chain rules within the same controller.
 
 ## 6. Webhook bridge
 

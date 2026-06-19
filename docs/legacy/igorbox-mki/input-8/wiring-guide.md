@@ -8,7 +8,7 @@ description: "Learn how to connect things to your IgorBox Input 8"
 The IgorBox Input 8 is designed to be a simple and reliable way to read and control up to 8 inputs from IgorBox.com. The Input 8 is perfect for reading sensors, buttons, footswitches, and other devices that provide a simple on/off voltage signal.
 
 :::info
-We know that wiring can be a bit intimidating, so we're here to help! This guide will walk you through the basics of wiring the Output 8 and give you some examples to get you started. If you have questions or need some help, feel free to reach out to us directly on Discord at [discord.igorbox.com](https://discord.igorbox.com).
+We know that wiring can be a bit intimidating, so we're here to help! This guide will walk you through the basics of wiring the Input 8 and give you some examples to get you started. If you have questions or need some help, feel free to reach out to us directly on Discord at [discord.igorbox.com](https://discord.igorbox.com).
 :::
 
 ## The I/O Connector Block

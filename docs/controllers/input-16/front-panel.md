@@ -31,11 +31,9 @@ This is more useful than it sounds. Color-code your inputs by puzzle, by zone, o
 
 The front-panel brightness is also dimmable globally (Configuration tab → Channel LEDs → Brightness). Useful in dark haunt scenes where any glow would be distracting.
 
-## Channel banks
+## Inputs 9–16
 
-If the controller is hosting a [remote channel bank](remote-channel-banks) for another Input 16, the indicators reflect the input state on this box. If the controller is the primary for remote banks, the indicators for channels 9–16 show the *remote* state.
-
-If a remote host loses connection, those channels show off, and the status LED shows degraded.
+Inputs 9–16 live on two included [breakout boards](channel-breakouts) connected by a standard Ethernet cable. Their indicators behave exactly like inputs 1–8 — the breakouts are part of the same controller, not separate boxes.
 
 ## Mounting
 

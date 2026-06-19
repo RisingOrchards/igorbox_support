@@ -9,11 +9,11 @@ Every IgorBox controller has both Ethernet and WiFi built in. You don't pick one
 
 ## Ethernet vs. WiFi
 
-| | Ethernet | WiFi |
-| --- | --- | --- |
-| Speed | Plenty | Plenty |
-| Range | Limited by cable | Anywhere your access point reaches |
-| Reliability | Bulletproof | Depends on your access point |
+|                     | Ethernet                                          | WiFi                                                    |
+| ------------------- | ------------------------------------------------- | ------------------------------------------------------- |
+| Speed               | Plenty                                            | Plenty                                                  |
+| Range               | Limited by cable                                  | Anywhere your access point reaches                      |
+| Reliability         | Bulletproof                                       | Depends on your access point                            |
 | **Recommended for** | Permanent installs, anywhere you can pull a cable | Temporary installs, hard-to-cable locations, prop carts |
 
 :::tip
@@ -32,7 +32,7 @@ For configuration and management of shows
 - **DNS** that can resolve `*.igorbox.studio`, `*.igorbox.io` and `*.igorbox.com`
 - **Outbound HTTPS to those domains** — open standard web ports (443) outbound
 
-If you have a managed firewall and need to allowlist specific destinations, those two domains plus port 443 outbound is what to allow. (dedicated ip blocks available to Enterprise tier customers)
+If you have a managed firewall and need to allowlist specific destinations, those three domains plus port 443 outbound is what to allow. (dedicated ip blocks available to Enterprise tier customers)
 
 ## Internet is not required for the show to run
 

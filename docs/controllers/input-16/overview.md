@@ -22,7 +22,7 @@ Photo coming soon.
 | Storage | 32 GB onboard |
 | Front panel | Status LED, RGB channel indicators, configurable [front button](/docs/controllers/shared/front-button) |
 | Power | 9–24V DC, center-positive barrel jack |
-| Remote channel banks | Yes — input channels 9–12 and 13–16 can be hosted on other controllers |
+| Channel breakouts | Inputs 9–16 ship on two included [breakout boards](channel-breakouts), connected by a standard Ethernet cable |
 
 ## Best for
 
@@ -55,13 +55,13 @@ For higher-power needs, target an Output 8 MKII or LED Controller from your Logi
 4. **Wire your inputs and outputs** — the [wiring guide](wiring-guide) covers buttons, sensors, and the relay outputs.
 5. **Build a Logic Rule** — [Logic Rules](/docs/studio/logic-rules/overview) is the place to start.
 
-## Remote channel banks
+## Channel breakout boards
 
-The Input 16 can host its inputs on other controllers when wiring distance gets in the way. See [Remote Channel Banks](remote-channel-banks).
+Inputs 9–16 don't fit on the main box, so they ship on two included breakout boards that connect with a standard Ethernet cable. It's one Input 16, not multiple boxes. See [Channel Breakout Boards](channel-breakouts).
 
 ## See also
 
 - [Wiring Guide](wiring-guide)
 - [Front Panel](front-panel)
 - [Tech Specs](tech-specs)
-- [Remote Channel Banks](remote-channel-banks)
+- [Channel Breakout Boards](channel-breakouts)

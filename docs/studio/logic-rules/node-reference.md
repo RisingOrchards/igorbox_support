@@ -31,9 +31,9 @@ Studio gives you the URL when you set up the [inbound webhook](/docs/studio/webh
 
 ### Named Trigger
 
-A signal from another rule. Lets one rule fire something that another rule listens for.
+A signal from another rule **on the same controller**. Lets one rule fire something that another rule listens for.
 
-Use it to chain rules together when one big rule would be too tangled.
+Use it to chain rules together when one big rule would be too tangled. To coordinate *across* controllers, use a Show Trigger instead — those reach any show in your Studio.
 
 ## Logic
 
@@ -77,7 +77,7 @@ Flips on, then flips off, then on again — every time it fires. Useful for stat
 
 Routes a fire to one of several outputs at random. Useful for "every time a guest walks through, pick a random scare from a pool."
 
-You can weight the outputs so some are more likely than others.
+Set how many outputs you want (2 to 8). Each fire picks one of them with equal odds.
 
 ## Outputs
 
@@ -93,7 +93,7 @@ Fires an [outbound webhook](/docs/studio/webhooks/outbound) to call out to some 
 
 ### Named Trigger (output)
 
-Sends a named signal that other rules in your account can listen for. The pair to the Named Trigger input above. Used to chain rules together.
+Sends a named signal that other rules **on the same controller** can listen for. The pair to the Named Trigger input above. Used to chain rules together on one box — not across controllers.
 
 ## Tips
 

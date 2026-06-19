@@ -23,11 +23,13 @@ You'll want a 3.5 mm TRS to dual-RCA or 3.5 mm to dual-1/4" cable for most amps 
 
 Audio plays from the controller's onboard storage — no streaming from the cloud, so latency is low and reliability is high.
 
-| Format | Supported | Notes |
-| --- | --- | --- |
-| WAV (PCM) | Yes | Lossless, biggest files |
-| FLAC | Yes | Lossless, much smaller than WAV |
-| MP3 | Yes | Lossy, smallest files |
+| Format    | Supported | Notes                           |
+| --------- | --------- | ------------------------------- |
+| WAV (PCM) | Yes       | Lossless, biggest files         |
+| FLAC      | Yes       | Lossless, much smaller than WAV |
+| MP3       | Yes       | Lossy, smallest files           |
+| AAC       | No        |                                 |
+| AIFF      | No        |                                 |
 
 For best playback fidelity, use **44.1 kHz, 16-bit, lossless** (WAV or FLAC). Studio will warn you if you upload media that's outside this sweet spot and it will prevent you from using incompatible audio formats.
 
@@ -39,9 +41,6 @@ If nothing is playing, the output is silent.
 
 ## Master volume
 
-Volume is set in IgorBox Studio, not on the device — there's no physical knob. You can:
-
-- Set a master volume per controller (in the Configuration tab)
 - Set a per-clip volume in the timeline editor (right-click an audio clip → Volume)
 
 If you need a hardware volume control on stage, put a powered speaker with a volume knob downstream of the controller, or use a mixer.

@@ -14,5 +14,5 @@ If an error code is displayed, the box will need to be power cycled to clear the
 | 3            | Failure to initialize audio system         |
 | 4            | Failure to initialize network hardware     |
 | 5            | Failure to retrieve internal configuration |
-| 6            | Failure to initialize one or more relays   |
+| 6            | Failure to initialize one or more inputs   |
 | 7            | Unhandled fatal error                      |
