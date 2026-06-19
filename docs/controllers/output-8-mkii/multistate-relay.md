@@ -33,6 +33,36 @@ All on one box. All from one show in the timeline editor.
 
 Each Multistate channel is rated for **1.5A** in either mode. If you need more current, use channels 7 or 8 (the standard 3A relays).
 
+## Flyback Diodes
+
+:::warning
+There is no flyback protection provided at the connector. This was intentional because we want IgorBox to be as versatile as possible. This means that if you're switching solenoids or other inductive loads, you should use a flyback diode installed close to the inductive device (like a solenoid) or at least add a flyback diode to the connector as a last resort. It's always better to put this as close to your solenoid as possible to prevent radio interference and other transient issues. 
+
+The diode should be configured so that the side with the line (cathode) is on the positive wire and the other side (anode) is on the negative wire. 
+
+If you need help with this or have additional questions, please contact us! We're here to help!
+:::
+
+
+```
+   IgorBox channel (Solid-State mode)
+
+   (+) ●──────────────┬──────────────┐
+                      │              │
+                   ═══════  ◄ STRIPE / line end (this end to +)
+                    DIODE            ▓
+                    ──┬──            ▓   SOLENOID
+                      │              ▓
+   (−) ●──────────────┴──────────────┘
+
+```
+
+A good "all around" Diode for this is the [1N5408](https://www.amazon.com/EEEEE-1N5408-Rectifier-Electronic-Silicon/dp/B0FC2917XJ) rectifier diode. You can buy packs of 50 of them for less than $10.. If you drop a note on your order, we'll give you a bunch for free. 
+
+:::info
+The diode is not strictly required and the IgorBox will be fine if you don't use one, but for the longevity of your connected devices and integrity of adjacent devices that may not reject radio interference well, we **strongly suggest** you consider putting in a diode as a cheap insurance.
+:::
+
 ## Switching modes
 
 Open the controller in Studio, go to the Configuration tab, and click the channel. Pick the mode and Studio pushes the change to the controller right away.
