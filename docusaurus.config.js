@@ -133,6 +133,11 @@ const config = {
     ({
       // Replace with your project's social card
       image: "img/opengraph-image-control.png",
+      docs: {
+        sidebar: {
+          autoCollapseCategories: true,
+        },
+      },
       navbar: {
         logo: {
           alt: "IgorBox Logo",

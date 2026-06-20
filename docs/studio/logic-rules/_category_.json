@@ -2,7 +2,7 @@
   "position": 20,
   "label": "Logic Rules",
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "link": {
     "type": "generated-index",
     "title": "Logic Rules",

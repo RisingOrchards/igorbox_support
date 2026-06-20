@@ -2,7 +2,7 @@
   "position": 20,
   "label": "LabRat G2 (New)",
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "className": "gray",
   "link": {
     "type": "generated-index",

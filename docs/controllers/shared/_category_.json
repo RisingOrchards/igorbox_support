@@ -2,7 +2,7 @@
   "position": 1,
   "label": "Shared concepts",
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "link": {
     "type": "generated-index",
     "title": "Shared Controller Concepts",
