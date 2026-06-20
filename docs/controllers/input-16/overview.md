@@ -65,3 +65,4 @@ Inputs 9–16 don't fit on the main box, so they ship on two included breakout b
 - [Front Panel](front-panel)
 - [Tech Specs](tech-specs)
 - [Channel Breakout Boards](channel-breakouts)
+- [Regulatory Compliance](compliance) — FCC & ISED statements

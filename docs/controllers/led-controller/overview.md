@@ -70,3 +70,4 @@ For those, use the [RGBW-PWR breakout](rgbw-pwr-breakout). The breakout takes th
 - [Channel Breakout Boards](channel-breakouts)
 - [Front Panel](front-panel)
 - [Tech Specs](tech-specs)
+- [Regulatory Compliance](compliance) — FCC & ISED statements

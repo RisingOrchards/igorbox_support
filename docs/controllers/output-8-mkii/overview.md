@@ -46,3 +46,4 @@ The marquee feature is our **Multistate Relay™** technology: six of the eight 
 - [Wiring Guide](wiring-guide) — examples for lights, solenoids, motors, and inputs
 - [Front Panel](front-panel)
 - [Tech Specs](tech-specs)
+- [Regulatory Compliance](compliance) — FCC & ISED statements
