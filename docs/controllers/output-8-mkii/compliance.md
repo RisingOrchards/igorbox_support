@@ -24,13 +24,13 @@ This device complies with part 15 of the FCC Rules. Operation is subject to the 
 
 ## ISED Compliance Statement
 
-Contains IC: **21098-ESPS3WROOM1U**
+Contains IC: **21098-ESPS3WROOMU**
 
 This Class B digital apparatus complies with Canadian ICES-003.
 
 Cet appareil numérique de la classe B est conforme à la norme NMB-003 du Canada.
 
-CAN ICES-003(B) / NMB-003(B)
+CAN ICES (B) / NMB (B)
 
 ## Supplier's Declaration of Conformity
 
