@@ -24,7 +24,7 @@ This device complies with part 15 of the FCC Rules. Operation is subject to the 
 
 ## ISED Compliance Statement
 
-Contains IC: **21098-ESPS3WROOMU**
+Contains IC: **21098-ESPS3WROOM1U**
 
 This Class B digital apparatus complies with Canadian ICES-003.
 
