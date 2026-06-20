@@ -3,6 +3,16 @@ sidebar_position: 1
 description: "What the Output 8 MKII is and how to get started with it"
 ---
 
+import ProductJsonLd from '@site/src/components/ProductJsonLd';
+
+<ProductJsonLd
+  name="IgorBox Output 8"
+  sku="IBRLY02"
+  description="The everyday IgorBox show-control workhorse: six software-configurable Multistate Relay outputs (relay or solid-state, 1.5A) plus two 3A relays and two isolated inputs. Fires pneumatic props, show lighting, and motors for haunted houses, escape rooms, and themed entertainment."
+  image="https://assets.igorbox.cloud/product/output-8.png"
+  url="https://help.igorbox.com/docs/controllers/output-8-mkii/overview"
+/>
+
 # Output 8 MKII
 
 The Output 8 MKII is the next generation of the original Output 8, refined with feedback from the early-access program. It's the everyday workhorse of the IgorBox lineup — eight outputs, two isolated inputs, and Easywire™ guided wiring on every terminal.

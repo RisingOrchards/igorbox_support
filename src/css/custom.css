@@ -192,3 +192,17 @@
   color: #888889 !important;
   opacity: 1; /* Firefox */
 }
+
+/* Per-doc CC BY license notice (DocItem/Footer swizzle) */
+.docs-license {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-toc-border-color);
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.docs-license a {
+  color: inherit;
+  text-decoration: underline;
+}

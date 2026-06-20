@@ -16,6 +16,31 @@ const config = {
   },
   themes: ["@docusaurus/theme-mermaid"],
 
+  // Site-wide Organization structured data (schema.org / JSON-LD) for AI & search.
+  headTags: [
+    {
+      tagName: "script",
+      attributes: { type: "application/ld+json" },
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "IgorBox",
+        legalName: "Rising Orchards, LLC dba IgorBox",
+        url: "https://www.igorbox.com",
+        logo: "https://help.igorbox.com/img/logo.svg",
+        description:
+          "Show-control hardware and software for haunted houses, escape rooms, and themed entertainment — controllers for props, lighting, pneumatics, and inputs, plus the IgorBox Studio timeline and logic-rules platform.",
+        sameAs: [
+          "https://github.com/RisingOrchards/igorbox_support",
+          "https://www.youtube.com/@igorboxcontrol",
+          "https://www.facebook.com/igorboxcontrol",
+          "https://www.instagram.com/igorboxcontrol/",
+          "https://store.igorbox.com",
+        ],
+      }),
+    },
+  ],
+
   // Set the production url of your site here
   url: "https://help.igorbox.com",
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -83,6 +108,7 @@ const config = {
 
   plugins: [
     require.resolve("docusaurus-lunr-search"),
+    require.resolve("./plugins/llms-txt"),
     [
       "docusaurus-plugin-mcp-server",
       {
@@ -94,35 +120,98 @@ const config = {
       {
         redirects: [
           // Studio docs restructure — Triggers split out of Logic Rules
-          { from: "/docs/studio/logic-rules/show-triggers", to: "/docs/studio/triggers" },
+          {
+            from: "/docs/studio/logic-rules/show-triggers",
+            to: "/docs/studio/triggers",
+          },
           // Legacy IgorBox MKI archive
           { from: "/contact", to: "/docs/contact" },
-          { from: "/docs/igorbox/getting-started", to: "/docs/legacy/igorbox-mki/getting-started" },
-          { from: "/docs/igorbox/connect", to: "/docs/legacy/igorbox-mki/connect" },
+          {
+            from: "/docs/igorbox/getting-started",
+            to: "/docs/legacy/igorbox-mki/getting-started",
+          },
+          {
+            from: "/docs/igorbox/connect",
+            to: "/docs/legacy/igorbox-mki/connect",
+          },
           { from: "/docs/igorbox/wifi", to: "/docs/legacy/igorbox-mki/wifi" },
-          { from: "/docs/igorbox/local_management", to: "/docs/legacy/igorbox-mki/local_management" },
-          { from: "/docs/igorbox/output-8/basics", to: "/docs/legacy/igorbox-mki/output-8/basics" },
-          { from: "/docs/igorbox/output-8/wiring-guide", to: "/docs/legacy/igorbox-mki/output-8/wiring-guide" },
-          { from: "/docs/igorbox/output-8/error-codes", to: "/docs/legacy/igorbox-mki/output-8/error-codes" },
-          { from: "/docs/igorbox/output-8/technical-info", to: "/docs/legacy/igorbox-mki/output-8/technical-info" },
-          { from: "/docs/igorbox/input-8/basics", to: "/docs/legacy/igorbox-mki/input-8/basics" },
-          { from: "/docs/igorbox/input-8/wiring-guide", to: "/docs/legacy/igorbox-mki/input-8/wiring-guide" },
-          { from: "/docs/igorbox/input-8/error-codes", to: "/docs/legacy/igorbox-mki/input-8/error-codes" },
-          { from: "/docs/igorbox/input-8/technical-info", to: "/docs/legacy/igorbox-mki/input-8/technical-info" },
+          {
+            from: "/docs/igorbox/local_management",
+            to: "/docs/legacy/igorbox-mki/local_management",
+          },
+          {
+            from: "/docs/igorbox/output-8/basics",
+            to: "/docs/legacy/igorbox-mki/output-8/basics",
+          },
+          {
+            from: "/docs/igorbox/output-8/wiring-guide",
+            to: "/docs/legacy/igorbox-mki/output-8/wiring-guide",
+          },
+          {
+            from: "/docs/igorbox/output-8/error-codes",
+            to: "/docs/legacy/igorbox-mki/output-8/error-codes",
+          },
+          {
+            from: "/docs/igorbox/output-8/technical-info",
+            to: "/docs/legacy/igorbox-mki/output-8/technical-info",
+          },
+          {
+            from: "/docs/igorbox/input-8/basics",
+            to: "/docs/legacy/igorbox-mki/input-8/basics",
+          },
+          {
+            from: "/docs/igorbox/input-8/wiring-guide",
+            to: "/docs/legacy/igorbox-mki/input-8/wiring-guide",
+          },
+          {
+            from: "/docs/igorbox/input-8/error-codes",
+            to: "/docs/legacy/igorbox-mki/input-8/error-codes",
+          },
+          {
+            from: "/docs/igorbox/input-8/technical-info",
+            to: "/docs/legacy/igorbox-mki/input-8/technical-info",
+          },
           // Legacy LabRat archive
-          { from: "/docs/labrat/g1/quick_start", to: "/docs/legacy/labrat/g1/quick_start" },
+          {
+            from: "/docs/labrat/g1/quick_start",
+            to: "/docs/legacy/labrat/g1/quick_start",
+          },
           { from: "/docs/labrat/g1/modes", to: "/docs/legacy/labrat/g1/modes" },
           { from: "/docs/labrat/g1/ui", to: "/docs/legacy/labrat/g1/ui" },
-          { from: "/docs/labrat/g1/tech_specs", to: "/docs/legacy/labrat/g1/tech_specs" },
-          { from: "/docs/labrat/g2/overview", to: "/docs/legacy/labrat/g2/overview" },
-          { from: "/docs/labrat/g2/configuration", to: "/docs/legacy/labrat/g2/configuration" },
-          { from: "/docs/labrat/g2/configurator", to: "/docs/legacy/labrat/g2/configurator" },
-          { from: "/docs/labrat/g2/firmware", to: "/docs/legacy/labrat/g2/firmware" },
+          {
+            from: "/docs/labrat/g1/tech_specs",
+            to: "/docs/legacy/labrat/g1/tech_specs",
+          },
+          {
+            from: "/docs/labrat/g2/overview",
+            to: "/docs/legacy/labrat/g2/overview",
+          },
+          {
+            from: "/docs/labrat/g2/configuration",
+            to: "/docs/legacy/labrat/g2/configuration",
+          },
+          {
+            from: "/docs/labrat/g2/configurator",
+            to: "/docs/legacy/labrat/g2/configurator",
+          },
+          {
+            from: "/docs/labrat/g2/firmware",
+            to: "/docs/legacy/labrat/g2/firmware",
+          },
           { from: "/docs/labrat/g2/reset", to: "/docs/legacy/labrat/g2/reset" },
           // Old category landing pages — redirect to a real page inside each category
-          { from: "/docs/category/output-8", to: "/docs/legacy/igorbox-mki/output-8/basics" },
-          { from: "/docs/category/input-8", to: "/docs/legacy/igorbox-mki/input-8/basics" },
-          { from: "/docs/category/labrat", to: "/docs/legacy/labrat/g2/overview" },
+          {
+            from: "/docs/category/output-8",
+            to: "/docs/legacy/igorbox-mki/output-8/basics",
+          },
+          {
+            from: "/docs/category/input-8",
+            to: "/docs/legacy/igorbox-mki/input-8/basics",
+          },
+          {
+            from: "/docs/category/labrat",
+            to: "/docs/legacy/labrat/g2/overview",
+          },
         ],
       },
     ],
@@ -210,15 +299,15 @@ const config = {
               },
               {
                 label: "Subscribe on YouTube",
-                href: "https://www.youtube.com/@risingorchards",
+                href: "https://www.youtube.com/@igorboxcontrol",
               },
               {
                 label: "Like on Facebook",
-                href: "https://www.facebook.com/profile.php?id=100087874489151",
+                href: "https://www.facebook.com/igorboxcontrol",
               },
               {
                 label: "Follow on Instagram",
-                href: "https://www.instagram.com/risingorchards/",
+                href: "https://www.instagram.com/igorboxcontrol/",
               },
             ],
           },
@@ -236,10 +325,6 @@ const config = {
               {
                 label: "Store",
                 href: "https://store.igorbox.com",
-              },
-              {
-                label: "Feedback and Bug Reports",
-                href: "https://feedback.igorbox.com",
               },
               {
                 label: "System Status",
