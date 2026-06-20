@@ -24,12 +24,15 @@ function firstH1(body) {
   return m ? m[1].trim() : null;
 }
 
-// Strip MDX imports and JSON-LD component blocks so the full-text dump is clean prose.
+// Strip MDX imports and JSX components (e.g. <ProductJsonLd/>, <LabRatConfigurator/>,
+// <Link>…</Link>) so the full-text dump is clean prose rather than leaking raw tags.
 function cleanBody(body) {
   return body
     .replace(/^import\s.+$/gm, '')
-    .replace(/<ProductJsonLd[\s\S]*?\/>/g, '')
-    .replace(/<Head>[\s\S]*?<\/Head>/g, '')
+    // Paired components: <Foo ...>…</Foo> (capitalized tag name).
+    .replace(/<([A-Z][A-Za-z0-9]*)\b[\s\S]*?<\/\1>/g, '')
+    // Self-closing components: <Foo ... />.
+    .replace(/<[A-Z][A-Za-z0-9]*\b[\s\S]*?\/>/g, '')
     .replace(/\n{3,}/g, '\n\n')
     .trim();
 }
