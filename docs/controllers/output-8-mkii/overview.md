@@ -13,9 +13,10 @@ The marquee feature is our **Multistate Relay™** technology: six of the eight 
 
 ## What's in the box
 
-| Outputs | 6 × 1.5A [Multistate Relay™](multistate-relay) outputs |
+| | |
 | --- | --- |
-|  | 2 × 3A standard relay outputs |
+| Multistate Outputs | 6 × 1.5A [Multistate Relay™](multistate-relay) outputs |
+| Relay Outputs | 2 × 3A standard relay outputs |
 | Inputs | 2 × isolated inputs |
 | Connectivity | Ethernet + WiFi |
 | Connectors | WAGO® on every terminal |

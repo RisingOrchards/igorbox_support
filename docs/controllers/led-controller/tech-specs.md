@@ -15,8 +15,9 @@ The figures here are working limits. If you choose to operate outside them, you 
 
 |  |  |
 | --- | --- |
-| Logic supply | 9–24V DC, 5.5 × 2.1 mm barrel jack |
-| Channel voltage | 12V or 24V DC, set per-controller during provisioning |
+| Supply voltage | 9–24V DC |
+| Recommended supply | 12V or 24V, 1A minimum |
+| Connector | 5.5 × 2.1 mm barrel jack, center-positive |
 
 ## Outputs
 
@@ -27,7 +28,7 @@ The figures here are working limits. If you choose to operate outside them, you 
 | **Current per channel** | **20 mA maximum (clamped)** |
 | Channel voltage | 12V or 24V DC (per-controller, not per-channel) |
 
-The 20 mA clamp means the onboard channels are sized for **indicators and signal-level use**, not for driving lighting loads directly. For panel LEDs, pinspots, strips, or motor loads, use the [RGBW-PWR breakout](rgbw-pwr-breakout).
+The 20 mA clamp means the onboard channels drive **low-current LED loads directly** — indicators, panel lights, and pinspots. For loads that draw more than 20 mA — LED strips, larger fixtures, or motors — use the [RGBW-PWR breakout](rgbw-pwr-breakout).
 
 ## Inputs
 

@@ -15,15 +15,23 @@ Photos coming soon. The wiring procedures below are accurate; we're working on d
 We know wiring is intimidating the first time. If anything below is unclear, jump on [Discord](https://discord.igorbox.com) — someone in the community has wired exactly the thing you're wiring.
 :::
 
-## The terminal block
+## The Connector Config
 
-The MKII terminal block is divided into three zones:
+![Output 8 Connector Map](/img/ibrly02/output-connectors.png)
 
-- **Outputs (left)** — channels 1–6 (Multistate, 1.5A) and channels 7–8 (standard, 3A)
-- **Power passthrough (center)** — V+ and GND mirrored from the barrel jack
-- **Inputs (right)** — the two isolated inputs
+Each channel is a WAGO connector starting with channel 1 on the left and going to channel 8.
 
-Each terminal is a WAGO® lever. Lift the lever, insert the wire, drop the lever. No screwdriver, no torquing, no spring fatigue.
+The first 6 WAGOs are [Multistate relays](multistate-relay) and can function as normal relays or solid-state-like relays.
+
+When in normal mode they are just shorting together when active. If you switch to solid-state mode in the software, they become switched power (internally jumped to the power). The helper LEDs will indicate the polarity with a **RED** LED for the Positive (V+) and a **BLUE** LED for the Negative (V-). These are limited to a max of 1.5A each.
+
+The next 2 WAGO connectors are standard "high power" relays capable of 3A sustained.
+
+The next WAGO (after channel 8) is the Power Output which is fed by the barrel jack you plug into the front of the controller. Positive is left and Negative is right. The helper LEDs indicate Red for Positive and Blue for Negative to help you identify this connector as well.
+
+Then the last two WAGOs on the right are Input 1 and Input 2 for triggering shows in your system or using in logic rules.
+
+The polarity of the inputs is not relevant as they can be wired in any polarity and support 6–48V DC or AC.
 
 ## Channel basics
 

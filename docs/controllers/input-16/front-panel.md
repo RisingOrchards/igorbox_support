@@ -13,7 +13,7 @@ The Input 16 front panel is dominated by its sixteen channel indicator LEDs — 
 | Element | What it tells you |
 | --- | --- |
 | Status LED | Overall controller state — see [Status LED](/docs/controllers/shared/status-led) |
-| 16 input indicators | One per input. Lights purple when that input is on. |
+| 8 input indicators | Channels 1-8 indicated. Lights purple when that input is on. |
 | 2 relay output indicators | One per relay output. Green when the output is on; orange if the output is set to inverted. |
 | Front button | Configurable per controller — see [Front Button](/docs/controllers/shared/front-button) |
 

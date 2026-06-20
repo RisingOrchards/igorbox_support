@@ -5,9 +5,9 @@ description: "What the LED Controller is and how to get started with it"
 
 # LED Controller
 
-The LED Controller is a 16-channel low-current dimmable controller. Each onboard channel is a smooth dimming output, perfect for indicator-level loads — puzzle-board LEDs, signal indicators, low-power "puzzle solved" lights, or driving an external power stage that does the heavy switching.
+The LED Controller is a 16-channel low-current dimmable controller. Each onboard channel is a smooth dimming output, perfect for low-current LED loads — puzzle-board LEDs, signal indicators, panel lights, pinspots, low-power "puzzle solved" lights — or for driving an external power stage that does the heavy switching.
 
-For real lighting loads — panel LEDs, pinspots, LED strips — pair it with the [RGBW-PWR breakout](rgbw-pwr-breakout). The breakout adds a power stage so four channels can drive up to 120W of lighting per board.
+For higher-current loads — LED strips and larger fixtures — pair it with the [RGBW-PWR breakout](rgbw-pwr-breakout). The breakout adds a power stage so four channels can drive up to 120W of lighting per board.
 
 It also has two isolated inputs you can wire into Logic Rules just like any other input.
 
@@ -24,7 +24,7 @@ It also has two isolated inputs you can wire into Logic Rules just like any othe
 | Audio | Stereo line out (3.5 mm) |
 | Storage | 32 GB onboard |
 | Front panel | Status LED, RGB channel indicators, configurable [front button](/docs/controllers/shared/front-button) |
-| Power | 9–24V DC, center-positive barrel jack |
+| Power | 9–24V DC, center-positive barrel jack (12V 1A supply included) |
 | Expansion | [RGBW-PWR breakout](rgbw-pwr-breakout) — higher-current / different-voltage output for 4 channels, up to 120W per board |
 | Channel breakouts | Channels 9–16 ship on two included [breakout boards](channel-breakouts), connected by a standard Ethernet cable |
 
@@ -33,15 +33,15 @@ It also has two isolated inputs you can wire into Logic Rules just like any othe
 Each onboard channel can drive **up to 20 mA**. That's enough for:
 
 - A single indicator LED (the 5 mm or SMD kind on a circuit board)
+- A panel light or pinspot — they're low-current LEDs too
 - A solid-state relay's input
 - An optocoupler that drives a downstream high-current circuit
 - A low-power signal to another show controller
 
 It's **not** enough for:
 
-- A panel LED
-- A pinspot
 - A length of LED strip
+- A larger fixture
 - A motor
 
 For those, use the [RGBW-PWR breakout](rgbw-pwr-breakout). The breakout takes the LED Controller's signal and drives the actual load with substantially more current.
@@ -51,7 +51,7 @@ For those, use the [RGBW-PWR breakout](rgbw-pwr-breakout). The breakout takes th
 - **Escape room puzzle boards** — sixteen indicator LEDs that flash, fade, and reveal solved puzzles
 - **Status indicator panels** — visual readouts of show state for staff
 - **Driving external power stages** — the LED Controller's channels are exactly what an SSR or breakout board wants on its input
-- **Real lighting** — paired with the RGBW-PWR breakout (panel LEDs, pinspots, strips, up to 120W)
+- **Real lighting** — paired with the RGBW-PWR breakout (LED strips and larger fixtures, up to 120W)
 - **Motor speed control** — paired with the RGBW-PWR breakout or an external motor driver
 
 ## Quick start

@@ -11,15 +11,17 @@ The two relay outputs (1.5A each) follow the same wiring conventions as the rela
 
 [Easywire™](/docs/controllers/shared/easywire) walks you through every wiring recipe visually. The instructions below are the manual fallback.
 
-:::caution
-Photos coming soon.
-:::
+## The Connector Config
 
-## The terminal block
+![Input 16 Connector Map](/img/ibin16/input-connectors.png)
 
-The Input 16 has 16 input pairs, two relay output pairs, and a center power passthrough zone — all on WAGO® levers.
+Each channel is a WAGO connector starting with channel 1 on the left and going to channel 8. These are optically isolated inputs and the polarity doesn't matter. They support 6–48V AC/DC. They are marked with a (+) and (-) but that's just a suggestion and not required.
 
-Each pair is a vertical pair of terminals.
+The next WAGO (after channel 8) is the Power Output which is fed by the barrel jack you plug into the front of the controller. Positive is left and Negative is right. The helper LEDs indicate Red for Positive and Blue for Negative to help you identify this connector as well.
+
+Then the last two WAGOs on the right are standard normally open relay outputs (1.5A each) that follow the same wiring conventions as the relay channels on the [Output 8 MKII](/docs/controllers/output-8-mkii/wiring-guide).
+
+Under the row of WAGOs, you'll find 2 RJ45 jacks (Ethernet jacks). The left one is channels 9–12 and the right one is channels 13–16. Each jack connects to a channel breakout board. Two **standard breakout boards** ship in the box (one per jack) and carry the same 6–48V AC/DC requirement to activate. They are also not polarized.
 
 ## Wiring inputs
 
@@ -69,7 +71,7 @@ Industrial sensors (proximity, photo-eye, etc.) often need 24V to operate and ou
 2. Wire the sensor's signal output to one terminal of an input pair.
 3. Wire the sensor's GND to the other terminal.
 
-Most sensors are PNP (sourcing) or NPN (sinking) — both work with the isolated input as long as you wire GND correctly. If the input doesn't trigger, swap the two terminals.
+Industrial sensors come in two switching types — you'll see them labeled **PNP** or **NPN** on the data sheet. Both work with the isolated input; if it doesn't trigger, just swap the two terminals.
 
 ### Wiring an output from another controller
 
@@ -91,7 +93,7 @@ When the channel turns on, the load turns on.
 
 Common uses for the two relay outputs:
 
-- **Maglock release** — wire the maglock's V+ through one of the relay channels. Logic Rule says "puzzle solved" → relay opens → maglock releases. (Maglocks are typically wired the opposite of "normal" — they're held *closed* by current and release when current is removed. So the inverse-on-release is what you want for fail-safe behavior.)
+- **Maglock release** — wire the maglock's V+ through one of the relay channels and set the channel to **Inverted** in the controller's config in Studio. Inverting it energizes the relay at rest, so it behaves like a **Normally Closed** relay — and it "fails safe": if the controller loses power (a power outage at your venue), the relay drops out and the maglock unlocks. In normal operation: Logic Rule fires "puzzle solved" → channel activates → relay opens → maglock releases. (Maglocks are typically wired the opposite of "normal" — they're held *closed* by current and release when current is removed. So the inverse-on-release is what you want for fail-safe behavior.)
 - **Small effect or indicator** — a low-power lamp, a buzzer, a single mister
 - **Trigger wire to another show controller** — the relay closes a contact closure that the other controller reads as a trigger input
 
