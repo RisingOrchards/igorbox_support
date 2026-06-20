@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+title: Output 8 MKII
 description: "What the Output 8 MKII is and how to get started with it"
 ---
 
@@ -12,8 +13,6 @@ import ProductJsonLd from '@site/src/components/ProductJsonLd';
   image="https://assets.igorbox.cloud/product/output-8.png"
   url="https://help.igorbox.com/docs/controllers/output-8-mkii/overview"
 />
-
-# Output 8 MKII
 
 The Output 8 MKII is the next generation of the original Output 8, refined with feedback from the early-access program. It's the everyday workhorse of the IgorBox lineup — eight outputs, two isolated inputs, and Easywire™ guided wiring on every terminal.
 

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+title: LED Controller
 description: "What the LED Controller is and how to get started with it"
 ---
 
@@ -12,8 +13,6 @@ import ProductJsonLd from '@site/src/components/ProductJsonLd';
   image="https://assets.igorbox.cloud/product/led.png"
   url="https://help.igorbox.com/docs/controllers/led-controller/overview"
 />
-
-# LED Controller
 
 The LED Controller is a 16-channel low-current dimmable controller. Each onboard channel is a smooth dimming output, perfect for low-current LED loads — puzzle-board LEDs, signal indicators, panel lights, pinspots, low-power "puzzle solved" lights — or for driving an external power stage that does the heavy switching.
 

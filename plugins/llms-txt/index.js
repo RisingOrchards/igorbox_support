@@ -29,6 +29,7 @@ function cleanBody(body) {
   return body
     .replace(/^import\s.+$/gm, '')
     .replace(/<ProductJsonLd[\s\S]*?\/>/g, '')
+    .replace(/<Head>[\s\S]*?<\/Head>/g, '')
     .replace(/\n{3,}/g, '\n\n')
     .trim();
 }

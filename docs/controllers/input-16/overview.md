@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+title: Input 16
 description: "What the Input 16 is and how to get started with it"
 ---
 
@@ -12,8 +13,6 @@ import ProductJsonLd from '@site/src/components/ProductJsonLd';
   image="https://assets.igorbox.cloud/product/input-16.png"
   url="https://help.igorbox.com/docs/controllers/input-16/overview"
 />
-
-# Input 16
 
 The Input 16 is the central nervous system of your attraction. Sixteen isolated inputs in a single box, plus two relay outputs you can use for locks, small effects, or triggers to other systems. Buttons, footswitches, reed sensors, IR beams, RFID readers, escape room puzzle pieces, prop sensors — wire them all into one IgorBox and let [Logic Rules](/docs/studio/logic-rules/overview) do the rest.
 
