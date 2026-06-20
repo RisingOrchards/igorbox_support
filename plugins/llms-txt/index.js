@@ -63,28 +63,38 @@ module.exports = function llmsTxtPlugin(context) {
       const entries = collect(docsDir, [])
         .sort()
         .map((file) => {
-          const raw = fs.readFileSync(file, 'utf8');
-          const {data, body} = parseFrontmatter(raw);
-          const rel = path
-            .relative(docsDir, file)
-            .replace(/\.mdx?$/, '')
-            .split(path.sep)
-            .join('/');
-          return {
-            rel,
-            section: rel.includes('/') ? rel.split('/')[0] : 'overview',
-            url: base + path.posix.join(baseUrl, 'docs', rel),
-            title: data.title || firstH1(body) || rel.split('/').pop(),
-            description: data.description || '',
-            body: cleanBody(body),
-          };
-        });
+          // A single unreadable or malformed doc shouldn't crash the whole
+          // build — skip it with a warning so the rest of llms.txt still ships.
+          try {
+            const raw = fs.readFileSync(file, 'utf8');
+            const {data, body} = parseFrontmatter(raw);
+            const rel = path
+              .relative(docsDir, file)
+              .replace(/\.mdx?$/, '')
+              .split(path.sep)
+              .join('/');
+            return {
+              rel,
+              section: rel.includes('/') ? rel.split('/')[0] : 'overview',
+              url: base + path.posix.join(baseUrl, 'docs', rel),
+              title: data.title || firstH1(body) || rel.split('/').pop(),
+              description: data.description || '',
+              body: cleanBody(body),
+            };
+          } catch (err) {
+            console.warn(
+              `[llms-txt-plugin] skipping ${file}: ${err.message}`,
+            );
+            return null;
+          }
+        })
+        .filter(Boolean);
 
       // llms.txt — curated index grouped by top-level section.
       const groups = {};
       for (const e of entries) (groups[e.section] ||= []).push(e);
 
-      const idx = [`# ${siteConfig.title}`, '', `> ${siteConfig.tagline}`, ''];
+      const idx = [`# ${siteConfig.title}`, '', `> ${siteConfig.tagline ?? ''}`, ''];
       for (const section of Object.keys(groups).sort()) {
         idx.push(`## ${titleCase(section)}`, '');
         for (const e of groups[section]) {
@@ -97,7 +107,7 @@ module.exports = function llmsTxtPlugin(context) {
       fs.writeFileSync(path.join(outDir, 'llms.txt'), idx.join('\n'), 'utf8');
 
       // llms-full.txt — every doc, full text, with its canonical URL.
-      const full = [`# ${siteConfig.title}`, '', `> ${siteConfig.tagline}`, ''];
+      const full = [`# ${siteConfig.title}`, '', `> ${siteConfig.tagline ?? ''}`, ''];
       for (const e of entries) {
         full.push('---', '', `# ${e.title}`, `Source: ${e.url}`, '');
         if (e.description) full.push(`> ${e.description}`, '');
