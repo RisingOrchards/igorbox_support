@@ -35,7 +35,7 @@ You need to link your discord to IgorBox and then ask Carl to `/verify_me`
 Once complete, you'll have this group of channels available.
 
 - **user-chat** - A place for IgorBox users to connect and help each other
-- **user-support** - a more formal support forum for filing tickets and getting staff to help.
+- **user-support** - A more formal support forum for filing tickets and getting staff to help.
 
 Here's a video on linking your discord:
 

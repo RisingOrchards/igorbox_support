@@ -19,7 +19,7 @@ Whether it's a dark ride, an immersive theatre piece, a museum exhibit, a retail
 
 No programming. Build the moment, wire the effects, and let guests set it off.
 
-The entire show lives on the controller(s) and comes up and starts working as soon as it's powered on. Great for on-site installs where daily reliability through power cycles is a requirement. The controllers don't need internet to run, but If the controller is connected to the internet, you can monitor and reprogram remotely without going to the location. 
+The entire show lives on the controller(s) and comes up and starts working as soon as it's powered on. Great for on-site installs where daily reliability through power cycles is a requirement. The controllers don't need internet to run, but if the controller is connected to the internet, you can monitor and reprogram remotely without going to the location. 
 
 ## What you can build
 
