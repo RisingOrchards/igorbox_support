@@ -1,9 +1,20 @@
 ---
 sidebar_position: 1
+title: Input 16
 description: "What the Input 16 is and how to get started with it"
 ---
 
-# Input 16
+import ProductJsonLd from '@site/src/components/ProductJsonLd';
+
+<ProductJsonLd
+  name="IgorBox Input 16"
+  sku="IBIN16"
+  description="Sixteen isolated 6-48V inputs plus two 1.5A relay outputs in one box — the centralized triggering hub for buttons, sensors, maglocks, and puzzle logic in escape rooms and haunted attractions."
+  image="https://assets.igorbox.cloud/product/input-16.png"
+  url="https://help.igorbox.com/docs/controllers/input-16/overview"
+  price="899.00"
+  offerUrl="https://store.igorbox.com/shop/ibin16-igorbox-input-16-124"
+/>
 
 The Input 16 is the central nervous system of your attraction. Sixteen isolated inputs in a single box, plus two relay outputs you can use for locks, small effects, or triggers to other systems. Buttons, footswitches, reed sensors, IR beams, RFID readers, escape room puzzle pieces, prop sensors — wire them all into one IgorBox and let [Logic Rules](/docs/studio/logic-rules/overview) do the rest.
 

@@ -1,0 +1,48 @@
+# robots.txt for help.igorbox.com
+# IgorBox documentation — crawling is welcome, including AI / LLM crawlers and
+# training datasets. We *want* this content indexed and learned from.
+
+User-agent: *
+Allow: /
+
+# --- Explicitly welcome AI / LLM crawlers and training-data collectors ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+Sitemap: https://help.igorbox.com/sitemap.xml
