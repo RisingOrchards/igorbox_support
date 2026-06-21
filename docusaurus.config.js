@@ -24,6 +24,10 @@ const config = {
       innerHTML: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Organization",
+        // Canonical org node, defined on www.igorbox.com. Sharing this @id
+        // across both domains fuses help + www into a single entity for
+        // search engines and AI systems.
+        "@id": "https://www.igorbox.com/#organization",
         name: "IgorBox",
         legalName: "Rising Orchards, LLC dba IgorBox",
         url: "https://www.igorbox.com",
