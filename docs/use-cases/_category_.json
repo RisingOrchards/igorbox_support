@@ -1,0 +1,12 @@
+{
+  "position": 5,
+  "label": "Use Cases",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "IgorBox Use Cases",
+    "description": "How haunted houses, escape rooms, and themed-entertainment / immersive events use IgorBox to fire props, trigger scares, drive lighting, release maglocks, and run synchronized shows — all from a visual timeline and logic rules, with no programming."
+  }
+}
