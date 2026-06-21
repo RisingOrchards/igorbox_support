@@ -1,11 +1,10 @@
 import React from 'react';
 import Head from '@docusaurus/Head';
 
-// Canonical Organization node, defined in full on www.igorbox.com (and
-// referenced by the Organization block in docusaurus.config.js). Pointing
-// manufacturer/seller at this @id fuses products with that single entity
-// rather than declaring a separate, duplicate org per product.
-const ORG_ID = 'https://www.igorbox.com/#organization';
+// Canonical Organization node (defined site-wide in docusaurus.config.js and
+// mirrored on www.igorbox.com). Reference it by @id so brand/manufacturer/
+// seller all resolve to the one IgorBox entity instead of loose duplicates.
+const ORGANIZATION_ID = 'https://www.igorbox.com/#organization';
 
 /**
  * Emits schema.org Product structured data (JSON-LD) into the page <head>.
@@ -23,10 +22,6 @@ export default function ProductJsonLd({
   priceCurrency = 'USD',
   availability = 'InStock',
 }) {
-  // Canonical Organization node (defined site-wide in docusaurus.config.js and
-  // mirrored on www.igorbox.com). Reference it by @id so brand/manufacturer/
-  // seller all resolve to the one IgorBox entity instead of loose duplicates.
-  const ORGANIZATION_ID = 'https://www.igorbox.com/#organization';
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -37,13 +32,8 @@ export default function ProductJsonLd({
     image,
     url,
     category: 'Show control & effects controller',
-<<<<<<< Updated upstream
-    brand: {'@type': 'Brand', name: 'IgorBox'},
-    manufacturer: {'@id': ORG_ID},
-=======
     brand: {'@id': ORGANIZATION_ID},
     manufacturer: {'@id': ORGANIZATION_ID},
->>>>>>> Stashed changes
   };
   if (price && offerUrl) {
     data.offers = {
@@ -52,11 +42,7 @@ export default function ProductJsonLd({
       priceCurrency,
       price,
       availability: `https://schema.org/${availability}`,
-<<<<<<< Updated upstream
-      seller: {'@id': ORG_ID},
-=======
       seller: {'@id': ORGANIZATION_ID},
->>>>>>> Stashed changes
     };
   }
   return (
