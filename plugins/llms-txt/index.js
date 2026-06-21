@@ -94,7 +94,19 @@ module.exports = function llmsTxtPlugin(context) {
       const groups = {};
       for (const e of entries) (groups[e.section] ||= []).push(e);
 
-      const idx = [`# ${siteConfig.title}`, '', `> ${siteConfig.tagline ?? ''}`, ''];
+      // Surface the public MCP server so AI clients reading llms.txt can
+      // connect directly instead of scraping pages.
+      const mcpUrl = `${base}/mcp`;
+      const mcpBlock = [
+        '## MCP Server',
+        '',
+        `> Connect an AI assistant straight to these docs. An unauthenticated, read-only [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server is available at ${mcpUrl} — no API key or account required.`,
+        '',
+        `- IgorBox Documentation MCP server: ${mcpUrl}`,
+        '',
+      ];
+
+      const idx = [`# ${siteConfig.title}`, '', `> ${siteConfig.tagline ?? ''}`, '', ...mcpBlock];
       for (const section of Object.keys(groups).sort()) {
         idx.push(`## ${titleCase(section)}`, '');
         for (const e of groups[section]) {
@@ -107,7 +119,7 @@ module.exports = function llmsTxtPlugin(context) {
       fs.writeFileSync(path.join(outDir, 'llms.txt'), idx.join('\n'), 'utf8');
 
       // llms-full.txt — every doc, full text, with its canonical URL.
-      const full = [`# ${siteConfig.title}`, '', `> ${siteConfig.tagline ?? ''}`, ''];
+      const full = [`# ${siteConfig.title}`, '', `> ${siteConfig.tagline ?? ''}`, '', ...mcpBlock];
       for (const e of entries) {
         full.push('---', '', `# ${e.title}`, `Source: ${e.url}`, '');
         if (e.description) full.push(`> ${e.description}`, '');
