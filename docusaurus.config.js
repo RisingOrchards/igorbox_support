@@ -13,6 +13,9 @@ const config = {
 
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
   },
   themes: ["@docusaurus/theme-mermaid"],
 
@@ -72,7 +75,6 @@ const config = {
   projectName: "igorbox_support", // Usually your repo name.
 
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -348,6 +350,19 @@ const config = {
               {
                 label: "System Status",
                 href: "https://status.igorbox.com",
+              },
+            ],
+          },
+          {
+            title: "Legal",
+            items: [
+              {
+                label: "Privacy Policy",
+                href: "https://www.igorbox.com/privacy",
+              },
+              {
+                label: "Terms of Service",
+                href: "https://www.igorbox.com/terms",
               },
             ],
           },
