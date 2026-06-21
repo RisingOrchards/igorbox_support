@@ -23,6 +23,10 @@ export default function ProductJsonLd({
   priceCurrency = 'USD',
   availability = 'InStock',
 }) {
+  // Canonical Organization node (defined site-wide in docusaurus.config.js and
+  // mirrored on www.igorbox.com). Reference it by @id so brand/manufacturer/
+  // seller all resolve to the one IgorBox entity instead of loose duplicates.
+  const ORGANIZATION_ID = 'https://www.igorbox.com/#organization';
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -33,8 +37,13 @@ export default function ProductJsonLd({
     image,
     url,
     category: 'Show control & effects controller',
+<<<<<<< Updated upstream
     brand: {'@type': 'Brand', name: 'IgorBox'},
     manufacturer: {'@id': ORG_ID},
+=======
+    brand: {'@id': ORGANIZATION_ID},
+    manufacturer: {'@id': ORGANIZATION_ID},
+>>>>>>> Stashed changes
   };
   if (price && offerUrl) {
     data.offers = {
@@ -43,7 +52,11 @@ export default function ProductJsonLd({
       priceCurrency,
       price,
       availability: `https://schema.org/${availability}`,
+<<<<<<< Updated upstream
       seller: {'@id': ORG_ID},
+=======
+      seller: {'@id': ORGANIZATION_ID},
+>>>>>>> Stashed changes
     };
   }
   return (
