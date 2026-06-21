@@ -24,15 +24,9 @@ const config = {
       innerHTML: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Organization",
-<<<<<<< Updated upstream
-        // Canonical org node, defined on www.igorbox.com. Sharing this @id
-        // across both domains fuses help + www into a single entity for
-        // search engines and AI systems.
-=======
         // Stable canonical id shared with www.igorbox.com so search/AI merge
         // both domains into one entity. Keep identical to the landing app's
         // Organization JSON-LD (apps/landing/app/structured-data.tsx).
->>>>>>> Stashed changes
         "@id": "https://www.igorbox.com/#organization",
         name: "IgorBox",
         legalName: "Rising Orchards, LLC dba IgorBox",
