@@ -15,7 +15,7 @@ keywords:
 
 # IgorBox for Haunted Houses
 
-Haunted houses live and die by timing. A scare that fires half a second late isn't a scare. IgorBox lets you design that timing visually — a guest crosses a sensor, the air cylinder fires, the lights snap to red, the scream plays, and the drop panel falls — and have it hit exactly the same way for every group, all night long.
+Haunted houses live and die by timing. A scare that fires half a second late isn't a scare. IgorBox lets you design that timing visually. A guest crosses a sensor, the air cylinder fires, the lights snap to red, the scream plays, and the drop panel falls. You can have it hit exactly the same way for every group, all night long, or even adjust throughout the night as crowd size and movements change with easy deploys and revision history.
 
 No programming. You draw the show on a timeline, wire your props to the box, and let IgorBox handle the rest.
 
@@ -37,17 +37,25 @@ No programming. You draw the show on a timeline, wire your props to the box, and
 
 Most haunts use a mix: an Output 8 to drive the props, an Input 16 to read the triggers, and an LED Controller for atmosphere. Because [every input is a global event](/docs/controllers/input-16/overview), a sensor on one box can fire a prop on another anywhere on your network.
 
+If you only need 1 or 2 inputs, the Output 8 and the LED Controller both have 2 inputs that can be used for triggers. So you don't need to purchase an Input 16 unless you want more trigger sources for different show playback. 
+
 ## How it works
 
 1. **Wire it** — [Easywire™](/docs/controllers/shared/easywire) lights up the right terminal for each prop and sensor so you don't have to guess.
 2. **Build the show** — lay out the scare on the [timeline](/docs/studio/timeline-editor/basics): props, lights, and sound on one clock.
 3. **Trigger it** — a [Trigger](/docs/studio/triggers) wires the step pad straight to the scare ("when the input fires → play the show"). For scares that depend on several inputs or timing, use a [Logic Rule](/docs/studio/logic-rules/overview) instead.
 
+You can have multiple shows on a single controller and use different inputs to trigger each show. 
+
 ## Common patterns
 
 - **Step pad → scare:** guest hits the mat → drop panel fires, light flashes, sound plays, then everything resets.
 - **Actor button → scare:** an actor presses a hidden button to fire on the perfect beat.
 - **Skip while playing:** set the trigger's [Retrigger](/docs/studio/triggers) to *Skip if Playing* so a re-trip is ignored until the scare finishes and resets.
+
+:::tip
+Pair blank space at the end of your scare with the **Skip if playing** feature to tune the reset time.
+:::
 
 ## Get started
 

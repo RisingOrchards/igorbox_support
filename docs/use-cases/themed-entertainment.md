@@ -19,6 +19,8 @@ Whether it's a dark ride, an immersive theatre piece, a museum exhibit, a retail
 
 No programming. Build the moment, wire the effects, and let guests set it off.
 
+The entire show lives on the controller(s) and comes up and starts working as soon as its powered on. Great for on-site installs where daily reliability through power cycles is a requirement. The controllers don't need internet to run, but If the controller is connected to internet, you can monitor and reprogram remotely without going to the location. 
+
 ## What you can build
 
 - **Synchronized shows** — lighting, audio, and motion locked to one timeline so every cue lands together.
@@ -26,6 +28,8 @@ No programming. Build the moment, wire the effects, and let guests set it off.
 - **Dynamic lighting** — smooth dimming and color for scenes, washes, and reveals.
 - **Photo ops & activations** — a button kicks off a lighting-and-effects sequence for the shot.
 - **Multi-room coordination** — controllers across the space talk to each other so one trigger can run a cue anywhere.
+- **Trigger from anywhere** — wire a single button to one controller (behind the bar, under the counter) and it fires a fully coordinated show across every *other* controller in the space. You never run wires between controllers — they coordinate over your network, so a button on box A drives the lights, sound, and effects on boxes B, C, and D.
+- **Tie into existing infrastructure** — with [webhooks](/docs/studio/webhooks/inbound) (a Pro/Enterprise feature), you can tie show triggering to anything that can call a URL. When a sale is made or a milestone is reached in your existing POS system, website, or mobile app, the location can come alive.
 
 ## Which IgorBox for which job
 

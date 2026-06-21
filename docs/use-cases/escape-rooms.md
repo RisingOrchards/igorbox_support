@@ -25,7 +25,7 @@ No code. You wire the inputs, draw the logic, and connect it to the locks and ef
 - **Multi-step puzzle logic** — "all four switches in the right order," "the correct RFID tag on the reader," "three plates pressed at once."
 - **Reveals** — open a hidden drawer, drop a curtain, or light up a clue when a step is solved.
 - **Sequence and counter logic** — detect order, count actions, latch progress — all without programming.
-- **Game-master controls** — reset the room, force-open a lock, or trigger a hint from one button.
+- **Game-master controls** — reset the room, force-open a lock, trigger a hint from one button, or even change the upcoming puzzle's logic rule to change the difficulty before the guests get there.
 
 ## Which IgorBox for which job
 
@@ -35,7 +35,7 @@ No code. You wire the inputs, draw the logic, and connect it to the locks and ef
 | Release maglocks and small locks, fire reveals and effects | [Input 16 relay outputs](/docs/controllers/input-16/wiring-guide) or an [Output 8](/docs/controllers/output-8-mkii/overview) |
 | Puzzle-board LEDs, lit clues, and accent lighting | [LED Controller](/docs/controllers/led-controller/overview) |
 
-The [Input 16](/docs/controllers/input-16/overview) is the heart of most rooms: sixteen isolated inputs in one box, so you can build the whole room's logic as a single rule with everything feeding into it.
+The [Input 16](/docs/controllers/input-16/overview) is the heart of most rooms: sixteen isolated inputs in one box, so you can build the whole room's logic as a single rule with everything feeding into it. Eight of those inputs can be remotely placed in 2 banks of 4 with our included breakout boards. 
 
 ## Maglocks, done right
 
@@ -52,6 +52,17 @@ Maglocks should **fail safe** — they hold the door locked while powered and re
 - **Solve → unlock:** the puzzle's solved condition opens the maglock and lights the next area.
 - **Wrong-answer feedback:** a buzzer or red flash when the input combination is incorrect.
 - **One-button reset:** the game master resets every lock, light, and counter for the next group.
+
+## Chaining and Looping Shows
+
+You often want to create a flow that walks guests through multiple puzzles in a specific order. We accomplish this with [chained and looping shows](/docs/studio/timeline-editor/looping-and-chaining) — triggering another show and looping it until a takeover event.
+
+- **Start Game:** The ambient routine is running and waiting for the guest to complete the puzzle. 
+- **Puzzle Completed:** Play a congratulations show to signify the puzzle complete and unlock anything that needs to be used for the next puzzle. This show triggers the next loop.
+- **Looping Show:** A looping show is now started and loops like an ambient show as the guest works on the next puzzle.
+- **Puzzle 2 Completed:** Play a congratulations show and trigger the next looping show.
+
+This can continue until the entire game is complete.
 
 ## Get started
 
