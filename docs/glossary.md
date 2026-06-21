@@ -200,7 +200,7 @@ A device that puts out a fine water mist for fog/humidity effects — switched f
 
 ### Multistate Relay™
 
-An IgorBox feature where a single channel can act as either a standard relay (dry contact) or a solid-state like (powered) output, switchable in software. See [Multistate Relay™](/docs/controllers/output-8-mkii/multistate-relay).
+An IgorBox feature where a single channel can act as either a standard relay (dry contact) or a "solid-state like" (powered) output, switchable in software. See [Multistate Relay™](/docs/controllers/output-8-mkii/multistate-relay).
 
 ### Named Trigger
 

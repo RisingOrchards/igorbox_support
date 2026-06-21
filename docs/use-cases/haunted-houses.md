@@ -37,7 +37,7 @@ No programming. You draw the show on a timeline, wire your props to the box, and
 
 Most haunts use a mix: an Output 8 to drive the props, an Input 16 to read the triggers, and an LED Controller for atmosphere. Because [every input is a global event](/docs/controllers/input-16/overview), a sensor on one box can fire a prop on another anywhere on your network.
 
-If you only need 1 or 2 inputs, the Output 8 and the LED Controller both have 2 inputs that can be used for triggers. So you don't need to purchase an Input 16 unless you want more trigger sources for different show playback. 
+If you only need 1 or 2 inputs, the Output 8 and the LED Controller both have 2 inputs that can be used for triggers. So you don't need to purchase an Input 16 unless you want more trigger sources for different show playback.
 
 ## How it works
 

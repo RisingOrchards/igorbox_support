@@ -35,7 +35,7 @@ No code. You wire the inputs, draw the logic, and connect it to the locks and ef
 | Release maglocks and small locks, fire reveals and effects | [Input 16 relay outputs](/docs/controllers/input-16/wiring-guide) or an [Output 8](/docs/controllers/output-8-mkii/overview) |
 | Puzzle-board LEDs, lit clues, and accent lighting | [LED Controller](/docs/controllers/led-controller/overview) |
 
-The [Input 16](/docs/controllers/input-16/overview) is the heart of most rooms: sixteen isolated inputs in one box, so you can build the whole room's logic as a single rule with everything feeding into it. Eight of those inputs can be remotely placed in 2 banks of 4 with our included breakout boards. 
+The [Input 16](/docs/controllers/input-16/overview) is the heart of most rooms: sixteen isolated inputs in one box, so you can build the whole room's logic as a single rule with everything feeding into it. Eight of those inputs can be remotely placed in 2 banks of 4 with our included breakout boards.
 
 ## Maglocks, done right
 

@@ -37,6 +37,6 @@ Once complete, you'll have this group of channels available.
 - **user-chat** - A place for IgorBox users to connect and help each other
 - **user-support** - a more formal support forum for filing tickets and getting staff to help.
 
-Here's a video on linking your discord: 
+Here's a video on linking your discord:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EE8IIlSNhMs?si=9ADJrZfQI01Qvgpj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
