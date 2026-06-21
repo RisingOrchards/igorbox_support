@@ -1,6 +1,11 @@
 import React from 'react';
 import Head from '@docusaurus/Head';
 
+// Canonical Organization node (defined site-wide in docusaurus.config.js and
+// mirrored on www.igorbox.com). Reference it by @id so brand/manufacturer/
+// seller all resolve to the one IgorBox entity instead of loose duplicates.
+const ORGANIZATION_ID = 'https://www.igorbox.com/#organization';
+
 /**
  * Emits schema.org Product structured data (JSON-LD) into the page <head>.
  * Used on each controller overview so search engines and AI systems can
@@ -27,8 +32,8 @@ export default function ProductJsonLd({
     image,
     url,
     category: 'Show control & effects controller',
-    brand: {'@type': 'Brand', name: 'IgorBox'},
-    manufacturer: {'@type': 'Organization', name: 'Rising Orchards, LLC'},
+    brand: {'@id': ORGANIZATION_ID},
+    manufacturer: {'@id': ORGANIZATION_ID},
   };
   if (price && offerUrl) {
     data.offers = {
@@ -37,7 +42,7 @@ export default function ProductJsonLd({
       priceCurrency,
       price,
       availability: `https://schema.org/${availability}`,
-      seller: {'@type': 'Organization', name: 'Rising Orchards, LLC'},
+      seller: {'@id': ORGANIZATION_ID},
     };
   }
   return (

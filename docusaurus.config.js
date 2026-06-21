@@ -24,10 +24,14 @@ const config = {
       innerHTML: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Organization",
+        // Stable canonical id shared with www.igorbox.com so search/AI merge
+        // both domains into one entity. Keep identical to the landing app's
+        // Organization JSON-LD (apps/landing/app/structured-data.tsx).
+        "@id": "https://www.igorbox.com/#organization",
         name: "IgorBox",
         legalName: "Rising Orchards, LLC dba IgorBox",
         url: "https://www.igorbox.com",
-        logo: "https://help.igorbox.com/img/logo.svg",
+        logo: "https://assets.igorbox.cloud/brand/igorbox-square.png",
         description:
           "Show-control hardware and software for haunted houses, escape rooms, and themed entertainment — controllers for props, lighting, pneumatics, and inputs, plus the IgorBox Studio timeline and logic-rules platform.",
         sameAs: [
@@ -40,6 +44,21 @@ const config = {
       }),
     },
   ],
+
+  // Build-time values bridged into the client bundle (e.g. for Coralogix RUM).
+  // process.env is readable here because the config runs in Node during the
+  // build; Vercel injects CORALOGIX_RUM_KEY into that build environment.
+  customFields: {
+    coralogixRumPublicKey: process.env.CORALOGIX_RUM_KEY,
+    coralogixDomain: "US1",
+    // Vercel sets VERCEL_ENV (production/preview/development) and the commit
+    // SHA automatically — no need to define these manually in the dashboard.
+    coralogixEnvironment: process.env.VERCEL_ENV || "production",
+    version: process.env.VERCEL_GIT_COMMIT_SHA || "development",
+  },
+
+  // Coralogix RUM — runs only in the browser, tracks SPA route changes.
+  clientModules: [require.resolve("./src/coralogix-rum.js")],
 
   // Set the production url of your site here
   url: "https://help.igorbox.com",

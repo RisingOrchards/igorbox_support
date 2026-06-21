@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 5
 description: "Carl, the official IgorBox Discord bot — reminders, verification, and community fun"
 ---
 

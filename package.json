@@ -16,6 +16,7 @@
   "dependencies": {
     "@aldridged/docusaurus-plugin-lunr": "1.0.0-alpha.10",
     "@cmfcmf/docusaurus-search-local": "1.1.0",
+    "@coralogix/browser": "^3.10.0",
     "@docusaurus/core": "^3.5.2",
     "@docusaurus/plugin-client-redirects": "3.5.2",
     "@docusaurus/plugin-content-docs": "^3.5.2",
