@@ -39,18 +39,18 @@ A member of the team will prioritize your change and get it updated as soon as p
 ### Requirements
 
 - [Node.js](https://nodejs.org/) 18 or newer
-- [Yarn](https://yarnpkg.com/) (this project uses Yarn — see `yarn.lock`)
+- [npm](https://www.npmjs.com/) (ships with Node.js — this project uses npm, see `package-lock.json`)
 
 ### Install dependencies
 
 ```bash
-yarn
+npm install
 ```
 
 ### Run the development server
 
 ```bash
-yarn start
+npm start
 ```
 
 This starts a local development server on port **4000** and opens a browser window. Most changes are reflected live without restarting the server.
@@ -58,10 +58,10 @@ This starts a local development server on port **4000** and opens a browser wind
 ### Build a production bundle
 
 ```bash
-yarn build
+npm run build
 ```
 
-This generates static content into the `build/` directory. You can preview the built site with `yarn serve`.
+This generates static content into the `build/` directory. You can preview the built site with `npm run serve`.
 
 ## Repository Layout
 
