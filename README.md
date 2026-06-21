@@ -38,7 +38,7 @@ A member of the team will prioritize your change and get it updated as soon as p
 
 ### Requirements
 
-- [Node.js](https://nodejs.org/) 18 or newer
+- [Node.js](https://nodejs.org/) 24.x (see `.nvmrc`; run `nvm use` if you use nvm)
 - [npm](https://www.npmjs.com/) (ships with Node.js — this project uses npm, see `package-lock.json`)
 
 ### Install dependencies
