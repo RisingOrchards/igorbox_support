@@ -40,14 +40,14 @@ Because IgorBox controllers coordinate over your network, a single interaction c
 ## How it works
 
 1. **Wire it** — [Easywire™](/docs/controllers/shared/easywire) walks you through each effect and input.
-2. **Design the show** — lay lighting, audio, and motion on the [timeline](/docs/studio/overview) and shape smooth moves.
-3. **Make it interactive** — [Logic Rules](/docs/studio/logic-rules/overview) connect guest actions to the show.
+2. **Design the show** — lay lighting, audio, and motion on the [timeline](/docs/studio/timeline-editor/basics) and shape smooth moves.
+3. **Make it interactive** — a [Trigger](/docs/studio/triggers) connects a guest action straight to a show; use [Logic Rules](/docs/studio/logic-rules/overview) when a moment needs combinations, sequencing, or timing.
 
 ## Common patterns
 
 - **Press-to-play:** a guest presses a button → a synchronized light-and-sound sequence runs, then resets.
-- **Ambient loop with takeover:** a background scene runs continuously until an interaction triggers a feature moment.
-- **Scene changes:** one cue retimes the lighting and audio of an entire room.
+- **Ambient loop with takeover:** an [ambient routine](/docs/studio/ambient-routines) runs continuously until an interaction triggers a feature moment, then resumes.
+- **Scene changes:** one trigger swaps an entire room to a new lighting and audio scene.
 
 ## Get started
 

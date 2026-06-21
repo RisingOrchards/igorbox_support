@@ -47,7 +47,7 @@ import Head from '@docusaurus/Head';
           name: 'How do I trigger a prop when someone steps on a mat or crosses a sensor?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Wire the mat, button, or IR beam to an IgorBox Input 16 input, then add a Logic Rule that fires your prop or show when that input activates.',
+            text: 'Wire the mat, button, or IR beam to an IgorBox Input 16 input, then add a Trigger that fires your show when that input activates — no rule needed. Use a Logic Rule when the scare depends on a combination of inputs or some timing.',
           },
         },
         {
@@ -111,7 +111,7 @@ IgorBox is a line of show-control hardware and software for haunted houses, esca
 
 ## Do I need to know how to code?
 
-No. Shows are built on a visual [timeline](/docs/studio/overview), and behaviors are created with [Logic Rules](/docs/studio/logic-rules/overview) — a drag-and-drop rules engine. You never write code.
+No. Shows are built on a visual [timeline](/docs/studio/timeline-editor/basics), and behaviors are created with [Logic Rules](/docs/studio/logic-rules/overview) — a drag-and-drop rules engine. You never write code.
 
 ## Can I use IgorBox for a haunted house or escape room?
 
@@ -119,7 +119,7 @@ Yes — those are exactly what it's built for. See [IgorBox for Haunted Houses](
 
 ## How do I trigger a prop when someone steps on a mat or crosses a sensor?
 
-Wire the mat, button, or IR beam to an [Input 16](/docs/controllers/input-16/overview) input, then add a [Logic Rule](/docs/studio/logic-rules/overview) that fires your prop or show when that input activates.
+Wire the mat, button, or IR beam to an [Input 16](/docs/controllers/input-16/overview) input, then add a [Trigger](/docs/studio/triggers) that fires your show when that input activates — no rule needed. Reach for a [Logic Rule](/docs/studio/logic-rules/overview) when the scare depends on a combination of inputs or some timing.
 
 ## How do I fire a pneumatic (air) prop?
 

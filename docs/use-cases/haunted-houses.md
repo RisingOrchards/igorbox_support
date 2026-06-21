@@ -25,7 +25,7 @@ No programming. You draw the show on a timeline, wire your props to the box, and
 - **Pneumatic props** — air cylinders for drop panels, jumping spiders, slamming doors, coffin lids, and wall-bangers.
 - **Synchronized light, sound, and motion** — one timeline drives the whole moment so the bang, the flash, and the scream land together.
 - **Scare-actor triggers** — a hidden button an actor presses to fire a scare on cue.
-- **Automatic reset** — every prop returns to its start state for the next group, hands-free.
+- **Hands-free reset** — when the scare's show ends, channels return to their rest state and the [ambient routine](/docs/studio/ambient-routines) resumes, ready for the next group.
 
 ## Which IgorBox for which job
 
@@ -40,14 +40,14 @@ Most haunts use a mix: an Output 8 to drive the props, an Input 16 to read the t
 ## How it works
 
 1. **Wire it** — [Easywire™](/docs/controllers/shared/easywire) lights up the right terminal for each prop and sensor so you don't have to guess.
-2. **Build the show** — lay out the scare on the [timeline](/docs/studio/overview): props, lights, and sound on one clock.
-3. **Trigger it** — a [Logic Rule](/docs/studio/logic-rules/overview) says "when the step pad fires → play the scare."
+2. **Build the show** — lay out the scare on the [timeline](/docs/studio/timeline-editor/basics): props, lights, and sound on one clock.
+3. **Trigger it** — a [Trigger](/docs/studio/triggers) wires the step pad straight to the scare ("when the input fires → play the show"). For scares that depend on several inputs or timing, use a [Logic Rule](/docs/studio/logic-rules/overview) instead.
 
 ## Common patterns
 
 - **Step pad → scare:** guest hits the mat → drop panel fires, light flashes, sound plays, then everything resets.
 - **Actor button → scare:** an actor presses a hidden button to fire on the perfect beat.
-- **Cooldown:** ignore re-triggers for a few seconds so the prop fully resets before it can fire again.
+- **Skip while playing:** set the trigger's [Retrigger](/docs/studio/triggers) to *Skip if Playing* so a re-trip is ignored until the scare finishes and resets.
 
 ## Get started
 

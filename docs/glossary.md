@@ -264,7 +264,7 @@ The powered version of a 4-channel breakout: it adds its own supply so four LED 
 
 ### Safety Lock
 
-A lock that stops the show currently playing on a controller and prevents new ones from starting until you toggle it back off — for maintenance, daytime, or walk-throughs. Available as a [front button](/docs/controllers/shared/front-button) mode or a trigger action (called Soft Lock there). Unlike a [Hard Lock](#hard-lock-e-stop), it doesn't need a reboot.
+A lock that stops the show currently playing on a controller and prevents new ones from starting until you toggle it back off — for maintenance, daytime, or walk-throughs. Available as a [front button](/docs/controllers/shared/front-button) mode or a trigger action (called Soft Lock there). Unlike a [Hard Lock](#hard-lock-e-stop-function), it doesn't need a reboot.
 
 ### Show
 
