@@ -3,6 +3,7 @@ authors: [mike]
 tags: [IgorBox, Changelog, "New Release"]
 title: "Studio Updates for June"
 date: 2026-06-22
+image: /img/blog/june26/header.png
 ---
 
 The last few weeks have been busy. We've shipped a wave of improvements to the
@@ -19,10 +20,10 @@ Programming color fixtures (like the LED Controller) got a major upgrade. If you
 
 - **Color groups** for RGB / RGBW / RGBAW channels: pick a color once and drive
   the whole group together instead of juggling individual channels.
-- **Color-stop authoring on the timeline**: lay down color changes over time
+- **Color stop authoring on the timeline**: lay down color changes over time
   with selection, copy/paste, range templates, and multi-drag, just like the
   rest of the timeline.
-- **Smooth, natural transitions**: color fades are calculated to give you the most natural color transitions.
+- **Smooth and natural transitions**: color fades are calculated to give you the most natural color transitions.
 - **Easing and hard cuts**: choose between eased transitions and instant snaps
   for sharp, punchy color hits.
 - An **Off button** replaced the old brightness slider for clearer, more
@@ -67,12 +68,12 @@ Audio is the backbone of a great scene, but lining your props up to it by ear is
 
 ## Shows that Loop and Chain
 
-Shows are no longer one-and-done. You can now build playback that runs the way a
+Shows are no longer one and done. You can now build playback that runs the way a
 real attraction needs it to:
 
 - **Looping shows**: flag a show to repeat continuously until something stops
   it. Perfect for ambient and idle states in escape room games.
-- **Show-to-show chaining**: when one show finishes, automatically fire the
+- **Show to show chaining**: when one show finishes, automatically fire the
   next. Stitch a sequence of shows into a single experience without wiring up
   extra logic!
 
@@ -103,7 +104,7 @@ Bring an iPad to the install and program right there in front of the props.
 Lots of smaller refinements that add up:
 
 - **Constrained loop region**: define a loop window with draggable handles and
-  a greyed-out overlay showing exactly what's in and out.
+  a grayed out overlay showing exactly what's in and out.
 - **Resizable channel header column**: drag the header column wider when you
   need room for long channel names.
 - **Control-point polish**: nicer hover states and double-click value pickers
@@ -134,7 +135,7 @@ On-site programming got a lot more cooperative.
 
 ## Studio-wide Quality of Life
 
-- **Announcement banners**: a new site-wide banner system lets us surface
+- **Announcement banners**: a new site wide banner system lets us surface
   important notices (maintenance windows, new features, etc.) right at the top
   of the app.
 - **Cleaner navigation**: Studio nav links moved to a dedicated sub-nav strip
