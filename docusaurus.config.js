@@ -140,6 +140,8 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
+          // Docs root has no index page — send /docs to the intro page
+          { from: "/docs", to: "/docs/intro" },
           // Studio docs restructure — Triggers split out of Logic Rules
           {
             from: "/docs/studio/logic-rules/show-triggers",
