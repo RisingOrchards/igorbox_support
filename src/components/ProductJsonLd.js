@@ -21,6 +21,11 @@ export default function ProductJsonLd({
   offerUrl,
   priceCurrency = 'USD',
   availability = 'InStock',
+  // Electrical/connectivity specs as [{name, value}] — emitted as schema.org
+  // PropertyValue entries so AI/search can answer "how many amps per channel?"
+  // from structured data instead of parsing the prose tables. Keep in sync with
+  // the matching product on www.igorbox.com (apps/landing/app/structured-data.tsx).
+  specs,
 }) {
   const data = {
     '@context': 'https://schema.org',
@@ -35,6 +40,13 @@ export default function ProductJsonLd({
     brand: {'@id': ORGANIZATION_ID},
     manufacturer: {'@id': ORGANIZATION_ID},
   };
+  if (Array.isArray(specs) && specs.length > 0) {
+    data.additionalProperty = specs.map((spec) => ({
+      '@type': 'PropertyValue',
+      name: spec.name,
+      value: spec.value,
+    }));
+  }
   if (price && offerUrl) {
     data.offers = {
       '@type': 'Offer',

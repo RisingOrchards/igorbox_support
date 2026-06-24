@@ -14,6 +14,14 @@ import ProductJsonLd from '@site/src/components/ProductJsonLd';
   url="https://help.igorbox.com/docs/controllers/input-16/overview"
   price="899.00"
   offerUrl="https://store.igorbox.com/shop/ibin16-igorbox-input-16-124"
+  specs={[
+    {name: 'Isolated inputs', value: '16'},
+    {name: 'Input voltage range', value: '6–48 V AC/DC'},
+    {name: 'Relay outputs', value: '2 × 1.5 A'},
+    {name: 'Connectivity', value: 'Ethernet + Wi-Fi (cloud-connected, not cloud-dependent)'},
+    {name: 'Audio output', value: 'Stereo line out (3.5 mm)'},
+    {name: 'Onboard storage', value: '32 GB'},
+  ]}
 />
 
 The Input 16 is the central nervous system of your attraction. Sixteen isolated inputs in a single box, plus two relay outputs you can use for locks, small effects, or triggers to other systems. Buttons, footswitches, reed sensors, IR beams, RFID readers, escape room puzzle pieces, prop sensors — wire them all into one IgorBox and let [Logic Rules](/docs/studio/logic-rules/overview) do the rest.
