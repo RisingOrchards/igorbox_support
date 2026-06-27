@@ -5,7 +5,7 @@ description: "An overview of the current IgorBox controller lineup"
 
 # Lineup Overview
 
-Every current IgorBox controller is built on the same foundation — same network stack, same audio hardware, same Studio integration, same Magic Provision setup. They differ in their capabilities like input, output, and dimmable channels.
+Every current IgorBox controller is built on the same foundation — same network stack, same audio hardware, same Studio integration, same Magic Provisioning setup. They differ in their capabilities like input, output, and dimmable channels.
 
 ## At a glance
 
@@ -20,7 +20,7 @@ Every current IgorBox controller is built on the same foundation — same networ
 - **Connectivity** — Ethernet or WiFi
 - **Connectors** — WAGO® on every terminal
 - **Wiring assistant** — [Easywire™](shared/easywire) LED indicators light up to guide you to the right terminal
-- **Provisioning** — [Magic Provision](shared/magic-provision) gets a controller online quickly
+- **Provisioning** — [Magic Provisioning](shared/magic-provision) gets a controller online quickly
 - **Audio** — Stereo line out, 32 GB onboard storage, lossless format support
 - **Front panel** — RGB channel indicators, status LED, configurable [front button](shared/front-button)
 - **Programming** — Everything is built and deployed from [IgorBox Studio](/docs/studio/overview)

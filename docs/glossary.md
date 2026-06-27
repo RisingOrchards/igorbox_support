@@ -100,7 +100,7 @@ The shape a dimmable channel's value follows over time, drawn on a lighting [tra
 
 ### Factory reset
 
-Wiping a controller's local shows, media, and configuration and rebooting it locked. The controller stays registered in your Studio and [Magic Provision](#magic-provision) re-pairs it automatically; the setup ID is used to restore your data from your Studio. Triggered by holding the front button at power-on. See [Front Button](/docs/controllers/shared/front-button).
+Wiping a controller's local shows, media, and configuration and rebooting it locked. The controller stays registered in your Studio and [Magic Provisioning](#magic-provisioning) re-pairs it automatically; the setup ID is used to restore your data from your Studio. Triggered by holding the front button at power-on. See [Front Button](/docs/controllers/shared/front-button).
 
 ### Fail-safe
 

@@ -56,7 +56,7 @@ If you let go before the first flash, no action is taken and the controller boot
 See [Front Button](front-button) for the exact hold times, and [Boot Sequence](boot-sequence) for the full power-on light progression.
 
 :::warning
-A full factory reset removes the controller's authentication and wipes its local content (shows, media, configuration files). You **don't** need to re-add it to Studio — the controller stays registered in your Studio and Magic Provision will re-pair it automatically as soon as it's back on the network. Show data and configuration in Studio are preserved.
+A full factory reset removes the controller's authentication and wipes its local content (shows, media, configuration files). You **don't** need to re-add it to Studio — the controller stays registered in your Studio and Magic Provisioning will re-pair it automatically as soon as it's back on the network. Show data and configuration in Studio are preserved.
 
 If you're sending the controller to a different organization, the original Studio's admin needs to **delete the controller** from Studio to release the binding _before_ the new Studio can add it.
 :::

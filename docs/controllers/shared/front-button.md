@@ -27,7 +27,7 @@ You can change the mode any time from the controller's Configuration tab in Stud
 The reset behaviors are independent of the mode setting and only apply at power-on. As you hold the button, the status light flashes to confirm each step you pass, so you know you've reached the right point before you release.
 
 - **Hold for ~7 seconds at power-on, then release** — The controller clears its WiFi credentials and reboots. It stays connected to your account and remembers everything else.
-- **Hold for ~20+ seconds at power-on, then release** — The controller wipes its local show, media, and config files, then reboots locked. It stays registered in your Studio — Magic Provision re-pairs it automatically. The setup ID is unchanged either way (it's tied to the hardware). Show data and configuration in Studio are preserved.
+- **Hold for ~20+ seconds at power-on, then release** — The controller wipes its local show, media, and config files, then reboots locked. It stays registered in your Studio — Magic Provisioning re-pairs it automatically. The setup ID is unchanged either way (it's tied to the hardware). Show data and configuration in Studio are preserved.
 
 If you release before the ~7-second mark, the controller starts up normally with no changes. See [Status LED](status-led) for the flash-count confirmation, and [Boot Sequence](boot-sequence) for the full at-power-on behavior.
 

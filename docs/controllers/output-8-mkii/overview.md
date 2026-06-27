@@ -46,8 +46,8 @@ The marquee feature is our **Multistate Relay™** technology: six of the eight 
 ## Quick start
 
 1. **Power it up** with the included 12V supply (or anything 9–24V DC, center-positive).
-2. **Connect to the network** — plug in Ethernet. If you'd rather use WiFi, add your WiFi network in **Studio Settings** before you provision: the controller picks it up automatically when it joins your account, and from then on it can roam to WiFi. See [Connectivity](/docs/controllers/shared/connectivity) and [Magic Provision](/docs/controllers/shared/magic-provision).
-3. **[Magic Provision](/docs/controllers/shared/magic-provision)** — read the setup ID and add it in Studio.
+2. **Connect to the network** — plug in Ethernet. If you'd rather use WiFi, add your WiFi network in **Studio Settings** before you provision: the controller picks it up automatically when it joins your account, and from then on it can roam to WiFi. See [Connectivity](/docs/controllers/shared/connectivity) and [Magic Provisioning](/docs/controllers/shared/magic-provision).
+3. **[Magic Provisioning](/docs/controllers/shared/magic-provision)** — read the setup ID and add it in Studio.
 4. **Wire your channels** with [Easywire™](/docs/controllers/shared/easywire) walking you through each terminal.
 5. **Build a show** in the [timeline editor](/docs/studio/timeline-editor/basics).
 

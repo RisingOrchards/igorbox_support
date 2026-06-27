@@ -68,7 +68,7 @@ For those, use the [RGBW-PWR breakout](rgbw-pwr-breakout). The breakout takes th
 ## Quick start
 
 1. **Power it up.** 9–24V DC.
-2. **Set the channel voltage.** During [Magic Provision](/docs/controllers/shared/magic-provision), Studio asks whether the channels are wired for 12V or 24V loads. This is per-controller, not per-channel.
+2. **Set the channel voltage.** During [Magic Provisioning](/docs/controllers/shared/magic-provision), Studio asks whether the channels are wired for 12V or 24V loads. This is per-controller, not per-channel.
 3. **Connect to the network.** See [Connectivity](/docs/controllers/shared/connectivity).
 4. **Wire your channels** with [Easywire™](/docs/controllers/shared/easywire) or follow the [wiring guide](wiring-guide).
 5. **Build a show.** [Lighting](/docs/studio/timeline-editor/pwm-and-lighting) is the place to start.

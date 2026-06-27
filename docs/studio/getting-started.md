@@ -22,7 +22,7 @@ You'll receive an email invitation with a link. Click the link, sign in with ema
 5. Pick a name (something like "Front Door" or "Coffin Room"), add tags if you want.
 6. Click **Add to Account**.
 
-Within a few seconds, the controller appears in your Studio with a green online indicator. Full details: [Magic Provision](/docs/controllers/shared/magic-provision).
+Within a few seconds, the controller appears in your Studio with a green online indicator. Full details: [Magic Provisioning](/docs/controllers/shared/magic-provision).
 
 ## Step 3 — Open the controller
 

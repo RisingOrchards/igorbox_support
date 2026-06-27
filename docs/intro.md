@@ -17,7 +17,7 @@ IgorBox is a cloud-connected show control platform built for haunts, escape room
 | [Input 16](/docs/controllers/input-16/overview) | Sixteen optically isolated inputs (6–48V AC/DC). Centralize triggers across an attraction or build elaborate escape room puzzles. |
 | [LED Controller](/docs/controllers/led-controller/overview) | Sixteen low-current dimmable channels for puzzle-board indicators and signal-level use — pair it with the RGBW-PWR breakout to drive real lighting (panel LEDs, pinspots, strips) and motor speed control. |
 
-Every controller speaks the same language: WAGO® connectors on every terminal, Easywire™ guided wiring, Magic Provision setup, Ethernet or WiFi, and a stereo audio output.
+Every controller speaks the same language: WAGO® connectors on every terminal, Easywire™ guided wiring, Magic Provisioning setup, Ethernet or WiFi, and a stereo audio output.
 
 ## The platform
 

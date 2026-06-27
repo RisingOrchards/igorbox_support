@@ -57,5 +57,5 @@ Easywire turns wiring from "read the manual carefully" into "follow the lights."
 ## See also
 
 - [Status LED](status-led) — the front-panel status LED uses similar color signals
-- [Magic Provision](magic-provision) — provisioning a brand-new controller
+- [Magic Provisioning](magic-provision) — provisioning a brand-new controller
 - The wiring guide for your specific controller, linked from each controller's overview page
