@@ -14,6 +14,15 @@ import ProductJsonLd from '@site/src/components/ProductJsonLd';
   url="https://help.igorbox.com/docs/controllers/led-controller/overview"
   price="899.00"
   offerUrl="https://store.igorbox.com/shop/ibps01-igorbox-led-controller-46"
+  specs={[
+    {name: 'Dimmable channels', value: '16'},
+    {name: 'Per-channel current', value: '20 mA (low-current; use the RGBW-PWR breakout for full lighting)'},
+    {name: 'RGBW-PWR breakout output', value: 'Up to 120 W of lighting per board (four channels); supports DC motor speed control'},
+    {name: 'Isolated inputs', value: '2 (6–48 V AC/DC)'},
+    {name: 'Connectivity', value: 'Ethernet + Wi-Fi (cloud-connected, not cloud-dependent)'},
+    {name: 'Audio output', value: 'Stereo line out (3.5 mm)'},
+    {name: 'Onboard storage', value: '32 GB'},
+  ]}
 />
 
 The LED Controller is a 16-channel low-current dimmable controller. Each onboard channel is a smooth dimming output, perfect for low-current LED loads — puzzle-board LEDs, signal indicators, panel lights, pinspots, low-power "puzzle solved" lights — or for driving an external power stage that does the heavy switching.

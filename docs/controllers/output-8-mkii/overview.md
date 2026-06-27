@@ -9,11 +9,20 @@ import ProductJsonLd from '@site/src/components/ProductJsonLd';
 <ProductJsonLd
   name="IgorBox Output 8 MKII"
   sku="IBRLY02"
-  description="The everyday IgorBox show-control workhorse: six software-configurable Multistate Relay outputs (relay or solid-state, 1.5A) plus two 3A relays and two isolated inputs. Fires pneumatic props, show lighting, and motors for haunted houses, escape rooms, and themed entertainment."
+  description="The everyday IgorBox show-control workhorse: six software-configurable Multistate Relay™ outputs (relay or solid-state, 1.5A) plus two 3A relays and two isolated inputs. Fires pneumatic props, show lighting, and motors for haunted houses, escape rooms, and themed entertainment."
   image="https://assets.igorbox.cloud/product/output-8.png"
   url="https://help.igorbox.com/docs/controllers/output-8-mkii/overview"
   price="999.00"
   offerUrl="https://store.igorbox.com/shop/ibrly02-igorbox-output-8-mkii-30"
+  specs={[
+    {name: 'Multistate Relay outputs', value: '6 (relay or solid-state, software-configurable)'},
+    {name: 'Multistate Relay output current', value: '1.5 A per channel'},
+    {name: 'Standard relay outputs', value: '2 × 3 A'},
+    {name: 'Isolated inputs', value: '2'},
+    {name: 'Connectivity', value: 'Ethernet + Wi-Fi (cloud-connected, not cloud-dependent)'},
+    {name: 'Audio output', value: 'Stereo line out (3.5 mm)'},
+    {name: 'Onboard storage', value: '32 GB'},
+  ]}
 />
 
 The Output 8 MKII is the next generation of the original Output 8, refined with feedback from the early-access program. It's the everyday workhorse of the IgorBox lineup — eight outputs, two isolated inputs, and Easywire™ guided wiring on every terminal.
