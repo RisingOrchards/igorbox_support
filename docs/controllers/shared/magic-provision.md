@@ -3,13 +3,13 @@ sidebar_position: 1
 description: "Get a brand-new IgorBox controller online"
 ---
 
-# Magic Provision
+# Magic Provisioning
 
-Magic Provision is how you connect a brand-new controller to your IgorBox Studio. There's no IP configuration, no USB cable, no captive portal. You read a short code off the device, type it into Studio, and you're done.
+Magic Provisioning is how you connect a brand-new controller to your IgorBox Studio. There's no IP configuration, no USB cable, no captive portal. You read a short code off the device, type it into Studio, and you're done.
 
 ## What you need
 
-- A powered controller, online (Ethernet plugged in, or WiFi already configured — Magic Provision can configure your WiFi too)
+- A powered controller, online (Ethernet plugged in, or WiFi already configured — Magic Provisioning can configure your WiFi too)
 - Access to your IgorBox Studio at `https://<your-org>.igorbox.studio`
 - A user account that's allowed to add controllers
 
@@ -55,6 +55,6 @@ If it stays in slow blue blink for more than a couple of minutes after you've ad
 
 There are two different scenarios — and they need different steps.
 
-**Re-pairing the controller with the same Studio** (e.g., after a factory reset to clear local config, or to recover from a problem) — do nothing special. Just [factory-reset](front-button) the controller and let it boot. The controller stays registered in your Studio, and Magic Provision will re-pair it automatically the next time it's online.
+**Re-pairing the controller with the same Studio** (e.g., after a factory reset to clear local config, or to recover from a problem) — do nothing special. Just [factory-reset](front-button) the controller and let it boot. The controller stays registered in your Studio, and Magic Provisioning will re-pair it automatically the next time it's online.
 
 **Moving the controller to a different studio** — the original studio's admin needs to **delete the controller** from their Studio first. Once it's been removed there, the new studio can add it normally. (A factory reset on the device is recommended at that point to wipe leftover content.) If you're acquiring used hardware and the previous owner isn't reachable, [contact support](/docs/contact) and we'll help you get it transferred. The setup ID stays the same throughout — it's tied to the hardware.

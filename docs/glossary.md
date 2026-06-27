@@ -182,9 +182,9 @@ Playing a show on the real hardware in real time while you keep editing — the 
 
 IgorBox's visual, no-code rules engine. Combine inputs and conditions ("switch A and switch B") to trigger shows, effects, and outputs. See [Logic Rules](/docs/studio/logic-rules/overview).
 
-### Magic Provision
+### Magic Provisioning
 
-How you get a brand-new controller onto your Studio: read its 8-character setup ID off the sticker, enter it in Studio, and power the controller on — no IP setup or cables to configure. See [Magic Provision](/docs/controllers/shared/magic-provision).
+How you get a brand-new controller onto your Studio: read its 8-character setup ID off the sticker, enter it in Studio, and power the controller on — no IP setup or cables to configure. See [Magic Provisioning](/docs/controllers/shared/magic-provision).
 
 ### Maglock
 
