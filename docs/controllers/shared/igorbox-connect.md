@@ -50,11 +50,10 @@ IgorBox Connect only does one thing: it gets the controller onto your **WiFi**. 
 
 ## Get the controller into Setup Mode first
 
-The app can only find a controller that's in **Setup Mode**: powered on, with no working network connection. A controller enters Setup Mode automatically when:
+The app can only find a controller that's in **Setup Mode**: powered on, with no working network connection. A controller is in Setup Mode when **both** of these are true:
 
-- It's **brand new** (or freshly [factory reset](front-button)), **or**
-- You've cleared its saved WiFi by holding the front button for ~7 seconds at power-on (see [Front Button](front-button)), **and**
-- There's **no Ethernet cable** plugged in.
+- It has **no saved WiFi**: it's **brand new** (or freshly [factory reset](front-button)), or you've cleared its WiFi by holding the front button for ~7 seconds at power-on (see [Front Button](front-button)).
+- It has **no Ethernet cable** plugged in.
 
 You'll know it's ready when the [status LED](status-led) is doing a **slow blue pulse** (Setup Mode / No Network). If the controller is plugged into Ethernet or already has WiFi, it won't appear in the app. Unplug the cable or forget WiFi first.
 

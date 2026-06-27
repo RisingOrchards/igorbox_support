@@ -22,7 +22,7 @@ Three of the things I'm most proud of are not features of any one controller —
 
 - **WAGO® connectors on every terminal.** No more screw terminals, no more stripped wires backing out mid-show. Lever-clamp connectors on every input, every output, every power and audio terminal. Wires go in fast and they stay in.
 - **[Easywire™](/docs/controllers/shared/easywire) guided wiring.** When you're wiring up a channel, the controller lights up an LED right at the terminal you should be touching. No squinting at silkscreen, no counting terminals from the left. The board tells you where to wire.
-- **[Magic Provision](/docs/controllers/shared/magic-provision).** Adding a controller to your account used to be the worst part of the day. Now it's a setup ID and one screen in Studio. No DHCP scavenger hunts. No serial-cable rituals. Just scan the QR Code on the serial number label, add it to your studio, and boot it up. It configures itself!
+- **[Magic Provisioning](/docs/controllers/shared/magic-provision).** Adding a controller to your account used to be the worst part of the day. Now it's a setup ID and one screen in Studio. No DHCP scavenger hunts. No serial-cable rituals. Just scan the QR Code on the serial number label, add it to your studio, and boot it up. It configures itself!
 
 These are the things you didn't know to ask for that you're going to feel every single day.
 
