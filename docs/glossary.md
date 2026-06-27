@@ -142,6 +142,10 @@ An emergency stop that halts all playback and keeps the controller locked until 
 
 The smaller, steady current a solenoid or relay coil needs to *stay* energized after it first pulls in — lower than the initial [inrush current](#inrush-current). See the [Output 8 wiring guide](/docs/controllers/output-8-mkii/wiring-guide).
 
+### IgorBox Connect
+
+The free iPhone/Android app that sets up a controller's WiFi over Bluetooth — no Ethernet cable or laptop needed. You stand next to the controller, prove you're there by pressing its front button, pick your WiFi network, and the controller joins it. The no-cable alternative to provisioning over Ethernet. See [IgorBox Connect](/docs/controllers/shared/igorbox-connect).
+
 ### Inductive load
 
 Anything with a coil — solenoids, relays, motors — that stores energy in a magnetic field and kicks back a voltage spike when power is cut. Inductive loads want a [flyback diode](#flyback-diode). See [Multistate Relay™ › Flyback Diodes](/docs/controllers/output-8-mkii/multistate-relay).

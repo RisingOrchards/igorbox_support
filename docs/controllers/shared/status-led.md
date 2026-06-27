@@ -14,7 +14,7 @@ The LED communicates with two things together: a **color** (green, blue, orange,
 | State | Color & pattern | What it means |
 | --- | --- | --- |
 | **Booting** | Orange, slow breath (~2 s cycle) | The controller is starting up. |
-| **No network** | Blue, slow breath (~3 s cycle) | The controller has no working network connection. This shows during first-time setup (no ethernet link and no saved WiFi yet), and also when a controller that was online has lost its connection and is trying to reconnect. Plug into ethernet, or set WiFi credentials in [Studio Settings](magic-provision) before powering on. |
+| **No network** | Blue, slow breath (~3 s cycle) | The controller has no working network connection. This shows during first-time setup (no ethernet link and no saved WiFi yet), and also when a controller that was online has lost its connection and is trying to reconnect. Plug into ethernet, set WiFi credentials in [Studio Settings](magic-provision) before powering on, or set its WiFi over Bluetooth with the [IgorBox Connect](igorbox-connect) app. |
 | **Idle / Ready** | Green, solid (dim) | All systems nominal. Idle, waiting for a trigger or a scheduled show. |
 | **Show playing** | Green, fast blink | A show or routine is actively playing. |
 | **Degraded** | Blue, slow blink (about once a second) | The controller is online locally but can't reach the cloud. Your show keeps running — you just can't push updates or see live telemetry until connectivity is restored. |

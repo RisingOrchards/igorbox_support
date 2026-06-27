@@ -15,6 +15,8 @@ Magic Provision is how you connect a brand-new controller to your IgorBox Studio
 
 :::tip
 Add your WiFi credentials to your Studio account under **Studio Settings** _before_ provisioning your controller. When it provisions, it will pick those up automatically — you can unplug the ethernet afterward and it'll roam to WiFi on the next boot.
+
+No Ethernet at the controller at all? Use the [IgorBox Connect](igorbox-connect) app to set its WiFi over Bluetooth from your phone, then provision as normal.
 :::
 
 ## Step by step

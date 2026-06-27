@@ -20,6 +20,10 @@ Every IgorBox controller has both Ethernet and WiFi built in. You don't pick one
 For permanent attractions, run a cable. The IgorBox WiFi stack is solid, but a CAT6 run is cheap insurance against interference from LED drivers, motors, ballasts, and the inevitable visitor with a hotspot.
 :::
 
+:::tip Setting up WiFi without Ethernet
+If a controller will run on WiFi and you can't get an Ethernet cable to it for first-time setup, use the [IgorBox Connect](igorbox-connect) app to configure its WiFi over Bluetooth from your phone.
+:::
+
 ## What your network needs
 
 For the controller to run normally, your network needs:
