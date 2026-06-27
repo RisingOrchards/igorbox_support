@@ -65,4 +65,4 @@ IgorBox Connect is free and live on both stores today. Download it, take it to y
 - [Download on the App Store](https://apps.apple.com/us/app/igorbox-connect/id6762228692)
 - [Get it on Google Play](https://play.google.com/store/apps/details?id=com.risingorchards.igorboxmanager)
 
-Let's make some magic. 🎃
+Let's make some magic. ✨
