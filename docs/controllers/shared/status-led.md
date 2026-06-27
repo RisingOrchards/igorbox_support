@@ -14,7 +14,8 @@ The LED communicates with two things together: a **color** (green, blue, orange,
 | State | Color & pattern | What it means |
 | --- | --- | --- |
 | **Booting** | Orange, slow breath (~2 s cycle) | The controller is starting up. |
-| **No network** | Blue, slow breath (~3 s cycle) | The controller has no working network connection. This shows during first-time setup (no ethernet link and no saved WiFi yet), and also when a controller that was online has lost its connection and is trying to reconnect. Plug into ethernet, or set WiFi credentials in [Studio Settings](magic-provision) before powering on. |
+| **No network** | Blue, slow breath (~3 s cycle) | The controller has no working network connection. This shows during first-time setup (no ethernet link and no saved WiFi yet), and also when a controller that was online has lost its connection and is trying to reconnect. Either plug into ethernet, set WiFi credentials in [Studio Settings](/docs/studio/settings/wifi-credentials) before powering on, or set its WiFi over Bluetooth with the [IgorBox Connect](igorbox-connect) app. |
+| **Authorizing setup** | Blue, fast blink | The controller is waiting for you to press the front button to authorize WiFi setup over [IgorBox Connect](igorbox-connect). Press it within 30 seconds. |
 | **Idle / Ready** | Green, solid (dim) | All systems nominal. Idle, waiting for a trigger or a scheduled show. |
 | **Show playing** | Green, fast blink | A show or routine is actively playing. |
 | **Degraded** | Blue, slow blink (about once a second) | The controller is online locally but can't reach the cloud. Your show keeps running — you just can't push updates or see live telemetry until connectivity is restored. |
@@ -56,7 +57,7 @@ If you let go before the first flash, no action is taken and the controller boot
 See [Front Button](front-button) for the exact hold times, and [Boot Sequence](boot-sequence) for the full power-on light progression.
 
 :::warning
-A full factory reset removes the controller's authentication and wipes its local content (shows, media, configuration files). You **don't** need to re-add it to Studio — the controller stays registered in your Studio and Magic Provision will re-pair it automatically as soon as it's back on the network. Show data and configuration in Studio are preserved.
+A full factory reset removes the controller's authentication and wipes its local content (shows, media, configuration files). You **don't** need to re-add it to Studio — the controller stays registered in your Studio and Magic Provisioning will re-pair it automatically as soon as it's back on the network. Show data and configuration in Studio are preserved.
 
 If you're sending the controller to a different organization, the original Studio's admin needs to **delete the controller** from Studio to release the binding _before_ the new Studio can add it.
 :::

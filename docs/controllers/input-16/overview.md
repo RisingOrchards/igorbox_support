@@ -70,7 +70,7 @@ For higher-power needs, target an Output 8 MKII or LED Controller from your Logi
 
 1. **Power it up** with the included 12V supply.
 2. **Connect to the network** — Ethernet or WiFi. See [Connectivity](/docs/controllers/shared/connectivity).
-3. **[Magic Provision](/docs/controllers/shared/magic-provision)** — read the setup ID and add it in Studio.
+3. **[Magic Provisioning](/docs/controllers/shared/magic-provision)** — read the setup ID and add it in Studio.
 4. **Wire your inputs and outputs** — the [wiring guide](wiring-guide) covers buttons, sensors, and the relay outputs.
 5. **Build a Logic Rule** — [Logic Rules](/docs/studio/logic-rules/overview) is the place to start.
 

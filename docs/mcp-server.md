@@ -81,7 +81,7 @@ Quit and reopen Claude Desktop. The tools appear under the server toggles in the
 You don't have to do anything special. Once the server is connected, just ask your assistant questions about IgorBox and it will reach for the docs when it needs to. Examples:
 
 - _"How do I wire a strobe to the Output 8 MKII?"_
-- _"What's the difference between Magic Provision and manual setup?"_
+- _"What's the difference between Magic Provisioning and manual setup?"_
 - _"Show me how Logic Rules work in IgorBox Studio."_
 
 If you want to be explicit, tell the assistant to use the IgorBox docs: _"Look it up in the igorbox-docs server and tell me…"_

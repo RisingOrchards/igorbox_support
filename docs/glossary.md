@@ -100,7 +100,7 @@ The shape a dimmable channel's value follows over time, drawn on a lighting [tra
 
 ### Factory reset
 
-Wiping a controller's local shows, media, and configuration and rebooting it locked. The controller stays registered in your Studio and [Magic Provision](#magic-provision) re-pairs it automatically; the setup ID is used to restore your data from your Studio. Triggered by holding the front button at power-on. See [Front Button](/docs/controllers/shared/front-button).
+Wiping a controller's local shows, media, and configuration and rebooting it locked. The controller stays registered in your Studio and [Magic Provisioning](#magic-provisioning) re-pairs it automatically; the setup ID is used to restore your data from your Studio. Triggered by holding the front button at power-on. See [Front Button](/docs/controllers/shared/front-button).
 
 ### Fail-safe
 
@@ -142,6 +142,10 @@ An emergency stop that halts all playback and keeps the controller locked until 
 
 The smaller, steady current a solenoid or relay coil needs to *stay* energized after it first pulls in — lower than the initial [inrush current](#inrush-current). See the [Output 8 wiring guide](/docs/controllers/output-8-mkii/wiring-guide).
 
+### IgorBox Connect
+
+The free iPhone/Android app that sets up a controller's WiFi over Bluetooth — no Ethernet cable or laptop needed. You stand next to the controller, prove you're there by pressing its front button, pick your WiFi network, and the controller joins it. The no-cable alternative to provisioning over Ethernet. See [IgorBox Connect](/docs/controllers/shared/igorbox-connect).
+
 ### Inductive load
 
 Anything with a coil — solenoids, relays, motors — that stores energy in a magnetic field and kicks back a voltage spike when power is cut. Inductive loads want a [flyback diode](#flyback-diode). See [Multistate Relay™ › Flyback Diodes](/docs/controllers/output-8-mkii/multistate-relay).
@@ -178,9 +182,9 @@ Playing a show on the real hardware in real time while you keep editing — the 
 
 IgorBox's visual, no-code rules engine. Combine inputs and conditions ("switch A and switch B") to trigger shows, effects, and outputs. See [Logic Rules](/docs/studio/logic-rules/overview).
 
-### Magic Provision
+### Magic Provisioning
 
-How you get a brand-new controller onto your Studio: read its 8-character setup ID off the sticker, enter it in Studio, and power the controller on — no IP setup or cables to configure. See [Magic Provision](/docs/controllers/shared/magic-provision).
+How you get a brand-new controller onto your Studio: read its 8-character setup ID off the sticker, enter it in Studio, and power the controller on — no IP setup or cables to configure. See [Magic Provisioning](/docs/controllers/shared/magic-provision).
 
 ### Maglock
 
