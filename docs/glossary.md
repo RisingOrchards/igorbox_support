@@ -48,7 +48,7 @@ The round power connector on every controller (5.5 × 2.1 mm), wired center-posi
 
 ### Channel indicator
 
-The per-channel RGB light on a controller's front panel. Its color shows how the channel is set up and whether it's on — reflecting the controller's *intended* state, not a live reading of the wiring. You can turn the indicators off for dark installs. See [Front Panel](/docs/controllers/output-8-mkii/front-panel).
+The per-channel RGB light on a controller's front panel. Its color shows how the channel is set up and its brightness shows whether it's on — reflecting the controller's *intended* state, not a live reading of the wiring. You can dim or turn off the indicators for dark installs. See [Indicator Lights](/docs/controllers/shared/indicator-lights) and each controller's Front Panel page.
 
 ### Clip
 

@@ -66,7 +66,9 @@ If you're sending the controller to a different organization, the original Studi
 
 The status light and the channel indicator lights show what the controller _intends_ to be doing — they follow the controller's commands, not a direct reading of the wiring. That means:
 
-- A channel indicator shows the channel's _intended_ on/off state. If you've set a channel as "normally closed", its light is on when the channel is "active" — even though that's when its contacts are open.
+- A channel indicator shows the channel's _intended_ on/off state. If a channel is set to inverted, its light is on when the channel is "active" — even though the physical output is doing the opposite.
 - You can turn the indicators off entirely from Studio if your install needs to be dark.
 - Manual Control drives the indicators in real time, so you can verify wiring without a multimeter.
 - During a Hard Lock, every light on the front panel switches to the purple blink, so the E-stop is visually unmissable.
+
+For what each channel and rear-connector light means, color by color, see [Indicator Lights](indicator-lights).
