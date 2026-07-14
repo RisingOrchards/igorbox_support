@@ -20,7 +20,7 @@ The faint idle markers on the rear input connectors are new in firmware 2.2.0. I
 
 * **GREEN** - Normal Relay
 * **ORANGE** - Inverted Relay
-* **PURLE** - Input
+* **PURPLE** - Input
 * **RED** - Power Positive
 * **BLUE** - Power Negative
 
