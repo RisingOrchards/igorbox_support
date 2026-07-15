@@ -13,9 +13,9 @@ From left to right:
 
 | Element | What it tells you |
 | --- | --- |
-| Status LED | Overall controller state — see [Status LED](/docs/controllers/shared/status-led) |
-| 8 RGB channel indicators | One per output channel. The color and brightness tell you the channel's mode and whether it's on or off — see [Channel indicators](#channel-indicators) below. |
-| Front button | Configurable per controller — see [Front Button](/docs/controllers/shared/front-button) |
+| Status LED | Overall controller state. See [Status LED](/docs/controllers/shared/status-led) |
+| 8 RGB channel indicators | One per output channel. The color and brightness tell you the channel's mode and whether it's on or off. See [Channel indicators](#channel-indicators) below. |
+| Front button | Configurable per controller. See [Front Button](/docs/controllers/shared/front-button) |
 
 ## Channel indicators
 
@@ -23,18 +23,20 @@ Each channel has its own RGB LED. The **color** tells you how that channel is se
 
 | Light | What it means |
 | --- | --- |
-| **Green** | A standard relay channel. Solid green when the channel is on, dark when it's off. |
-| **Orange** | A standard relay channel set to inverted. Bright when the channel is on, and dimly lit when it's off (so it's never fully dark). |
-| **Red** | A solid-state (powered) channel. Lit when the channel is on. If that channel is also set to inverted, it stays dimly lit when off instead of going fully dark. |
+| **Green** | A channel in relay mode (dry contact). Bright green when the channel is on, dark when it's off. |
+| **Orange** | An **inverted** relay-mode channel. Bright orange when the channel is on, faint orange when it's off. |
+| **Red** | A channel in [solid-state mode](multistate-relay) (powered output). Bright red when the channel is on. When it's off: dark for a normal channel, a faint red glow for an inverted one. |
 
 A couple of things to take away:
 
-- **The color tells you the channel's mode** at a glance — green means a standard relay, red means solid-state, and orange means the channel is inverted.
-- **Inverted channels are never fully dark.** They keep a faint glow when off, so you can always tell an inverted channel apart from one that's simply turned off or disabled.
+- **The color tells you the channel's mode** at a glance: green and orange are relay mode (orange marks it inverted), red is solid-state.
+- **Inverted channels are never fully dark.** They keep a faint glow when off (orange in relay mode, red in solid-state mode), so you can always tell an inverted channel apart from one that's simply turned off or disabled.
 
-The light reflects the **commanded state** of the channel — so an inverted channel shows its indicator on when the channel is *active*, even though that flips the output the opposite way.
+The light reflects the **commanded state** of the channel, so an inverted channel shows its indicator on when the channel is *active*, even though that flips the output the opposite way.
 
-You can disable the channel indicators entirely from the controller's Configuration tab in Studio (useful in pitch-black haunt environments where any light leak would break the scene).
+The rear connector lights follow the same color language, with a faint always-on marker at every connector (as of firmware 2.2.0). See [Indicator Lights](/docs/controllers/shared/indicator-lights) for the full rear-panel reference.
+
+You can dim the indicators globally or disable them entirely from the controller's Configuration tab in Studio (useful in pitch-black haunt environments where any light leak would break the scene).
 
 ## Mounting
 

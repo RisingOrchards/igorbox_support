@@ -1,0 +1,30 @@
+import React from 'react';
+import Content from '@theme-original/DocItem/Content';
+import {useDoc} from '@docusaurus/plugin-content-docs/client';
+
+const DEFAULT_NOTE =
+  'This page covers hardware that is in beta testing. Details can change ' +
+  'before release, and your firmware may be ahead of or behind these docs.';
+
+export default function ContentWrapper(props) {
+  const {frontMatter} = useDoc();
+  const beta = frontMatter.beta;
+
+  if (!beta) {
+    return <Content {...props} />;
+  }
+
+  const note = typeof beta === 'string' ? beta : DEFAULT_NOTE;
+
+  return (
+    <div className="docs-beta">
+      <div className="docs-beta-flag" aria-hidden="true">
+        <span>Beta</span>
+      </div>
+      <div className="docs-beta-banner" role="note">
+        <strong>Beta hardware.</strong> {note}
+      </div>
+      <Content {...props} />
+    </div>
+  );
+}

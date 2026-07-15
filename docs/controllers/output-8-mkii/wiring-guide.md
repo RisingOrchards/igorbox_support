@@ -23,7 +23,7 @@ Each channel is a WAGO connector starting with channel 1 on the left and going t
 
 The first 6 WAGOs are [Multistate relays](multistate-relay) and can function as normal relays or solid-state-like relays.
 
-When in normal mode they are just shorting together when active. If you switch to solid-state mode in the software, they become switched power (internally jumped to the power). The helper LEDs will indicate the polarity with a **RED** LED for the Positive (V+) and a **BLUE** LED for the Negative (V-). These are limited to a max of 1.5A each.
+When in normal (relay) mode they are just shorting together when active. In this mode the connector pair lights **GREEN**: both bright when the channel is on, with one light keeping a faint marker glow when it's off. If you switch to solid-state mode in the software, they become switched power (internally jumped to the power) and the pair lights **RED and BLUE** instead, matching the power-terminal colors: red marks the positive terminal and blue the negative, bright when the output is live and faint when it's off. These are limited to a max of 1.5A each. See [Indicator Lights](/docs/controllers/shared/indicator-lights) for the full rear-panel light reference.
 
 The next 2 WAGO connectors are standard "high power" relays capable of 3A sustained.
 
@@ -115,7 +115,7 @@ To use a button or footswitch:
 1. Connect the input voltage source's V+ through the button to one terminal of an input channel.
 2. Connect the input voltage source's GND to the other terminal.
 
-When the button is pressed, the input fires. The inputs feed straight into the [Logic Rules](/docs/studio/logic-rules/overview) engine and can be used as triggers.
+When the button is pressed, the input fires, and its connector lights jump from a faint purple glow to bright purple (firmware 2.2.0 and later), so you can confirm the wiring right at the box. The inputs feed straight into the [Logic Rules](/docs/studio/logic-rules/overview) engine and can be used as triggers.
 
 ## What about mains power?
 
