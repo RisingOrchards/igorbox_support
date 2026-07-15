@@ -41,10 +41,10 @@ The red and blue power markers are there purely to help you identify polarity wh
 
 Each output channel's rear connector pair signals both the channel's state and, through its color, how the channel is set up:
 
-- **Standard channel (not inverted)**: both lights are bright green when the channel is on. When it's off, one light keeps a faint green marker glow and the other goes dark.
-- **Inverted channel**: the same idea in orange. When the channel is on, one light is bright orange. When it's off, both lights keep a faint orange glow.
+- **Relay channel (not inverted)**: both lights are bright green when the channel is on. When it's off, one light keeps a faint green marker glow and the other goes dark.
+- **Inverted relay channel**: the same idea in orange. When the channel is on, one light is bright orange. When it's off, both lights keep a faint orange glow.
 
-**Output 8 MKII channels in relay mode** (a dry contact, see [Multistate Relay™](/docs/controllers/output-8-mkii/multistate-relay)) are special: the pair shows the **actual switch position**, not the commanded state. A red light marks the common terminal and a blue light marks the switched terminal. Both glow bright when the contacts are closed and faint when they're open. If the channel is inverted, the red light turns orange and the bright and faint states swap.
+**Output 8 MKII channels in solid-state mode** (a powered output, see [Multistate Relay™](/docs/controllers/output-8-mkii/multistate-relay)) use the power colors instead, because their terminals carry the controller's supply: a red light marks the positive terminal and a blue light marks the negative, just like the power connector. Both glow bright when the output is live and faint when it's off. If the channel is inverted, the red light turns orange and the bright and faint states follow the actual output, which is the opposite of the commanded state.
 
 ## Front panel lights
 
