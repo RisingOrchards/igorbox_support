@@ -23,7 +23,7 @@ Each channel is a WAGO connector starting with channel 1 on the left and going t
 
 The first 6 WAGOs are [Multistate relays](multistate-relay) and can function as normal relays or solid-state-like relays.
 
-When in normal (relay) mode they are just shorting together when active. In this mode the helper LEDs show the actual contact position: a **RED** LED marks the common terminal and a **BLUE** LED marks the switched terminal, glowing bright when the contacts are closed and faint when they're open. If you switch to solid-state mode in the software, they become switched power (internally jumped to the power) and the pair lights **GREEN** instead: bright when the channel is on, with a faint marker glow when it's off. These are limited to a max of 1.5A each. See [Indicator Lights](/docs/controllers/shared/indicator-lights) for the full rear-panel light reference.
+When in normal (relay) mode they are just shorting together when active. In this mode the connector pair lights **GREEN**: both bright when the channel is on, with one light keeping a faint marker glow when it's off. If you switch to solid-state mode in the software, they become switched power (internally jumped to the power) and the pair lights **RED and BLUE** instead, matching the power-terminal colors: red marks the positive terminal and blue the negative, bright when the output is live and faint when it's off. These are limited to a max of 1.5A each. See [Indicator Lights](/docs/controllers/shared/indicator-lights) for the full rear-panel light reference.
 
 The next 2 WAGO connectors are standard "high power" relays capable of 3A sustained.
 
