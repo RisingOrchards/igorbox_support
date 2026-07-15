@@ -25,7 +25,7 @@ The color is configurable in Studio (Configuration tab → Channel → Indicator
 
 This makes the front panel a handy way to check your show at a glance: even if your stage lights are unplugged or pointing the wrong way, you can see what each channel is doing right on the box.
 
-Channels 9–16 live on the included [breakout boards](channel-breakouts) and have no front-panel lights. The indicator pair beside each breakout connector mirrors the same thing instead: the channel's configured color, dimming with its level, on both lights of the pair.
+Channels 9–16 live on the included [breakout boards](channel-breakouts) and have no front-panel lights. There are no onboard indicators for these channels.
 
 ## Indicator brightness
 

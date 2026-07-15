@@ -29,7 +29,7 @@ If the lights would be distracting — for example in a dark haunt scene — you
 
 ## Inputs 9–16
 
-Inputs 9–16 live on two included [breakout boards](channel-breakouts) connected by a standard Ethernet cable. Their indicators behave exactly like inputs 1–8 — the breakouts are part of the same controller, not separate boxes.
+Inputs 9–16 live on two included [breakout boards](channel-breakouts) connected by a standard Ethernet cable. There are no onboard indicators for these channels.
 
 ## Mounting
 
