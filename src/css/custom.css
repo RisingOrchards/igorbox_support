@@ -206,3 +206,82 @@
   color: inherit;
   text-decoration: underline;
 }
+
+/* Beta hardware marker (DocItem/Content swizzle, frontmatter `beta: true`) */
+.docs-beta-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid
+    color-mix(in srgb, var(--ifm-color-warning-dark) 45%, transparent);
+  border-radius: var(--ifm-global-radius);
+  background: color-mix(in srgb, var(--ifm-color-warning-dark) 9%, transparent);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.docs-beta-badge {
+  flex: none;
+  align-self: center;
+  padding: 0.12rem 0.65rem;
+  border-radius: 999px;
+  background: var(--ifm-color-warning-dark);
+  color: #1c1e21;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.docs-beta-note {
+  color: var(--ifm-font-color-base);
+}
+
+/* Sidebar Beta pill (category className `sidebar-beta` in _category_.json) */
+li.sidebar-beta > .menu__list-item-collapsible > .menu__link::after {
+  content: "Beta";
+  align-self: center;
+  margin-left: 0.5rem;
+  padding: 0.02rem 0.45rem;
+  border-radius: 999px;
+  background: var(--ifm-color-warning-dark);
+  color: #1c1e21;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+/* Infima rotates .menu__link--sublist::after for the collapse caret; keep the pill upright */
+li.sidebar-beta.menu__list-item--collapsed > .menu__list-item-collapsible > .menu__link::after {
+  transform: none;
+}
+
+/* Hide a category from the sidebar unless the visitor is inside it
+   (category className `sidebar-hidden` in _category_.json).
+   Direct links still work; the section reveals itself when active. */
+li.sidebar-hidden:not(:has(.menu__link--active)) {
+  display: none;
+}
+
+/* Companion to sidebar-hidden: don't advertise hidden sections in the
+   prev/next pagination footer of neighboring visible pages.
+   Remove together with the category's `sidebar-hidden` class. */
+.pagination-nav__link[href^="/docs/category/dmx"],
+.pagination-nav__link[href^="/docs/category/igorbox-dmx"],
+.pagination-nav__link[href^="/docs/studio/dmx"],
+.pagination-nav__link[href^="/docs/controllers/dmx"] {
+  display: none;
+}
+
+/* Companion to sidebar-hidden: hide the category's DocCard on parent
+   generated-index pages (DocCard carries the category's className).
+   The hidden category's own index still lists its children, since
+   child cards don't carry the class. */
+a.card.sidebar-hidden,
+article:has(> a.card.sidebar-hidden) {
+  display: none;
+}

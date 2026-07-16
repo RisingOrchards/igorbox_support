@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 description: "Test shows on real hardware while you're editing"
 ---
 

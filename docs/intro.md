@@ -9,6 +9,15 @@ description: "Welcome to the IgorBox documentation"
 
 IgorBox is a cloud-connected show control platform built for haunts, escape rooms, and immersive attractions. Program your show in **IgorBox Studio**, deploy it to your **controllers**, and let the platform keep everything in sync, monitored, and updateable from anywhere — even when the internet isn't.
 
+```mermaid
+flowchart LR
+    STUDIO["IgorBox Studio<br/>in your browser"] -- "build shows, wire logic,<br/>monitor: from anywhere" --> CLOUD["The IgorBox cloud"]
+    CLOUD -- "deploys shows and<br/>updates over the air" --> BOXES
+    subgraph SITE["Your attraction: keeps running even if the internet drops"]
+        BOXES["Controllers: Output 8,<br/>Input 16, LED Controller"] <--> STUFF["Props, lights, audio,<br/>and sensors"]
+    end
+```
+
 ## The current lineup
 
 | Controller | What it's for |

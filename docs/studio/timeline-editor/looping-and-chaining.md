@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 description: "Loop a show, hand off to the next one, or stop on cue"
 ---
 
@@ -8,6 +8,15 @@ description: "Loop a show, hand off to the next one, or stop on cue"
 A show doesn't have to be one-and-done. From a show's settings you can make it **loop**, **hand off to another show** when it finishes, or be **stopped** on cue — which lets you build sequences and idle states without wiring up extra logic.
 
 Open a show in the editor and click the **gear icon** (Show Settings) in the toolbar. The options below live under **When this show ends**.
+
+```mermaid
+flowchart TD
+    SHOW["The show plays"] --> ENDQ{"When this<br/>show ends"}
+    ENDQ -- "Loop this show" --> SHOW
+    ENDQ -- "Then play<br/>another show" --> NEXT["The next show plays,<br/>with its own ending"]
+    ENDQ -- "neither set" --> AMB(["The ambient routine<br/>resumes, if one is set"])
+    SHOW -. "stopped mid-play: front button<br/>in Stop mode, or a Stop trigger" .-> AMB
+```
 
 ## Loop a show
 

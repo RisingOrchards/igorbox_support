@@ -1,0 +1,12 @@
+{
+  "position": 40,
+  "label": "IgorBox DMX",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red sidebar-beta sidebar-hidden",
+  "link": {
+    "type": "generated-index",
+    "title": "IgorBox DMX",
+    "description": "A show controller that speaks DMX: one full universe of lighting control, DMX input, two relay outputs, two isolated inputs, and synchronized audio, all driven from one timeline. The IgorBox DMX is currently in beta."
+  }
+}

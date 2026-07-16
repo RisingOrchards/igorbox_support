@@ -14,6 +14,10 @@ keywords:
 
 Plain-language definitions of the terms you'll see across the IgorBox docs. New to show control? Start here.
 
+### Address (DMX)
+
+The first [DMX channel](#dmx-dmx-512) a fixture listens to. A fixture set to address 10 that uses four channels responds to channels 10–13. The next fixture should be addressed at 14 or later (and ideally [with a gap](/docs/controllers/dmx/dmx-basics#leave-gaps-when-addressing)). Set on the fixture itself, then matched in IgorBox Studio when you patch it.
+
 ### Air cylinder (pneumatic actuator)
 
 A piston that extends or retracts when compressed air is applied. The muscle behind drop panels, popping props, fast moving armatures, and slamming doors. Air flow is switched by a [solenoid valve](#solenoid-valve).
@@ -48,7 +52,7 @@ The round power connector on every controller (5.5 × 2.1 mm), wired center-posi
 
 ### Channel indicator
 
-The per-channel RGB light on a controller's front panel. Its color shows how the channel is set up and whether it's on — reflecting the controller's *intended* state, not a live reading of the wiring. You can turn the indicators off for dark installs. See [Front Panel](/docs/controllers/output-8-mkii/front-panel).
+The per-channel RGB light on a controller's front panel. Its color shows how the channel is set up and its brightness shows whether it's on — reflecting the controller's *intended* state, not a live reading of the wiring. You can dim or turn off the indicators for dark installs. See [Indicator Lights](/docs/controllers/shared/indicator-lights) and each controller's Front Panel page.
 
 ### Clip
 
@@ -66,6 +70,10 @@ A (time, value) point on a lighting [track](#track). Between control points the 
 
 A built-in limit on how much current a channel will pass. The LED Controller clamps every channel at 20 mA — which is why an LED can't pull more than its safe current and you don't need a series resistor. See [Tech Specs](/docs/controllers/led-controller/tech-specs).
 
+### Daisy chain (DMX)
+
+How DMX fixtures connect: controller → first fixture's **in**, that fixture's **out/thru** → the next fixture's **in**, and so on down the line. One continuous chain, [terminated](#terminator-dmx) at the far end. Never split it with a Y-cable.
+
 ### Dark ride
 
 An indoor ride-through attraction where guests move past scenes of synchronized lighting, sound, and effects — one of the themed-entertainment setups IgorBox is used for. See [IgorBox for Themed Entertainment](/docs/use-cases/themed-entertainment).
@@ -81,6 +89,10 @@ The common network service that automatically hands out IP addresses. Your netwo
 ### DIN rail
 
 A standard metal mounting rail used inside electrical enclosures. IgorBox controllers can wall-mount or clip to a DIN rail (with the optional kit). See [Tech Specs](/docs/controllers/output-8-mkii/tech-specs).
+
+### DMX (DMX-512)
+
+The standard control language for stage and effect lighting: par cans, moving heads, foggers, and DMX-controlled props. One DMX **universe** carries 512 **DMX channels**, each holding one level, refreshed continuously. The [IgorBox DMX](/docs/controllers/dmx/overview) drives a full universe and can also listen to one.
 
 ### Draft
 
@@ -106,6 +118,10 @@ Wiping a controller's local shows, media, and configuration and rebooting it loc
 
 Designed so a loss of power or other failure leaves things in the safe state. A [maglock](#maglock) is fail-safe because it unlocks when power is removed — and you keep that behavior by switching it through an [inverted output](#inverted-output). See [IgorBox for Escape Rooms](/docs/use-cases/escape-rooms).
 
+### Fixture profile (DMX)
+
+A reusable description of a *model* of DMX fixture: its modes and what each channel does. Profiles live in the [Fixture Library](/docs/studio/dmx/fixture-library); you [patch](#patch-dmx) from them. IgorBox ships a large built-in catalog, and you can import or build your own.
+
 ### Flyback diode
 
 A diode placed across an inductive load (like a solenoid or motor) to absorb the voltage spike created when power is removed. Protects your electronics and reduces radio interference. See [Multistate Relay™ › Flyback Diodes](/docs/controllers/output-8-mkii/multistate-relay).
@@ -121,6 +137,10 @@ When a motor coasts to a stop on its own after power is removed, rather than bei
 ### Game master
 
 The staff member who runs an escape room — watching the group, sending hints, and resetting or force-opening locks. IgorBox supports game-master controls like a one-button room reset. See [IgorBox for Escape Rooms](/docs/use-cases/escape-rooms).
+
+### GDTF
+
+General Device Type Format, the lighting industry's open standard for describing DMX fixtures. Manufacturers and the community publish ready-made GDTF profiles on [gdtf-share.com](https://gdtf-share.com), and IgorBox Studio imports them straight into your [Fixture Library](/docs/studio/dmx/fixture-library#gdtf-share) so you don't have to map channels by hand.
 
 ### Global event
 
@@ -220,11 +240,15 @@ Isolation that passes a signal across a gap using light instead of a shared wire
 
 ### Par can / fixture
 
-A stage/architectural light. Bigger fixtures need more current than a signal-level channel can provide — drive them through the [RGBW-PWR breakout](/docs/controllers/led-controller/rgbw-pwr-breakout).
+A stage/architectural light. DMX fixtures are driven by the [IgorBox DMX](/docs/controllers/dmx/overview) and [patched in IgorBox Studio](/docs/studio/dmx/patching-fixtures); simpler wired fixtures that need more current than a signal-level channel can provide are driven through the [RGBW-PWR breakout](/docs/controllers/led-controller/rgbw-pwr-breakout).
 
 ### Passthrough (power / zone)
 
 A set of terminals that brings the controller's barrel-jack supply voltage out to the channels, so a channel can switch that same voltage without a separate power supply. The internal bus has a current limit, so it's for modest loads — heavier loads get their own supply. See the [Output 8 wiring guide](/docs/controllers/output-8-mkii/wiring-guide).
+
+### Patch (DMX)
+
+Telling IgorBox Studio what's on a controller's DMX chain: which fixture, at which [address](#address-dmx), under what name. Done on the controller's Configuration tab; shows and rules then reference the fixture by name instead of raw channel numbers. See [Patching Fixtures](/docs/studio/dmx/patching-fixtures).
 
 ### Photo-eye / proximity sensor
 
@@ -266,6 +290,10 @@ A four-color fixture or channel group — **R**ed, **G**reen, **B**lue, and **W*
 
 The powered version of a 4-channel breakout: it adds its own supply so four LED Controller channels can drive real lighting (or a small motor) at higher current or a different voltage than the controller's own channels. See [RGBW-PWR Breakout](/docs/controllers/led-controller/rgbw-pwr-breakout).
 
+### Safe Zone (DMX)
+
+A per-channel limit the [IgorBox DMX](/docs/controllers/dmx/safe-zones) enforces against everything: shows, rules, and manual control. Used to keep moving props and fixtures inside their mechanical limits no matter what a show asks for.
+
 ### Safety Lock
 
 A lock that stops the show currently playing on a controller and prevents new ones from starting until you toggle it back off — for maintenance, daytime, or walk-throughs. Available as a [front button](/docs/controllers/shared/front-button) mode or a trigger action (called Soft Lock there). Unlike a [Hard Lock](#hard-lock-e-stop-function), it doesn't need a reboot.
@@ -306,6 +334,10 @@ The single front-panel light that tells you a controller's state through a **col
 
 The web app where you add controllers, build shows, set up logic, and run your attraction — it runs in any browser. Your shows run on the controllers, not the cloud, so they keep playing if the internet drops; the cloud is for building and pushing them. See [What is IgorBox Studio?](/docs/studio/overview).
 
+### Terminator (DMX)
+
+A small resistor plug (or built-in switch) on the **last** device in a [DMX chain](#daisy-chain-dmx) that keeps the signal from reflecting back up the cable and corrupting itself. Skipping it is the classic cause of flickering, glitchy fixtures on long runs. The IgorBox DMX has a [built-in terminator](/docs/controllers/dmx/dmx-basics#termination) switchable from the Studio.
+
 ### Timeline editor
 
 Studio's show-building screen, modeled on video editors and digital audio workstations: [tracks](#track) for each channel, with [clips](#clip) and [control points](#control-point) arranged over time. See [Timeline Editor: Basics](/docs/studio/timeline-editor/basics).
@@ -325,6 +357,10 @@ Anything that starts a show or rule — a button press, a sensor, a timer, or an
 ### TRS jack
 
 The 3.5 mm three-conductor (tip-ring-sleeve) stereo connector used for the controller's [line-level](#line-level) audio output. A 3.5 mm-to-dual-RCA or dual-¼″ cable feeds most amps and mixers. See [Audio Output](/docs/controllers/shared/audio-out).
+
+### Universe (DMX)
+
+One complete run of DMX: 512 [DMX channels](#dmx-dmx-512) on one chain of cable. Bigger rigs use multiple universes; one IgorBox DMX drives one universe.
 
 ### V+ / V−
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 description: "Going from draft to live, and how to roll back"
 ---
 
@@ -35,6 +35,17 @@ While you're editing, a badge in the metadata bar tells you — live — how the
 - **Pending** — you've deployed, but the controllers haven't confirmed receipt yet.
 - **Partial** — some, but not all, of the target controllers have the latest version.
 - **Deployed** — every target controller has confirmed the latest version. You're fully live.
+
+```mermaid
+flowchart TD
+    DRAFT["Draft:<br/>never deployed yet"] -- "Deploy" --> PENDING["Pending: waiting for<br/>controllers to confirm"]
+    PENDING -- "every target<br/>confirms" --> DEPLOYED(["Deployed: fully live"])
+    PENDING -- "only some targets confirm<br/>(one is offline, say)" --> PARTIAL["Partial: not every<br/>controller has it yet"]
+    PARTIAL -- "the stragglers reconnect<br/>and pull it automatically" --> DEPLOYED
+    DEPLOYED -- "edit the show" --> MOD["Modified: changes<br/>not deployed yet"]
+    MOD -- "Deploy" --> PENDING
+    DEPLOYED -. "History: Restore<br/>an old version" .-> MOD
+```
 
 ## Rolling back
 

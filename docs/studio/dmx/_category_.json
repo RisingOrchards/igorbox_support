@@ -1,0 +1,12 @@
+{
+  "position": 15,
+  "label": "DMX & Fixtures",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "title": "DMX & Fixtures",
+    "description": "Driving DMX lighting and props from IgorBox Studio: the fixture library, patching, channel types, live control, DMX input, and recording from a console. DMX support in the Studio is currently in beta."
+  },
+  "className": "sidebar-beta sidebar-hidden"
+}

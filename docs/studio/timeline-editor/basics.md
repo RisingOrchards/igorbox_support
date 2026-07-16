@@ -33,6 +33,7 @@ Track types:
 - **Relay** — for relay outputs (like the Output 8 MKII). Clips are simple On pulses.
 - **Lighting** — for dimmable channels. Clips are envelopes you draw with control points.
 - **Audio** — for audio clips. Per-clip volume, slip editing, waveform display.
+- **DMX** — for fixtures patched on an IgorBox DMX. Each fixture is a collapsible group of rows (dimmer envelopes, color tracks, state clips, and pan/tilt cues). See [DMX Tracks](dmx-tracks).
 
 The editor only shows tracks for channels the targeted controllers actually have. If a show targets a controller without any audio, you won't see any audio tracks.
 

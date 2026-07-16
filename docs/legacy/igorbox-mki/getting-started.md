@@ -53,10 +53,3 @@ The IgorBox Input 8 is our flagship 8 input device. It is designed to be a simpl
 
 You can read the Input 8 [Documentation](/docs/legacy/igorbox-mki/input-8/basics) for more information.
 
-### IgorBox DMX
-
-:::info
-Coming Soon!
-:::
-
-The IgorBox DMX is a networked DMX controller that allows you to control a DMX universe. The DMX is perfect for controlling lighting fixtures, moving heads, and other DMX devices.

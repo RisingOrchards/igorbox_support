@@ -37,6 +37,14 @@ A signal another rule **on the same controller** can fire and listen for — han
 
 To *listen* for one, add an **Input** block and point it at the named trigger instead of a physical input. To *send* one, use the Named Trigger output (under Outputs, below). To coordinate *across* controllers, you have two options: watch another controller's input directly (see the Input block above), or use a Show Trigger to fire any show in your Studio.
 
+### DMX Input
+
+Watches one slot of incoming DMX on an [IgorBox DMX](/docs/controllers/dmx/overview) and stays on while the value sits inside a range you set.
+
+Point it at one of the controller's [named DMX inputs](/docs/studio/dmx/dmx-input#named-inputs) (or a raw slot number) and pick the range; "console fader above half" is a range of 128–255. The block turns on when the incoming value enters the range and off when it leaves.
+
+It's stateless (it simply reflects the wire), so pair it with a **Latch** for "fire once and remember." The rule must run on the DMX controller doing the listening, and that controller's input must be live: always true in Buffer or Fixture mode, and in Standard mode once DMX input is enabled. See [DMX Input](/docs/studio/dmx/dmx-input).
+
 ## Logic
 
 ### And
@@ -122,6 +130,16 @@ Sends a named signal that other rules **on the same controller** can listen for.
 ### Channel Hold
 
 Forces a specific output channel on (or off) and **holds it there** until it's released. Useful for "keep this maglock powered until the puzzle is solved."
+
+### DMX Slot Hold
+
+The DMX cousin of Channel Hold: takes ownership of one DMX channel and **pins it at a value** until released. While held, shows, manual control, and the ambient routine can't move that channel; the rest of the universe stays free.
+
+It has separate **Set** and **Release** connections, each with its own value, so "Set" can pin a fogger's channel to zero and "Release" can hand it back at its resting level. Wire a Reset (or any signal) to Release to let go. The target controller must be in Standard or Buffer mode; in Fixture mode nothing can drive the output. See [Operating Modes](/docs/controllers/dmx/modes).
+
+### DMX Fixture Hold
+
+Same idea, aimed at a [patched fixture](/docs/studio/dmx/patching-fixtures) instead of a raw channel: pick the fixture, tick which of its channels to hold, and set a value for each. Only the ticked channels are held; the rest of the fixture stays live for shows and manual control. Ideal for "park the moving head and kill its dimmer, but leave its strobe channel alone."
 
 ### Play Sound
 
