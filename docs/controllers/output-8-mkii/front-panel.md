@@ -40,4 +40,4 @@ You can dim the indicators globally or disable them entirely from the controller
 
 ## Mounting
 
-The MKII chassis has holes for wall-mount directly with screws through the side flanges, and we sell a DIN-rail bracket kit that can use the side flange holes to position the controller in 5 different positions.
+Same chassis and mounting pattern as every current IgorBox controller. See [Mounting](/docs/controllers/shared/mounting) for the footprint drawing, wall-mount and DIN-rail options, and hardware-reuse notes.

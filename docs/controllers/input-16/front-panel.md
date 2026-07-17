@@ -30,6 +30,4 @@ Inputs 9–16 live on two included [breakout boards](channel-breakouts) connecte
 
 ## Mounting
 
-Same chassis dimensions as the rest of the lineup.
-
-The chassis has holes for wall-mount directly with screws through the side flanges, and we sell a DIN-rail bracket kit that can use the side flange holes to position the controller in 5 different positions.
+Same chassis and mounting pattern as every current IgorBox controller. See [Mounting](/docs/controllers/shared/mounting) for the footprint drawing, wall-mount and DIN-rail options, and hardware-reuse notes.

@@ -34,7 +34,7 @@ Using a console cue as a trigger ([Fixture mode](modes#fixture)): wire the box a
 
 The two relay outputs and two isolated inputs wire up exactly like their counterparts on the other controllers. See the [Output 8 MKII wiring guide](/docs/controllers/output-8-mkii/wiring-guide) for the recipes (lights, solenoids, and input switches all apply here).
 
-These are the same Outputs and Inputs on all other IgorBox devices. 
+These are the same Outputs and Inputs on all other IgorBox devices.
 
 The outputs are rated at 1.5A max and the inputs are rated 6V - 48V DC or AC.
 

@@ -19,7 +19,7 @@ export default function ContentWrapper(props) {
   return (
     <>
       <div className="docs-beta-banner" role="note">
-        <span className="docs-beta-badge">Beta</span>
+        <span className="docs-beta-badge">Beta</span>{' '}
         <span className="docs-beta-note">{note}</span>
       </div>
       <Content {...props} />

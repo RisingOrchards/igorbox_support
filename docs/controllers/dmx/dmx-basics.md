@@ -52,9 +52,9 @@ flowchart LR
 
 The last device in a DMX chain should be **terminated** with a small plug (or built-in switch) that stops the signal from reflecting back up the cable and garbling itself. Short chains often work without it; long chains and picky fixtures will make you regret skipping it.
 
-The IgorBox DMX has its own **built-in terminator you can [switch on from the Studio](/docs/studio/dmx/patching-fixtures#input-termination)** on the **Input**, no plug required. Use it when the controller sits at the end of a chain (for example, in [Fixture or Buffer mode](modes) where the chain arrives at the box). When the controller is the start of the chain (the usual case), terminate at the far end: the last fixture. 
+The IgorBox DMX has its own **built-in terminator you can [switch on from the Studio](/docs/studio/dmx/patching-fixtures#input-termination)** on the **Input**, no plug required. Use it when the controller sits at the end of a chain (for example, in [Fixture or Buffer mode](modes) where the chain arrives at the box). When the controller is the start of the chain (the usual case), terminate at the far end: the last fixture.
 
-In buffer mode this is crucial because the input is the **End** of your universe terminated into the IgorBox controller and the Output on the controller becomes a new Universe which is copied from the input to the output. 
+In Buffer mode this is crucial. The console's chain **ends** at the IgorBox input, and the output sends a fresh copy of that universe onward to your fixtures.
 
 :::tip Use the internal Terminator for Small Loops
 If you're running in **Standard mode** and have a relatively small distance of fixture run, you can just run the output of your last fixture back to the input of the IgorBox Controller. This will use the internal terminator on that input jack as the terminator for your universe
@@ -78,15 +78,15 @@ The front panel shows the current rate at a glance. See [Front Panel](front-pane
 
 We support two ways to connect your DMX fixtures to the IgorBox DMX: XLR and WAGO.
 
-The first is 3-pin XLR cables. These are microphone cables for all intents and purposes and are pretty easy to find. 
+The first is 3-pin XLR cables. These are microphone cables for all intents and purposes and are pretty easy to find.
 
 :::note But I thought DMX is 5 pin?
 Yes, the DMX "official spec" is 5 pin XLR connectors and many professional fixtures use 5 pin connectors. The 5 pin connectors still only use 3 conductors and are chosen to prevent a rigger at a concert from plugging a microphone cable with 48v of phantom power into a DMX device. Over the years, this has proven to not be a problem in practice, and 5 pin cables were hard to come by in live concert environments. So many manufacturers just started supporting 3 pin XLR and a majority of fixtures only have 3 pin XLR connections now. You can get adapters for 3 pin to 5 pin and back pretty easily.
 
-We originally spec'd a 5 pin and 3 pin configuration on the controller, but discovered we just didn't have the space for 2 sets of XLR connectors. So we chose compatibility over adapters. 
+We originally spec'd a 5 pin and 3 pin configuration on the controller, but discovered we just didn't have the space for 2 sets of XLR connectors. So we chose compatibility over adapters.
 :::
 
-99% of users will likely use the 3-pin XLR. For those of you that need a more direct wired solution, we also break out our Input and Output via 3 pin WAGO connectors on the back panel. 
+99% of users will likely use the 3-pin XLR. For those of you that need a more direct wired solution, we also break out our Input and Output via 3 pin WAGO connectors on the back panel.
 
 The configuration of the Connector is: Positive, Negative, Ground (or B, A, GND):
 
