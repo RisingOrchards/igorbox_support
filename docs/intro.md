@@ -14,7 +14,7 @@ flowchart LR
     STUDIO["IgorBox Studio<br/>in your browser"] -- "build shows, wire logic,<br/>monitor: from anywhere" --> CLOUD["The IgorBox cloud"]
     CLOUD -- "deploys shows and<br/>updates over the air" --> BOXES
     subgraph SITE["Your attraction: keeps running even if the internet drops"]
-        BOXES["Controllers: Output 8,<br/>Input 16, LED Controller"] <--> STUFF["Props, lights, audio,<br/>and sensors"]
+        BOXES["Controllers: Output 8, Input 16,<br/>LED Controller, IgorBox DMX (beta)"] <--> STUFF["Props, lights, audio,<br/>and sensors"]
     end
 ```
 
@@ -25,6 +25,7 @@ flowchart LR
 | [Output 8 MKII](/docs/controllers/output-8-mkii/overview) | Eight outputs — six with software-switchable Multistate Relay™ technology (standard relay or solid-state) plus two standard relays. |
 | [Input 16](/docs/controllers/input-16/overview) | Sixteen optically isolated inputs (6–48V AC/DC). Centralize triggers across an attraction or build elaborate escape room puzzles. |
 | [LED Controller](/docs/controllers/led-controller/overview) | Sixteen low-current dimmable channels for puzzle-board indicators and signal-level use — pair it with the RGBW-PWR breakout to drive real lighting (panel LEDs, pinspots, strips) and motor speed control. |
+| [IgorBox DMX](/docs/controllers/dmx/overview) (beta) | A full universe of DMX lighting control from the show timeline, plus DMX input for working alongside a console. Currently in beta. |
 
 Every controller speaks the same language: WAGO® connectors on every terminal, Easywire™ guided wiring, Magic Provisioning setup, Ethernet or WiFi, and a stereo audio output.
 

@@ -259,29 +259,3 @@ li.sidebar-beta > .menu__list-item-collapsible > .menu__link::after {
 li.sidebar-beta.menu__list-item--collapsed > .menu__list-item-collapsible > .menu__link::after {
   transform: none;
 }
-
-/* Hide a category from the sidebar unless the visitor is inside it
-   (category className `sidebar-hidden` in _category_.json).
-   Direct links still work; the section reveals itself when active. */
-li.sidebar-hidden:not(:has(.menu__link--active)) {
-  display: none;
-}
-
-/* Companion to sidebar-hidden: don't advertise hidden sections in the
-   prev/next pagination footer of neighboring visible pages.
-   Remove together with the category's `sidebar-hidden` class. */
-.pagination-nav__link[href^="/docs/category/dmx"],
-.pagination-nav__link[href^="/docs/category/igorbox-dmx"],
-.pagination-nav__link[href^="/docs/studio/dmx"],
-.pagination-nav__link[href^="/docs/controllers/dmx"] {
-  display: none;
-}
-
-/* Companion to sidebar-hidden: hide the category's DocCard on parent
-   generated-index pages (DocCard carries the category's className).
-   The hidden category's own index still lists its children, since
-   child cards don't carry the class. */
-a.card.sidebar-hidden,
-article:has(> a.card.sidebar-hidden) {
-  display: none;
-}

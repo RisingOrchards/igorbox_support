@@ -3,7 +3,7 @@
   "label": "IgorBox DMX",
   "collapsible": true,
   "collapsed": true,
-  "className": "red sidebar-beta sidebar-hidden",
+  "className": "red sidebar-beta",
   "link": {
     "type": "generated-index",
     "title": "IgorBox DMX",

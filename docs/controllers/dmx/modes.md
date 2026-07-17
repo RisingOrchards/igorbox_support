@@ -92,17 +92,16 @@ Use it to make a console cue the trigger for an entire IgorBox scene: audio, rel
 In this mode the input and output are electrically connected and the box's own transmitter is silent. The terminator decides where the box sits: **on**, and the controller is the end of the line; **off**, and it's just another fixture in the middle, with DMX out continuing to the next fixture in the chain.
 
 ```mermaid
-flowchart LR
-    subgraph END["Termination on: the end of the line"]
+flowchart TD
+    subgraph ON["Termination on: the end of the line"]
+        direction LR
         C2["Console"] --> F2["Fixtures"] --> B2["IgorBox DMX<br/>built-in terminator on"]
     end
-```
-
-```mermaid
-flowchart LR
-    subgraph MID["Termination off: just another fixture mid-chain"]
+    subgraph OFF["Termination off: just another fixture mid-chain"]
+        direction LR
         C1["Console"] --> B1["IgorBox DMX<br/>in to out"] --> N1["Next fixture"] --> T1(["Terminator at<br/>the chain's end"])
     end
+    ON ~~~ OFF
 ```
 :::
 
