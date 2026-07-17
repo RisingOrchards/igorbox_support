@@ -37,7 +37,11 @@ A state channel is a *mode selector*; its named ranges pick gobos, color-wheel s
 - **Drawing a clip.** With the **Draw** tool, drag across the track. The state picker opens as soon as you release; choose the named state for that span. Between clips, the channel returns to the default.
 - **Editing.** Clips move, resize, and collide like any other clip. Double-click a clip to pick a different state.
 
+![State Clip](/img/dmx/state-clip.png)
+
 Ranges marked **Proportional (slider in band)**, like strobe speed, get a bonus: the clip carries its own mini envelope inside, so you can ramp the speed over the clip's duration with ordinary control points.
+
+![State Clip with Range](/img/dmx/state-clip-prop.png)
 
 ## Pan/tilt (X/Y) tracks
 
@@ -47,6 +51,8 @@ A moving head's pan and tilt channels pair into a single **X/Y track**. Each dia
 - **The position editor**: a large 2D pad where you drag the handle to aim. Pan is left/right, tilt is up/down, with sliders below for one axis at a time (and fine controls on 16-bit fixtures). During [Live Preview](live-preview), the real fixture follows the pad as you drag, so you aim the actual light, not a number.
 - **Move in time**: in Select mode, drag a diamond horizontally. (Its aim stays put; use the editor to change where it points.)
 - **Endpoints**: like lighting tracks, the first and last diamonds are pinned to the show's start and end. Keep them linked (**Sync paired endpoint** in the editor) so looping shows don't snap at the wrap; the editor warns when the last diamond has drifted away from the first.
+
+![Pan and Tilt Editor](/img/dmx/pan-tilt.png)
 
 :::tip Aim with the light on
 Give the head some intensity on its dimmer envelope first, start Live Preview, then place your position cues; a moving light you can see is a lot easier to aim.
@@ -59,6 +65,8 @@ The browser doesn't simulate DMX fixtures; there's no on-screen beam. DMX comes 
 ## Generators
 
 The [effect generators](pwm-and-lighting) don't care whether a channel is an LED Controller channel or a DMX dimmer: flicker, lightning, pulses, chases, and the color-group effects all apply to DMX rows the same way. (State and X/Y tracks don't take generators; author those directly.)
+
+![Audio Reactive Generator](/img/dmx/generator-audio.png)
 
 ## Deploying
 
