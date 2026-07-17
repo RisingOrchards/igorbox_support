@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-description: "Channel kinds, named states, defaults, safe states, and Safe Zones"
+description: "Channel kinds, named states, defaults, safe states, and Safe Zones™"
 beta: "The IgorBox DMX and the Studio's DMX features are in beta testing. Details can change before release, and what you see in the Studio may be ahead of or behind these docs."
 ---
 
@@ -55,9 +55,9 @@ When a controller's [front button](/docs/studio/front-button-modes) is set to **
 
 Leave it blank and the channel freezes at whatever value it had when the lock engaged.
 
-## Safe Zones
+## Safe Zones™
 
-Intensity, pan, and tilt channels can carry a **Safe min / Safe max** pair: a hard band the controller enforces against *everything*, whether shows, rules, manual control sliders, defaults, or safe states. It's the last line of defense for fixtures that move; the full story is on the [Safe Zones](/docs/controllers/dmx/safe-zones) hardware page.
+Intensity, pan, and tilt channels can carry a **Safe min / Safe max** pair: a hard band the controller enforces against *everything*, whether shows, rules, manual control sliders, defaults, or safe states. It's the last line of defense for fixtures that move; the full story is on the [Safe Zones™](/docs/controllers/dmx/safe-zones) hardware page.
 
 ![Zones and States](/img/dmx/zones-states.png)
 

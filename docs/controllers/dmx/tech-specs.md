@@ -17,7 +17,7 @@ beta: true
 | Termination | Built-in 120Ω on input side, software-switchable |
 | Failsafe | Hardware relay connects DMX in → out when unpowered or in Fixture mode |
 | Connectors | 3-pin XLR and WAGO |
-| Safe Zones | Per-channel min/max limits enforced on all output, including [paired fine/coarse (16-bit) channels](safe-zones) |
+| Safe Zones™ | Per-channel min/max limits enforced on all output, including [paired fine/coarse (16-bit) channels](safe-zones) |
 
 ## Relay outputs
 

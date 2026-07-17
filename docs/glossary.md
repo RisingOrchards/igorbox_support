@@ -290,7 +290,7 @@ A four-color fixture or channel group — **R**ed, **G**reen, **B**lue, and **W*
 
 The powered version of a 4-channel breakout: it adds its own supply so four LED Controller channels can drive real lighting (or a small motor) at higher current or a different voltage than the controller's own channels. See [RGBW-PWR Breakout](/docs/controllers/led-controller/rgbw-pwr-breakout).
 
-### Safe Zone (DMX)
+### Safe Zone™ (DMX)
 
 A per-channel limit the [IgorBox DMX](/docs/controllers/dmx/safe-zones) enforces against everything: shows, rules, and manual control. Used to keep moving props and fixtures inside their mechanical limits no matter what a show asks for.
 

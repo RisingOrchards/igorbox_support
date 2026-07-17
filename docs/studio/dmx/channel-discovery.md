@@ -4,7 +4,7 @@ description: "Probe a mystery fixture's channels live, one slot at a time"
 beta: "The IgorBox DMX and the Studio's DMX features are in beta testing. Details can change before release, and what you see in the Studio may be ahead of or behind these docs."
 ---
 
-# Channel Discovery
+# Channel Discovery™
 
 Some fixtures come with no manual. Some come with a *wrong* manual. **DMX Discovery** is IgorBox Studio's answer: drive any slot of the universe by hand, watch what the fixture does, and map its channels by experiment.
 

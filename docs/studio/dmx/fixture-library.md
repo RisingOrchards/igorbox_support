@@ -65,7 +65,7 @@ For any fixture in the results:
 - **Color groups**: when a mode has red/green/blue (plus white/amber) channels, they're grouped so the Studio can drive them as one color picker. A default group is created for you; you can split it up (for multi-head fixtures with independent color sections) or clear it.
 - **Card image**: upload a photo after the first save.
 
-Working from a fixture whose manual is missing or wrong? Click **Discover channels** in the editor to probe the real thing live; see [Channel Discovery](channel-discovery).
+Working from a fixture whose manual is missing or wrong? Click **Discover channels** in the editor to probe the real thing live; see [Channel Discovery™](channel-discovery).
 
 Validation runs as you type: errors block saving; warnings don't.
 
