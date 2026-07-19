@@ -38,14 +38,14 @@ These are the same Outputs and Inputs on all other IgorBox devices.
 
 The outputs are rated at 1.5A max and the inputs are rated 6V - 48V DC or AC.
 
-:::danger Prototype Controller Inputs De-Rated
-Serial Number 000001 through 000010 inputs can only handle 6V to 12V DC or AC due to a manufacturing issue with the prototypes.
+:::danger Beta units SN 000001–000010: inputs are 12V max
+The isolated inputs on the first ten beta units (Rev A.1) accept **6–12V DC or AC**, not the usual 6–48V. A part that can't handle the full input range made it into this revision. We caught it after these units were built, and rather than delay the beta we're shipping them with this limit documented. Production units are corrected and accept the full 6–48V.
 
-**DO NOT EXCEED 12V**
+**Do not exceed 12V on these units' inputs.** Higher voltage can damage the input circuit. Your serial number is on the label on the bottom of the controller.
 :::
 
-:::danger Label Issue
-Serial Number 000001 through 000010 has its inputs and outputs mislabeled (they are swapped). The Channels with purple indicators are inputs and green indicators are outputs.
+:::danger Beta units SN 000001–000010: input and output labels are swapped
+On the first ten beta units (Rev A.1), the rear-panel labels for the inputs and the relay outputs are swapped. Trust the indicator lights, not the printed labels: **purple** lights mark the inputs, **green** lights mark the outputs. Production units are labeled correctly.
 :::
 
 ## Power
