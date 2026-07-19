@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from '@docusaurus/Head';
 import Content from '@theme-original/DocItem/Content';
 import {useDoc} from '@docusaurus/plugin-content-docs/client';
 
@@ -18,6 +19,10 @@ export default function ContentWrapper(props) {
 
   return (
     <>
+      {/* Keep beta pages out of search engines until the beta flag is removed. */}
+      <Head>
+        <meta name="robots" content="noindex" />
+      </Head>
       <div className="docs-beta-banner" role="note">
         <span className="docs-beta-badge">Beta</span>{' '}
         <span className="docs-beta-note">{note}</span>
