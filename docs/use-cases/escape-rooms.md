@@ -19,6 +19,31 @@ An escape room is one big state machine: inputs (buttons, magnets, RFID tags, se
 
 No code. You wire the inputs, draw the logic, and connect it to the locks and effects.
 
+```mermaid
+flowchart LR
+    subgraph INPUTS["The room's inputs"]
+        BTN["Buttons"]
+        REED["Magnets"]
+        RFID["RFID tags"]
+        SENS["Sensors"]
+    end
+    subgraph LOGIC["Puzzle logic"]
+        RULE["Logic Rule:<br/>the solved condition"]
+    end
+    subgraph PAYOFF["The payoff"]
+        LOCK["The maglock pops"]
+        REVEAL["A drawer reveals"]
+        LIGHTS["Lights change,<br/>the next clue appears"]
+    end
+    BTN --> RULE
+    REED --> RULE
+    RFID --> RULE
+    SENS --> RULE
+    RULE --> LOCK
+    RULE --> REVEAL
+    RULE --> LIGHTS
+```
+
 ## What you can build
 
 - **Maglock releases** — solve the puzzle, the magnetic lock drops, the door or compartment opens. Wired **fail-safe** so a power loss unlocks the room.
@@ -63,6 +88,16 @@ You often want to create a flow that walks guests through multiple puzzles in a 
 - **Puzzle 2 Completed:** Play a congratulations show and trigger the next looping show.
 
 This can continue until the entire game is complete.
+
+```mermaid
+flowchart TD
+    AMB["Ambient routine loops:<br/>waiting for the group"] -- "puzzle 1 solved" --> C1["Congratulations show:<br/>unlocks the next puzzle"]
+    C1 -- "chains into" --> L1["Looping show plays while<br/>the group works puzzle 2"]
+    L1 -- "puzzle 2 solved" --> C2["Congratulations show"]
+    C2 -- "chains into" --> L2["Next looping show"]
+    L2 -. "and so on, until..." .-> DONE(["Game complete"])
+    DONE -. "the game master resets<br/>for the next group" .-> AMB
+```
 
 ## Get started
 

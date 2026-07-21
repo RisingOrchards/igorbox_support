@@ -41,6 +41,25 @@ The entire show lives on the controller(s) and comes up and starts working as so
 
 Because IgorBox controllers coordinate over your network, a single interaction can fan out into a whole-space cue — lights in one room, sound in another, a kinetic effect down the hall.
 
+```mermaid
+flowchart LR
+    subgraph BAR["Behind the bar"]
+        BTN["Button on Box A"]
+    end
+    subgraph R1["Room 1"]
+        B["Box B: lights"]
+    end
+    subgraph R2["Room 2"]
+        C["Box C: sound"]
+    end
+    subgraph HALL["Down the hall"]
+        D["Box D: kinetic effect"]
+    end
+    BTN --> B
+    BTN -- "over your network,<br/>no wires between boxes" --> C
+    BTN --> D
+```
+
 ## How it works
 
 1. **Wire it** — [Easywire™](/docs/controllers/shared/easywire) walks you through each effect and input.

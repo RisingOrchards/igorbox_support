@@ -56,6 +56,21 @@ For escape rooms in particular, this is a huge unlock: you can build the entire 
 
 And it isn't unique to the Input 16 — across IgorBox, every input is a global event. Any input on any controller can trigger any show on any other controller, or be used as a condition inside a [Logic Rule](/docs/studio/logic-rules/overview) running anywhere on your network. The Input 16 simply gives you the most inputs in one box; a single button on an Output 8 MKII three rooms away can feed the same rule.
 
+```mermaid
+flowchart LR
+    subgraph SENSORS["Every sensor in the room"]
+        BTN["Buttons and<br/>footswitches"]
+        REED["Reed sensors<br/>and IR beams"]
+        RFID["RFID readers and<br/>puzzle pieces"]
+    end
+    BTN --> HUB["Input 16: the whole<br/>room's Logic Rule"]
+    REED --> HUB
+    RFID --> HUB
+    FAR["A button on an Output 8,<br/>three rooms away"] -. "still a global event,<br/>over your network" .-> HUB
+    HUB --> LOCK["Its own two relays:<br/>a maglock, a clue reveal"]
+    HUB --> SHOWS["Shows on any<br/>other controller"]
+```
+
 ## The two relay outputs
 
 The Input 16 isn't input-only. The two onboard relays (1.5A each) are perfect for the kind of low-amperage triggers and locks that go hand-in-hand with input-driven shows:

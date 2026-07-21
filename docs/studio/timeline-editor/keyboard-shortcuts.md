@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 description: "Keyboard shortcuts in the timeline editor"
 ---
 

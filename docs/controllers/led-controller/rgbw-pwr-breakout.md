@@ -32,6 +32,14 @@ A typical install:
 - Load supply → RGBW-PWR power input → fixture
 - LED Controller runs on its own small logic supply; the breakout carries the load.
 
+```mermaid
+flowchart LR
+    CTRL["LED Controller channels,<br/>via the breakout-port cable or<br/>the four direct signal inputs"] -- "the signal" --> BRK["RGBW-PWR<br/>breakout"]
+    PSU["Its own supply, sized for<br/>the fixture (9–24V DC)"] -- "the power" --> BRK
+    BRK --> FIX["The fixture: RGBW, or<br/>four independent loads"]
+    PASS["The controller's<br/>passthrough rail"] -. "not this: it powers logic,<br/>not lighting loads" .-x BRK
+```
+
 ## Limits
 
 - **2A per channel**, and **5A total across the board.** With all four channels loaded, that's an average of 1.25A each — fine for most fixtures, but size your loads so the board total stays under 5A. At 24V that 5A works out to about **120W** of total load per board.

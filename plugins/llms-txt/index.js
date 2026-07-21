@@ -73,12 +73,20 @@ module.exports = function llmsTxtPlugin(context) {
               .replace(/\.mdx?$/, '')
               .split(path.sep)
               .join('/');
+            // Docs flagged `beta:` in frontmatter get a disclaimer here too, so
+            // LLM consumers see the same warning the on-page banner gives humans.
+            const beta = data.beta
+              ? data.beta === 'true'
+                ? 'This page covers hardware that is in beta testing. Details can change before release, and your firmware may be ahead of or behind these docs.'
+                : data.beta
+              : null;
             return {
               rel,
               section: rel.includes('/') ? rel.split('/')[0] : 'overview',
               url: base + path.posix.join(baseUrl, 'docs', rel),
               title: data.title || firstH1(body) || rel.split('/').pop(),
               description: data.description || '',
+              beta,
               body: cleanBody(body),
             };
           } catch (err) {
@@ -111,7 +119,7 @@ module.exports = function llmsTxtPlugin(context) {
         idx.push(`## ${titleCase(section)}`, '');
         for (const e of groups[section]) {
           idx.push(
-            `- [${e.title}](${e.url})${e.description ? ': ' + e.description : ''}`,
+            `- [${e.title}](${e.url})${e.beta ? ' **(Beta)**' : ''}${e.description ? ': ' + e.description : ''}`,
           );
         }
         idx.push('');
@@ -123,6 +131,7 @@ module.exports = function llmsTxtPlugin(context) {
       for (const e of entries) {
         full.push('---', '', `# ${e.title}`, `Source: ${e.url}`, '');
         if (e.description) full.push(`> ${e.description}`, '');
+        if (e.beta) full.push(`> **Beta:** ${e.beta}`, '');
         full.push(e.body, '');
       }
       fs.writeFileSync(

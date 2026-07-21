@@ -14,6 +14,7 @@ Every current IgorBox controller is built on the same foundation — same networ
 | [Output 8 MKII](output-8-mkii/overview) | 6 × 1.5A Multistate Relay™ + 2 × 3A relays | 2 × isolated | The everyday show-control workhorse — pneumatics, lights, motors |
 | [Input 16](input-16/overview) | 2 × 1.5A relays | 16 × isolated (6–48V AC/DC) | Centralized triggering, escape room puzzle logic |
 | [LED Controller](led-controller/overview) | 16 × low-current dimmable channels (12V/24V) | 2 × isolated | Indicator panels, puzzle boards, and (with the RGBW-PWR breakout) full lighting |
+| [IgorBox DMX](dmx/overview) | 1 DMX universe (512 channels) + 2 relays | 2 × isolated + DMX in | Stage lighting, moving heads, DMX props, or adding scares to an existing console's rig |
 
 ## Shared across every controller
 

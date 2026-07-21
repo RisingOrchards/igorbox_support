@@ -57,6 +57,7 @@ Best practice for any production attraction:
 - Put the controllers on their own VLAN or their own access point, isolated from guest and office networks.
 - Hide the SSID and use a strong password.
 - Use a quality access point.
+- Avoid WiFi range extenders and repeaters on the controller network. See [WiFi Extenders and Repeaters](wifi-extenders).
 
 ## Recommended hardware
 

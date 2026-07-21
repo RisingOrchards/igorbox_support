@@ -61,6 +61,27 @@ In the channel configuration tab, when hard lock is active, you'll see "Safe Sta
 
 Unlike a Safety Lock, you can override this. You can force something to "off" or 0. This can be a logical off state like "Off" on an inverted channel would turn it "On"... or a true power off state like a maglock that is on an inverted channel actually is powered off and safely opens. You can also choose a specific setting you want the channel to go to. This can be useful for turning on lights to full brightness or parking an animatronic in a safe way. 
 
+## The two locks at a glance
+
+The crucial difference is how you get *out*:
+
+```mermaid
+flowchart LR
+    subgraph SAFETY["Safety Lock mode"]
+        direction TB
+        U1["Unlocked:<br/>shows run normally"] -- "press" --> LB["Locked by the button:<br/>everything holds in place"]
+        LB -- "press again" --> U1
+        U1 -. "locked by a<br/>trigger instead" .-> LT["Locked by a trigger:<br/>the button won't unlock this"]
+        LT -. "the trigger<br/>unlocks it" .-> U1
+    end
+    subgraph HARD["Hard Lock mode"]
+        direction TB
+        U2["Unlocked:<br/>shows run normally"] -- "press" --> HL["Hard locked: nothing plays,<br/>Manual Control is blocked,<br/>channels go to their Safe States"]
+        HL -- "the only way out:<br/>reboot the controller" --> U2
+    end
+    SAFETY ~~~ HARD
+```
+
 ## Interaction with Logic Rules
 
 When the mode is **Trigger**, the front button shows up as an input in the Logic Rules editor. You can use it as the input to any rule, just like a wired input.

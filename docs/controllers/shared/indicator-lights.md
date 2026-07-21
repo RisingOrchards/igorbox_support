@@ -26,7 +26,7 @@ The faint idle markers on the rear input connectors are new in firmware 2.2.0. I
 
 ## Rear connector lights
 
-These apply to the Output 8 MKII, Input 16, and LED Controller:
+These apply to the Output 8 MKII, Input 16, LED Controller, and IgorBox DMX:
 
 | Connector | Idle | Active |
 | --- | --- | --- |
@@ -46,6 +46,13 @@ Each output channel's rear connector pair signals both the channel's state and, 
 
 **Output 8 MKII channels in solid-state mode** (a powered output, see [Multistate Relay™](/docs/controllers/output-8-mkii/multistate-relay)) use the power colors instead, because their terminals carry the controller's supply: a red light marks the positive terminal and a blue light marks the negative, just like the power connector. Both glow bright when the output is live and faint when it's off. If the channel is inverted, the red light turns orange and the bright and faint states follow the actual output, which is the opposite of the commanded state.
 
+### IgorBox DMX extras
+
+The IgorBox DMX rear panel adds two configuration lights of its own, both always-on faint markers:
+
+- **Mode**: green = Standard, orange = Buffer, red = Fixture (see [Operating Modes](/docs/controllers/dmx/modes))
+- **Terminator**: green = the built-in terminator is on, red = off
+
 ## Front panel lights
 
 Each controller's front panel is covered on its own page:
@@ -53,5 +60,6 @@ Each controller's front panel is covered on its own page:
 - [Output 8 MKII front panel](/docs/controllers/output-8-mkii/front-panel): color shows the channel's mode, brightness shows on or off
 - [Input 16 front panel](/docs/controllers/input-16/front-panel): purple per-input lights
 - [LED Controller front panel](/docs/controllers/led-controller/front-panel): each light dims smoothly with its channel
+- [IgorBox DMX front panel](/docs/controllers/dmx/front-panel): four activity lights plus four always-faint DMX configuration markers (refresh rate, mode, terminator). It's the one front panel with deliberate idle glow
 
-With the exception of relay-mode rear pairs noted above, every indicator reflects the state the controller is **commanding**, not a live electrical reading of the wiring. An inverted channel shows "on" when the channel is logically active, even though the physical output does the opposite.
+With the exception of the inverted solid-state pairs noted above, every indicator reflects the state the controller is **commanding**, not a live electrical reading of the wiring. An inverted channel shows "on" when the channel is logically active, even though the physical output does the opposite.

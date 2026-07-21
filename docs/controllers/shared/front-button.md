@@ -16,7 +16,7 @@ There are four modes:
 | **Safety Lock** | Toggles a lock that stops the show currently playing on this controller and prevents anyone from triggering new ones. | Maintenance windows, daytime in a haunt, walk-throughs. |
 | **Hard Lock** | Hard-stops everything and locks the controller. Nothing plays until the controller is rebooted (power-cycled). | Repairs, electrical work, construction. |
 
-You can change the mode any time from the controller's Configuration tab in Studio.
+You can change the mode any time from the controller's Configuration tab in IgorBox Studio. The Studio side of each mode is covered in [Front Button Modes](/docs/studio/front-button-modes), including [how the two locks differ and how each unlocks](/docs/studio/front-button-modes#the-two-locks-at-a-glance).
 
 :::tip
 **Stop** only stops playback on the controller you press the button on. If your show spans multiple controllers, set up a [Logic Rule](/docs/studio/logic-rules/overview) so a single button press can stop them together.

@@ -5,9 +5,9 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start --port 4000",
-    "build": "docusaurus build",
+    "build": "DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus-build docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
+    "deploy": "DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus-build docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",

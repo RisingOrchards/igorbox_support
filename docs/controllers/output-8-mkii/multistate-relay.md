@@ -11,6 +11,19 @@ In Standard relay mode, you have a bare contact relay. You can use it like a lig
 
 Both modes switch ON and OFF — the difference is what's on the terminals. Relay mode gives you an isolated dry contact you pass your own power through. Solid-state mode hands you the controller's own supply voltage, already live, so you can drive a load straight off the box.
 
+```mermaid
+flowchart LR
+    subgraph RELAY["Relay mode: you bring the power"]
+        direction TB
+        PSU1["Your own supply<br/>(DC or AC)"] --> CH1["Channel contact:<br/>an isolated switch"] --> LOAD1["Load"]
+    end
+    subgraph SS["Solid-state mode: the box brings the power"]
+        direction TB
+        PSU2["The controller's own<br/>supply (barrel jack)"] --> CH2["Channel: fed internally,<br/>live when switched on"] --> LOAD2["Load (DC only)"]
+    end
+    RELAY ~~~ SS
+```
+
 ## Why it matters
 
 Traditional show controllers make you commit to a channel type when you order the box. Want an isolated dry contact on channel 5? Order the relay version. Want a powered output on channel 6 so you can fire a solenoid without running extra power wires? Order the solid-state version. Need both? Order two boxes.

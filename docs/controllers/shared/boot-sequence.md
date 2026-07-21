@@ -11,6 +11,20 @@ When a controller first gets power, the channel lights run a brief, colorful swe
 
 Once it's on the network and has loaded its settings, it plays a short welcome sound — a little robotic voice saying "IgorBox" — out the [Audio Out](audio-out). A few seconds later, when it has finished connecting and is ready to go, the status light turns solid green.
 
+```mermaid
+flowchart TD
+    POWER["Power on"] --> SWEEP["Channel lights sweep a quick hello"]
+    SWEEP --> Q{"Holding the<br/>front button?"}
+    Q -- "not holding" --> ORANGE["Status LED pulses orange:<br/>starting up"]
+    ORANGE --> BLUE["Blue: on the network,<br/>connecting to the cloud"]
+    BLUE --> SOUND["Welcome sound: 'IgorBox'"]
+    SOUND --> READY(["Solid green: ready"])
+    Q -- "holding: the timer<br/>starts now" --> T7["About 7 seconds:<br/>lights flash"]
+    T7 -- "release" --> WIFI(["Saved WiFi forgotten"])
+    T7 -- "keep holding" --> T20["About 20 seconds:<br/>lights flash"]
+    T20 -- "release" --> RESET(["Factory reset"])
+```
+
 ## Status light during startup
 
 While it's coming up, the status light walks you through where it is:
@@ -21,7 +35,7 @@ While it's coming up, the status light walks you through where it is:
 
 ## Holding the front button at power-on
 
-You can hold the [Front Button](front-button) while powering the controller on to do one of two things. The lights flash to confirm as you pass each step, so you can let go at the right moment.
+You can hold the [Front Button](front-button) while powering the controller on to do one of two things. The hold timer starts once the startup light sweep finishes, and the lights flash to confirm as you pass each step, so you can let go at the right moment.
 
 - **Hold about 7 seconds** — forget the saved WiFi. Use this when you're moving the controller to a new network.
 - **Hold about 20 seconds** — full factory reset. This wipes the controller's saved content and settings and clears its local pairing. It stays registered in your Studio, though, and re-pairs automatically the next time it's online.

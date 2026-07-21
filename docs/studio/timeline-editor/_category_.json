@@ -6,6 +6,6 @@
   "link": {
     "type": "generated-index",
     "title": "Timeline Editor",
-    "description": "The video-editor-style show editor — tracks, clips, PWM envelopes, audio, live preview, deploys, and version history."
+    "description": "The video-editor-style show editor: tracks, clips, PWM envelopes, DMX fixtures, audio, live preview, deploys, and version history."
   }
 }

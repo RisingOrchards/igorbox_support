@@ -123,6 +123,18 @@ const config = {
           trackingID: "G-FC6CBDXDG9",
           anonymizeIP: false,
         },
+
+        // Keep beta DMX docs out of search-engine indexing until GA.
+        // Remove together with the sidebar-hidden classes at launch.
+        sitemap: {
+          ignorePatterns: [
+            "/docs/controllers/dmx/**",
+            "/docs/studio/dmx/**",
+            "/docs/studio/timeline-editor/dmx-tracks",
+            "/docs/category/igorbox-dmx",
+            "/docs/category/dmx--fixtures",
+          ],
+        },
       }),
     ],
   ],

@@ -19,6 +19,17 @@ Haunted houses live and die by timing. A scare that fires half a second late isn
 
 No programming. You draw the show on a timeline, wire your props to the box, and let IgorBox handle the rest.
 
+```mermaid
+flowchart LR
+    GUEST["Guest trips the<br/>step pad or beam"] --> SHOW["The scare show fires:<br/>everything on one timeline"]
+    SHOW --> AIR["Air cylinder"]
+    SHOW --> RED["Lights snap to red"]
+    SHOW --> SCREAM["The scream"]
+    SHOW --> PANEL["Drop panel falls"]
+    SHOW -- "show ends" --> AMB(["Channels reset,<br/>ambient resumes"])
+    GUEST -. "re-trip mid-scare:<br/>Skip if Playing ignores it" .-> SHOW
+```
+
 ## What you can build
 
 - **Sensor-triggered scares** — a guest steps on a mat or breaks an IR beam and a prop fires instantly.

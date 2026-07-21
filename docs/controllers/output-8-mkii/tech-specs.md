@@ -75,6 +75,6 @@ For best results, feed the controller 44.1 kHz / 16-bit lossless audio (WAV or F
 |  |  |
 | --- | --- |
 | Case material | 16ga Steel |
-| Mounting | Wall or DIN rail (with optional din rail kit) |
+| Mounting | Wall or DIN rail (with optional DIN-rail kit). See [Mounting](/docs/controllers/shared/mounting) |
 | Operating temp | 0–50 °C |
 | Storage temp | -20–70 °C |

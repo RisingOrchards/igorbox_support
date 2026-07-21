@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 description: "Slip editing, per-clip volume, and waveforms for audio tracks"
 ---
 
