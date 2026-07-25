@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/mcp.mjs": { "includeFiles": "build/mcp/**" }
+    "api/mcp.mjs": { "includeFiles": "build/mcp/**", "memory": 3009 }
   },
   "rewrites": [{ "source": "/mcp", "destination": "/api/mcp" }]
 }

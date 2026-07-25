@@ -146,6 +146,10 @@ const config = {
       "docusaurus-plugin-mcp-server",
       {
         server: { name: "igorbox-docs", version: "1.0.0" },
+        // Forward (prefix) tokenization bloats search-index.json ~90x
+        // (247 MB for a <1 MB corpus), which OOM-kills the Vercel function
+        // serving /mcp. Must match the flexsearch config in api/mcp.mjs.
+        flexsearch: { tokenize: "strict", context: false },
       },
     ],
     [

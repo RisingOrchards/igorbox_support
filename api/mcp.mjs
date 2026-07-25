@@ -12,4 +12,8 @@ export default createNodeHandler({
   indexPath: path.join(__dirname, "../build/mcp/search-index.json"),
   name: "igorbox-docs",
   baseUrl: "https://help.igorbox.com",
+  // Must match the plugin's search config in docusaurus.config.js — the
+  // runtime deserializes the index with this shape and silently returns no
+  // results on a mismatch.
+  flexsearch: { tokenize: "strict", context: false },
 });
