@@ -1,0 +1,61 @@
+diff --git a/node_modules/@coralogix/browser/index.esm2.js b/node_modules/@coralogix/browser/index.esm2.js
+index cc880fc..8eb8d30 100644
+--- a/node_modules/@coralogix/browser/index.esm2.js
++++ b/node_modules/@coralogix/browser/index.esm2.js
+@@ -3791,26 +3791,39 @@ var W3CBaggagePropagator = function () {
+   };
+   W3CBaggagePropagator.prototype.extract = function (context, carrier, getter) {
+     var headerValue = getter.get(carrier, BAGGAGE_HEADER);
+-    var baggageString = Array.isArray(headerValue) ? headerValue.join(BAGGAGE_ITEMS_SEPARATOR) : headerValue;
+-    if (!baggageString) return context;
++    if (!headerValue) return context;
+     var baggage = {};
+-    if (baggageString.length === 0) {
+-      return context;
+-    }
+-    var pairs = baggageString.split(BAGGAGE_ITEMS_SEPARATOR);
+-    pairs.forEach(function (entry) {
+-      var keyPair = parsePairKeyValue(entry);
+-      if (keyPair) {
+-        var baggageEntry = {
+-          value: keyPair.value
+-        };
+-        if (keyPair.metadata) {
+-          baggageEntry.metadata = keyPair.metadata;
++    var count = 0;
++    var totalSize = 0;
++    var headerValues = Array.isArray(headerValue) ? headerValue : [headerValue];
++    headers: for (var i = 0; i < headerValues.length; i++) {
++      var baggageString = headerValues[i];
++      var start = 0;
++      while (start < baggageString.length && count < BAGGAGE_MAX_NAME_VALUE_PAIRS) {
++        var end = baggageString.indexOf(BAGGAGE_ITEMS_SEPARATOR, start);
++        var entryEnd = end === -1 ? baggageString.length : end;
++        var entryLength = entryEnd - start;
++        if (entryLength <= BAGGAGE_MAX_PER_NAME_VALUE_PAIRS) {
++          var keyPair = parsePairKeyValue(baggageString.substring(start, entryEnd));
++          if (keyPair) {
++            var entrySize = (count === 0 ? 0 : 1) + entryLength;
++            if (totalSize + entrySize > BAGGAGE_MAX_TOTAL_LENGTH) break headers;
++            var baggageEntry = {
++              value: keyPair.value
++            };
++            if (keyPair.metadata) {
++              baggageEntry.metadata = keyPair.metadata;
++            }
++            baggage[keyPair.key] = baggageEntry;
++            count++;
++            totalSize += entrySize;
++          }
+         }
+-        baggage[keyPair.key] = baggageEntry;
++        if (end === -1) break;
++        start = end + 1;
+       }
+-    });
+-    if (Object.entries(baggage).length === 0) {
++    }
++    if (count === 0) {
+       return context;
+     }
+     return propagation.setBaggage(context, propagation.createBaggage(baggage));
