@@ -5,9 +5,7 @@ description: "What the IgorBox DMX is and how to get started with it"
 beta: true
 ---
 
-:::caution
-Photo coming soon.
-:::
+![IBDMX Beta Unit](/img/dmx/ibdmx-back.jpeg)
 
 {/* TODO: enable once price, image, and store URL are final
 import ProductJsonLd from '@site/src/components/ProductJsonLd';

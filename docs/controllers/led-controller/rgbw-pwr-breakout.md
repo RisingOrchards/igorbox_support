@@ -9,9 +9,7 @@ The RGBW-PWR breakout is a **power version of a 4-channel breakout board**. The 
 
 It's named for its typical job — driving an RGBW fixture (Red, Green, Blue, White on four channels) — but the four channels can just as well be four independent single-color loads.
 
-:::caution
-Photo coming soon.
-:::
+![RGBW-PWR Overhead](/img/rgbw-pwr/rgbw-pwr-overhead.jpeg)
 
 ## Two ways to use it
 
@@ -48,4 +46,4 @@ flowchart LR
 
 ## Order one
 
-The breakout is sold separately. See the [IgorBox Store](https://store.igorbox.com) for current pricing and availability.
+The breakout is sold separately. See the [IgorBox Store](https://store.igorbox.com/shop/rgbw-pwr-rgbw-power-injector-139) for current pricing and availability.
